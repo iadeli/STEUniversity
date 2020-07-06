@@ -1,0 +1,51 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.runtimeconfig.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.runtimeconfig.dev.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.deps.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.runtimeconfig.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.runtimeconfig.dev.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.runtimeconfig.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.runtimeconfig.dev.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.Test.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain.Test\obj\Debug\netcoreapp2.2\Official.Domain.Test.pdb

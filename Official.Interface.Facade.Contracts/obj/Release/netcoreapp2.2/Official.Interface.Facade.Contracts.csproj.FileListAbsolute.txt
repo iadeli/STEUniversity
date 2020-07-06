@@ -1,0 +1,12 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.QueryModel.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.QueryModel.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.pdb

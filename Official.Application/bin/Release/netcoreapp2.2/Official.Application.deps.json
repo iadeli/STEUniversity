@@ -1,0 +1,140 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "a8e63d3cf5c0984467f412101f7331f46e7536bd"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Official.Application/1.0.0": {
+        "dependencies": {
+          "Mapster": "4.1.0",
+          "Official.Application.Contracts": "1.0.0",
+          "Official.Domain": "1.0.0",
+          "Official.Framework.Application": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0.0"
+        },
+        "runtime": {
+          "Official.Application.dll": {}
+        }
+      },
+      "Mapster/4.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mapster.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {},
+      "Official.Application.Contracts/1.0.0": {
+        "runtime": {
+          "Official.Application.Contracts.dll": {}
+        }
+      },
+      "Official.Domain/1.0.0": {
+        "runtime": {
+          "Official.Domain.dll": {}
+        }
+      },
+      "Official.Framework.Application/1.0.0": {
+        "dependencies": {
+          "Official.Framework.Core": "1.0.0"
+        },
+        "runtime": {
+          "Official.Framework.Application.dll": {}
+        }
+      },
+      "Official.Framework.Core/1.0.0": {
+        "runtime": {
+          "Official.Framework.Core.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Core/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Core.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.2.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18315"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Official.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mapster/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a8MLjFJKclB5IAM4rBP4+f/bR9wWHZ6mOZJMxIB/bEhEK9Dc31d/9CX3OFMQ73VLVrdj5acfoiz8UFdT146d7w==",
+      "path": "mapster/4.1.0",
+      "hashPath": "mapster.4.1.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+    },
+    "Official.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Official.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Official.Framework.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Official.Framework.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Core/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Logging.Abstractions/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

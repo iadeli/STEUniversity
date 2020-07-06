@@ -1,0 +1,48 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.deps.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb

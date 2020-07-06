@@ -1,0 +1,3 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfo.cs

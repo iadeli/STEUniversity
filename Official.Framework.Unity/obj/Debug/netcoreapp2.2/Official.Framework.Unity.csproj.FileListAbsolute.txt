@@ -1,0 +1,16 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Unity.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Unity.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Unity.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.Unity.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Microsoft.Extensions.DependencyInjection.Abstractions.xml

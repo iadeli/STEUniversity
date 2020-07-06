@@ -1,0 +1,7 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application.Contracts\Debug\netcoreapp2.2\Official.Application.Contracts.dll

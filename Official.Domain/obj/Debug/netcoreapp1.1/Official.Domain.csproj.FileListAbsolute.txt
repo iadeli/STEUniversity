@@ -1,0 +1,36 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.deps.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csprojAssemblyReference.cache

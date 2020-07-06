@@ -1,0 +1,5 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\ServiceHost\Debug\netcoreapp2.2\ServiceHost.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\ServiceHost\Debug\netcoreapp2.2\ServiceHost.RazorAssemblyInfo.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\ServiceHost\Debug\netcoreapp2.2\ServiceHost.RazorAssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\ServiceHost\Debug\netcoreapp2.2\ServiceHost.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\ServiceHost\Debug\netcoreapp2.2\ServiceHost.AssemblyInfo.cs

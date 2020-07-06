@@ -1,0 +1,56 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.deps.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.DI.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.pdb

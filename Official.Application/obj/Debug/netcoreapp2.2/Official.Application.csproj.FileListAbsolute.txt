@@ -1,0 +1,96 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\sama laptop\Documents\Projects\Official\Official\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.deps.json
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.dll
+C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.pdb

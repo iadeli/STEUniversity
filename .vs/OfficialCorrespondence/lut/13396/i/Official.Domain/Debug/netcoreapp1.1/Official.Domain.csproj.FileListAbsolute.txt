@@ -1,0 +1,7 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Domain\Debug\netcoreapp1.1\Official.Domain.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Domain\Debug\netcoreapp1.1\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Domain\Debug\netcoreapp1.1\Official.Domain.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Domain\Debug\netcoreapp1.1\Official.Domain.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Domain\Debug\netcoreapp1.1\Official.Domain.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Domain\Debug\netcoreapp1.1\Official.Domain.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Domain\Debug\netcoreapp1.1\Official.Domain.dll

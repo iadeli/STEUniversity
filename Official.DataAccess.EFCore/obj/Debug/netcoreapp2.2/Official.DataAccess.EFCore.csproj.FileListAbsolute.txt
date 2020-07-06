@@ -1,0 +1,9 @@
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.DataAccess.EFCore.deps.json
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.DataAccess.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.DataAccess.EFCore.pdb
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.DataAccess.EFCore.csprojAssemblyReference.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.DataAccess.EFCore.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.DataAccess.EFCore.AssemblyInfoInputs.cache
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.DataAccess.EFCore.AssemblyInfo.cs
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.DataAccess.EFCore.dll
+C:\Users\sama laptop\Documents\Projects\Official\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.DataAccess.EFCore.pdb

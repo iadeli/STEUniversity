@@ -1,0 +1,12 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Release\netcoreapp2.2\Official.Persistence.EFCore.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Release\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Release\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Release\netcoreapp2.2\Official.Domain.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Release\netcoreapp2.2\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Release\netcoreapp2.2\Official.Persistence.EFCore.pdb

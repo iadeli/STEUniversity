@@ -1,0 +1,8 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.csprojAssemblyReference.cache

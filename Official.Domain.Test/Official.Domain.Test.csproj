@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\Cartbot\**" />
+    <Compile Remove="Services\Letter\**" />
+    <EmbeddedResource Remove="Services\Cartbot\**" />
+    <EmbeddedResource Remove="Services\Letter\**" />
+    <None Remove="Services\Cartbot\**" />
+    <None Remove="Services\Letter\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fluentassertions" Version="5.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Official.Domain\Official.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>

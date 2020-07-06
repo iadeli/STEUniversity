@@ -1,0 +1,13 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\aaaaaa\Debug\netcoreapp2.2\aaaaaa.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\aaaaaa\Debug\netcoreapp2.2\aaaaaa.runtimeconfig.json
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\aaaaaa\Debug\netcoreapp2.2\aaaaaa.runtimeconfig.dev.json
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\aaaaaa\Debug\netcoreapp2.2\aaaaaa.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.RazorAssemblyInfo.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.RazorAssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.RazorTargetAssemblyInfo.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\aaaaaa\Debug\netcoreapp2.2\aaaaaa.csprojAssemblyReference.cache

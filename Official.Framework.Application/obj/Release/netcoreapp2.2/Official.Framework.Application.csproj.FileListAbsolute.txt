@@ -1,0 +1,12 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\bin\Release\netcoreapp2.2\Official.Framework.Application.deps.json
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\bin\Release\netcoreapp2.2\Official.Framework.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\bin\Release\netcoreapp2.2\Official.Framework.Application.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\bin\Release\netcoreapp2.2\Official.Framework.Core.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\bin\Release\netcoreapp2.2\Official.Framework.Core.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.AssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.csproj.CopyComplete
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Release\netcoreapp2.2\Official.Framework.Application.pdb
