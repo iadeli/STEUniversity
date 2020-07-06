@@ -12,6 +12,7 @@ namespace Official.Domain.Model.Person.IPersonRepository
         Task Remove(long id);
 
         Task<Person> GetById(long id);
-        //Task<List<Person>> Get();
+        Task<bool> IsExistsNationalCode(long? id, string nationalCode, int actionType);
+        Task<List<Person>> Get();
     }
 }

@@ -1,16 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Enum;
+using Official.Interface.Facade.Contracts.Utility;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Persistence.EFCore.Jwt;
 
 namespace Official.Interface.RestApi
 {
     [ServiceFilter(typeof(LoggingActionFilter))]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class PlaceQueryController : ControllerBase
     {
         private readonly IPlaceFacadeQuery _query;
@@ -29,7 +34,7 @@ namespace Official.Interface.RestApi
             }
             catch (Exception e)
             {
-                throw e;
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
     }

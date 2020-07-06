@@ -4587,7 +4587,8 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Official.Application": "1.0.0",
-          "Official.Interface.Facade.Contracts": "1.0.0"
+          "Official.Interface.Facade.Contracts": "1.0.0",
+          "Official.Persistence.EFCore": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Official.Interface.RestApi.dll": {}
@@ -4600,6 +4601,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Official.Domain": "1.0.0"

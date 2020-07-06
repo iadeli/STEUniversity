@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Menu;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
+using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi
 {
@@ -30,7 +31,7 @@ namespace Official.Interface.RestApi
             }
             catch (Exception e)
             {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.Message);
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
 
@@ -44,7 +45,7 @@ namespace Official.Interface.RestApi
             }
             catch (Exception e)
             {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.Message);
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
     }

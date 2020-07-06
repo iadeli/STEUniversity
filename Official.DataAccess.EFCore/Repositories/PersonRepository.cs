@@ -78,6 +78,22 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
+        public async Task<bool> IsExistsNationalCode(long? id, string nationalCode, int actionType)
+        {
+            try
+            {
+                if(actionType == 1)
+                {
+                    return await _context.Persons.Where(a => a.NationalCode == nationalCode).AnyAsync();
+                }
+                return await _context.Persons.Where(a => a.Id != id && a.NationalCode == nationalCode).AnyAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public async Task Remove(long id)
         {
             try
@@ -92,17 +108,17 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        //public async Task<List<Person>> Get()
-        //{
-        //    try
-        //    {
-        //        return _context.Persons.ToList();
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw e;
-        //    }
-        //}
+        public async Task<List<Person>> Get()
+        {
+            try
+            {
+                return _context.Persons.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
         private async Task Save()
         {

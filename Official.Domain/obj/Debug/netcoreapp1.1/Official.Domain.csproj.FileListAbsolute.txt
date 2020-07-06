@@ -28,9 +28,9 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\bin\Debug\netcoreapp1.1\Official.Domain.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfoInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.pdb
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Domain\obj\Debug\netcoreapp1.1\Official.Domain.csprojAssemblyReference.cache

@@ -86,10 +86,6 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CopyComplete
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.pdb
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csprojAssemblyReference.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Interface.Facade.Query.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Interface.Facade.Query.pdb
@@ -103,6 +99,9 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\De
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.QueryModel.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Application.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.Interface.Facade.Contracts.pdb
@@ -113,6 +112,16 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\De
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Official.QueryModel.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Query\obj\Debug\netcoreapp2.2\Official.Interface.Facade.Query.pdb

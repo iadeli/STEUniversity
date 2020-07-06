@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Mapster;
 using Official.Application.Contracts.Command.Person;
@@ -20,6 +21,20 @@ namespace Official.Application.Command.Person
         {
             try
             {
+                const int create = 1;
+
+                var input = command.NationalCode.PadLeft(10, '0');
+                if (!Regex.IsMatch(input, @"^\d{10}$"))
+                {
+                    throw new Exception("کد ملی وارد شده نامعتبر است");
+                }
+
+                var person = _personRepository.IsExistsNationalCode(command.Id, command.NationalCode, create);
+                if(person != null)
+                {
+                    throw new Exception("کد ملی تکراری است");
+                }
+
                 var entity = Domain.Model.Person.Person.Instance;
                 command.Adapt(entity);
                 entity = await _personRepository.Create(entity);
@@ -36,6 +51,20 @@ namespace Official.Application.Command.Person
         {
             try
             {
+                const int create = 2;
+
+                var input = command.NationalCode.PadLeft(10, '0');
+                if (!Regex.IsMatch(input, @"^\d{10}$"))
+                {
+                    throw new Exception("کد ملی وارد شده نامعتبر است");
+                }
+
+                var person = _personRepository.IsExistsNationalCode(command.Id, command.NationalCode, create);
+                if (person != null)
+                {
+                    throw new Exception("کد ملی تکراری است");
+                }
+
                 var entity = await _personRepository.GetById(command.Id);
                 entity.Adapt(command);
                 entity = await _personRepository.Update(entity);

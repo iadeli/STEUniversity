@@ -1,4 +1,0 @@
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs

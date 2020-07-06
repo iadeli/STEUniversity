@@ -375,7 +375,8 @@
       "Official.Interface.RestApi/1.0.0": {
         "dependencies": {
           "Official.Application": "1.0.0",
-          "Official.Interface.Facade.Contracts": "1.0.0"
+          "Official.Interface.Facade.Contracts": "1.0.0",
+          "Official.Persistence.EFCore": "1.0.0"
         },
         "runtime": {
           "Official.Interface.RestApi.dll": {}
@@ -386,6 +387,7 @@
       },
       "Official.Persistence.EFCore/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Official.Domain": "1.0.0"

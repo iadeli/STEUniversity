@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person;
 using Official.Framework.Application;
+using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi
 {
@@ -33,7 +34,7 @@ namespace Official.Interface.RestApi
             }
             catch (Exception e)
             {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.Message);
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
 
@@ -47,7 +48,7 @@ namespace Official.Interface.RestApi
             }
             catch (Exception e)
             {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.Message);
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
 
@@ -63,7 +64,7 @@ namespace Official.Interface.RestApi
             }
             catch (Exception e)
             {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.Message);
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
     }

@@ -13,9 +13,13 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Official.Application\Official.Application.csproj" />
+    <ProjectReference Include="..\Official.DataAccess.EFCore\Official.Persistence.EFCore.csproj" />
     <ProjectReference Include="..\Official.Interface.Facade.Contracts\Official.Interface.Facade.Contracts.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Authorization">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.authorization\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
       <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.abstractions\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
     </Reference>

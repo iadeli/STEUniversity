@@ -1,12 +1,16 @@
 ﻿using System.Reflection;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Official.Config.DI;
 using Official.Framework.DI;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Enum;
@@ -15,6 +19,9 @@ using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
 using Official.Interface.Facade.Query.FacadeQuery.Enum;
 using Official.Interface.Facade.Query.FacadeQuery.Menu;
 using Official.Interface.Facade.Query.FacadeQuery.Person;
+using Official.Persistence.EFCore.Context;
+using Official.Persistence.EFCore.Identity;
+using Official.Persistence.EFCore.Jwt;
 using ServiceHost.Configs;
 
 namespace ServiceHost
@@ -35,11 +42,46 @@ namespace ServiceHost
             services.AddMvc(options => options.Filters.Add(new AuthorizeFilter()));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("Official.Interface.RestApi")));
-            services.AddMvc(opts =>
+
+            services.AddScoped<UserStore<AppUser, AppRole, STEDbContext, long, AppUserClaim, AppUserRole, AppUserLogin, AppUserToken, AppRoleClaim>, ApplicationUserStore>();
+            services.AddScoped<UserManager<AppUser>, ApplicationUserManager>();
+            services.AddScoped<RoleManager<AppRole>, ApplicationRoleManager>();
+            services.AddScoped<SignInManager<AppUser>, ApplicationSignInManager>();
+            services.AddScoped<RoleStore<AppRole, STEDbContext, long, AppUserRole, AppRoleClaim>, ApplicationRoleStore>();
+
+            services.AddIdentity<AppUser, AppRole>(identityOptions =>
+                {
+                    identityOptions.Password.RequiredLength = 1;
+                    identityOptions.Password.RequireNonAlphanumeric = false;
+                    identityOptions.Password.RequireLowercase = false;
+                    identityOptions.Password.RequireUppercase = false;
+                }).AddUserStore<ApplicationUserStore>()
+                .AddUserManager<ApplicationUserManager>()
+                .AddRoleStore<ApplicationRoleStore>()
+                .AddRoleManager<ApplicationRoleManager>()
+                .AddSignInManager<ApplicationSignInManager>()
+                // You **cannot** use .AddEntityFrameworkStores() when you customize everything
+                //.AddEntityFrameworkStores<ApplicationDbContext, int>()
+                .AddDefaultTokenProviders();
+
+            services.AddAuthentication(options =>
             {
-                opts.Filters.Add(new AllowAnonymousFilter());
-            });
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(cfg =>
+                {
+                    cfg.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidIssuer = MvsJwtTokens.Issuer,
+                        ValidAudience = MvsJwtTokens.Audience,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(MvsJwtTokens.Key))
+                    };
+                });
+
+            WireUp(services);
+
             services.AddCors();
+            services.AddMvc();
 
             //services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
             //    .AddIdentityServerAuthentication(options =>
@@ -48,58 +90,6 @@ namespace ServiceHost
             //        options.ApiName = "Official-api";
             //        options.RequireHttpsMetadata = false;
             //    });
-
-            services.AddAuthentication(options =>
-            {
-
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(o =>
-            {
-                o.Authority = "http://localhost:5000/";
-                o.Audience = "Official-api";
-                o.RequireHttpsMetadata = false;
-            });
-
-            //services.AddScoped<UserStore<AppUser, AppRole, AppDbContext, long, AppUserClaim, AppUserRole, AppUserLogin, AppUserToken, AppRoleClaim>, ApplicationUserStore>();
-            //services.AddScoped<UserManager<AppUser>, ApplicationUserManager>();
-            //services.AddScoped<RoleManager<AppRole>, ApplicationRoleManager>();
-            //services.AddScoped<SignInManager<AppUser>, ApplicationSignInManager>();
-            //services.AddScoped<RoleStore<AppRole, AppDbContext, long, AppUserRole, AppRoleClaim>, ApplicationRoleStore>();
-            //services.AddIdentity<AppUser, AppRole>(identityOptions =>
-            //{
-            //})
-            //.AddUserStore<ApplicationUserStore>()
-            //.AddUserManager<ApplicationUserManager>()
-            //.AddRoleStore<ApplicationRoleStore>()
-            //.AddRoleManager<ApplicationRoleManager>()
-            //.AddSignInManager<ApplicationSignInManager>()
-            //.AddDefaultTokenProviders();
-            //services.AddAuthentication()
-            //    .AddCookie(cfg =>
-            //    {
-            //        cfg.SlidingExpiration = true;
-            //        cfg.LoginPath = "/AppIdentity/Account/Login";
-            //    })
-            //    .AddJwtBearer(cfg =>
-            //    {
-            //        cfg.TokenValidationParameters = new TokenValidationParameters()
-            //        {
-            //            ValidIssuer = MvsJwtTokens.Issuer,
-            //            ValidAudience = MvsJwtTokens.Audience,
-            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(MvsJwtTokens.Key))
-            //        };
-            //    });
-            //services.AddAuthorization(options =>
-            //{
-            //    options.AddPolicy("ViewPolicy", policy => policy.AddRequirements(new ManageMPolicyRequirement()));
-            //    options.AddPolicy("CreatePolicy", policy => policy.AddRequirements(new ManageMPolicyRequirement()));
-            //    options.AddPolicy("EditPolicy", policy => policy.AddRequirements(new ManageMPolicyRequirement()));
-            //    options.AddPolicy("DeletePolicy", policy => policy.AddRequirements(new ManageMPolicyRequirement())); ;
-            //});
-            //services.AddTransient<IAuthorizationHandler, ManagePolicyHandler>();
-
-            WireUp(services);
         }
 
         private void WireUp(IServiceCollection services)
@@ -120,8 +110,6 @@ namespace ServiceHost
             //{
             //    app.UseDeveloperExceptionPage();
             //}
-
-            //app.UseMvc();
 
             if (env.IsDevelopment())
             {

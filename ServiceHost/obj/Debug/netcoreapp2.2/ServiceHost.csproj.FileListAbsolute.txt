@@ -1,9 +1,3 @@
-C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.csprojAssemblyReference.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.RazorAssemblyInfo.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.RazorAssemblyInfo.cs
-C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\ServiceHost.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\ServiceHost.runtimeconfig.json
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\ServiceHost.runtimeconfig.dev.json
@@ -33,6 +27,12 @@ C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\Of
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\bin\Debug\netcoreapp2.2\Official.QueryModel.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.RazorAssemblyInfo.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.RazorAssemblyInfo.cs
+C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.RazorTargetAssemblyInfo.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\ServiceHost\obj\Debug\netcoreapp2.2\ServiceHost.dll

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Official.Persistence.EFCore.Jwt;
 
 namespace ServiceHost.Controllers
 {

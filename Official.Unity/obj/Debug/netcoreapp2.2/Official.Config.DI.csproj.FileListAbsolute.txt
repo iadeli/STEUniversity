@@ -87,6 +87,9 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Application.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Domain.pdb
@@ -95,6 +98,12 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.AssemblyInfoInputs.cache
