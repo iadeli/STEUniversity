@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Official.Domain.Model.Enum
 {
-    public sealed class Enumuration : AggregateRoot
+    public sealed class Enumuration : Entity
     {
         public string EnumName { get; private set; }
         public string EnumTitle { get; private set; }

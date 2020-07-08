@@ -94,6 +94,7 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Debug\netcoreapp2.2\Official.Interface.RestApi.csproj.CopyComplete
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Debug\netcoreapp2.2\Official.Interface.RestApi.dll
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Debug\netcoreapp2.2\Official.Interface.RestApi.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Interface.RestApi.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Interface.RestApi.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Interface.RestApi.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Interface.RestApi.pdb

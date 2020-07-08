@@ -6,3 +6,4 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Rel
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.csprojAssemblyReference.cache

@@ -22,6 +22,11 @@ namespace Official.Interface.RestApi
             _query = query;
         }
 
+        /// <summary>
+        /// دریافت لیست کمبو
+        /// </summary>
+        /// <param name="Name">نام کمبو</param>
+        /// <returns></returns>
         [HttpGet("{Name}")]
         public async Task<IActionResult> GetByName(string Name)
         {

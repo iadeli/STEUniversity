@@ -22,6 +22,11 @@ namespace Official.Interface.RestApi
             _query = query;
         }
 
+        /// <summary>
+        /// دریافت اطلاعات فردی
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             try
@@ -35,6 +40,11 @@ namespace Official.Interface.RestApi
             }
         }
 
+        /// <summary>
+        /// دریافت اطلاعات فردی براساس شناسه
+        /// </summary>
+        /// <param name="id">شناسه اطلاعات فردی</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

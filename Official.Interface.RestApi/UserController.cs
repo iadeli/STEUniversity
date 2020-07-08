@@ -23,6 +23,11 @@ namespace Official.Interface.RestApi
             _bus = bus;
         }
 
+        /// <summary>
+        /// احراز هویت
+        /// </summary>
+        /// <param name="command">پارامترهای ورودی</param>
+        /// <returns></returns>
         [HttpPost("Login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginCommand command)
@@ -39,6 +44,11 @@ namespace Official.Interface.RestApi
             }
         }
 
+        /// <summary>
+        /// ایجاد کاربر
+        /// </summary>
+        /// <param name="command">پارامترهای ورودی</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserCommand command)
         {

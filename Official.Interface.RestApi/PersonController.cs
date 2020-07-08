@@ -23,6 +23,11 @@ namespace Official.Interface.RestApi
             _bus = bus;
         }
 
+        /// <summary>
+        /// افزودن اطلاعات فردی
+        /// </summary>
+        /// <param name="command">فیلدهای اطلاعات فردی</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Post(CreatePersonCommand command)
         {
@@ -38,6 +43,11 @@ namespace Official.Interface.RestApi
             }
         }
 
+        /// <summary>
+        /// ویرایش اطلاعات فردی
+        /// </summary>
+        /// <param name="command">فیلدهای اطلاعات فردی</param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IActionResult> Put(UpdatePersonCommand command)
         {
@@ -52,6 +62,11 @@ namespace Official.Interface.RestApi
             }
         }
 
+        /// <summary>
+        /// حذف اطلاهات فردی
+        /// </summary>
+        /// <param name="Id">شناسه فرد</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long Id)
         {

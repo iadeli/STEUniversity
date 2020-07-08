@@ -22,6 +22,11 @@ namespace Official.Interface.RestApi
             _query = query;
         }
 
+        /// <summary>
+        /// دریافت لیست منو
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             try
@@ -35,6 +40,10 @@ namespace Official.Interface.RestApi
             }
         }
 
+        /// <summary>
+        /// دریافت ساختار درختی منو
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Tree")]
         public async Task<IActionResult> GetTree()
         {

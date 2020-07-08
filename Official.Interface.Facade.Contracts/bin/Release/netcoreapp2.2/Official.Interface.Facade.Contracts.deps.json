@@ -14,7 +14,15 @@
           "Official.Interface.Facade.Contracts.dll": {}
         }
       },
+      "Official.Application.Contracts/1.0.0": {
+        "runtime": {
+          "Official.Application.Contracts.dll": {}
+        }
+      },
       "Official.QueryModel/1.0.0": {
+        "dependencies": {
+          "Official.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "Official.QueryModel.dll": {}
         }
@@ -23,6 +31,11 @@
   },
   "libraries": {
     "Official.Interface.Facade.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Official.Application.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

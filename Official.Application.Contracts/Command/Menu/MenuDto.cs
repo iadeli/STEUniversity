@@ -12,6 +12,7 @@ namespace Official.Application.Contracts.Command.Menu
         public int? Level { get; set; }
         public int? Order { get; set; }
         public string Title { get; set; }
+        public string Path { get; set; }
         public string Icon { get; set; }
     }
 }

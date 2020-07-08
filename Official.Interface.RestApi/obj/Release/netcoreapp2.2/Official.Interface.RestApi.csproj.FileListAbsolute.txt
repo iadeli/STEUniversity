@@ -12,7 +12,6 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Framework.Core.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.QueryModel.dll
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Application.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Application.Contracts.pdb
@@ -22,7 +21,6 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.QueryModel.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release\netcoreapp2.2\Official.Interface.RestApi.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release\netcoreapp2.2\Official.Interface.RestApi.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release\netcoreapp2.2\Official.Interface.RestApi.AssemblyInfoInputs.cache
@@ -30,3 +28,17 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release\netcoreapp2.2\Official.Interface.RestApi.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release\netcoreapp2.2\Official.Interface.RestApi.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Release\netcoreapp2.2\Official.Interface.RestApi.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.AspNetCore.Authorization.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.AspNetCore.Authorization.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Release\netcoreapp2.2\Official.Interface.RestApi.xml

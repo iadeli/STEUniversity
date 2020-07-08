@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "Official.QueryModel/1.0.0": {
+        "dependencies": {
+          "Official.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "Official.QueryModel.dll": {}
+        }
+      },
+      "Official.Application.Contracts/1.0.0": {
+        "runtime": {
+          "Official.Application.Contracts.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Official.QueryModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Official.Application.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

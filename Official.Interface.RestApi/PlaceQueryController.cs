@@ -24,6 +24,12 @@ namespace Official.Interface.RestApi
             _query = query;
         }
 
+        /// <summary>
+        /// دریافت لیست کشور، استان و شهر
+        /// </summary>
+        /// <param name="typeId">نوع لیست 1- کشور 2- استان 3- شهر</param>
+        /// <param name="placeId">شناسه پدر</param>
+        /// <returns></returns>
         [HttpGet("{typeId}/{placeId?}")]
         public async Task<IActionResult> GetByType(int typeId, long? placeId = null)
         {

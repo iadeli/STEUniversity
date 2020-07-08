@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +17,12 @@
     <ProjectReference Include="..\Official.Interface.Facade.Query\Official.Interface.Facade.Query.csproj" />
     <ProjectReference Include="..\Official.Interface.RestApi\Official.Interface.RestApi.csproj" />
     <ProjectReference Include="..\Official.Unity\Official.Config.DI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -32,6 +39,12 @@
     <TypeScriptSourceMap>True</TypeScriptSourceMap>
     <TypeScriptMapRoot />
     <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\ServiceHost.xml</DocumentationFile>
+    <NoWarn>1701;1702; 1591</NoWarn>
+    <OutputPath>bin\Debug\netcoreapp2.2\</OutputPath>
   </PropertyGroup>
 
 </Project>

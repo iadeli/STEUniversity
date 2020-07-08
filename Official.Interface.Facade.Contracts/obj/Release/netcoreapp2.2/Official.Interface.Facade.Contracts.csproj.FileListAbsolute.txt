@@ -10,3 +10,5 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\ob
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\obj\Release\netcoreapp2.2\Official.Interface.Facade.Contracts.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.Application.Contracts.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Interface.Facade.Contracts\bin\Release\netcoreapp2.2\Official.Application.Contracts.pdb

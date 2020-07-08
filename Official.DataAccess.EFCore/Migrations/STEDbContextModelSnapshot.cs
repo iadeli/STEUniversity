@@ -19,6 +19,25 @@ namespace Official.Persistence.EFCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Term", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FromYear");
+
+                    b.Property<int>("No");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("ToYear");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Terms");
+                });
+
             modelBuilder.Entity("Official.Domain.Model.Enum.Enumuration", b =>
                 {
                     b.Property<long>("Id")
@@ -69,6 +88,8 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int?>("Order");
 
+                    b.Property<string>("Path");
+
                     b.Property<string>("SystemId");
 
                     b.Property<string>("Title");
@@ -80,15 +101,11 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("Menus");
                 });
 
-            modelBuilder.Entity("Official.Domain.Model.Person.Person", b =>
+            modelBuilder.Entity("Official.Domain.Model.Person.BirthCertificate", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Address");
-
-                    b.Property<string>("BirthCertificateNumber");
 
                     b.Property<int?>("BirthCityId");
 
@@ -98,19 +115,9 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int?>("BirthProvinceId");
 
-                    b.Property<string>("Description");
-
                     b.Property<string>("EFirstName");
 
                     b.Property<string>("ELastName");
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("EnlistCode");
-
-                    b.Property<int?>("EnlistId");
-
-                    b.Property<int?>("EthnicityId");
 
                     b.Property<string>("FatherName");
 
@@ -118,31 +125,47 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int>("GenderId");
 
-                    b.Property<int?>("IndigenousSituationId");
-
                     b.Property<int?>("IssueCityId");
 
                     b.Property<string>("LastName");
 
                     b.Property<int?>("MarriedId");
 
+                    b.Property<string>("No");
+
+                    b.Property<long>("PersonId");
+
+                    b.Property<int>("PrefixId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId")
+                        .IsUnique();
+
+                    b.ToTable("BirthCertificate");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.Contact", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Email");
+
                     b.Property<string>("Mobile");
 
-                    b.Property<string>("NationalCode");
-
-                    b.Property<int?>("NationalityId");
-
                     b.Property<string>("NecessaryContactNumber");
+
+                    b.Property<long>("PersonId");
 
                     b.Property<string>("PostBox");
 
                     b.Property<string>("PostalCode");
-
-                    b.Property<int>("PrefixId");
-
-                    b.Property<int?>("ReligionId");
-
-                    b.Property<int?>("SubReligionId");
 
                     b.Property<string>("WorkAddress");
 
@@ -150,7 +173,132 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PersonId")
+                        .IsUnique();
+
+                    b.ToTable("Contact");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.DegreeAttach", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte>("AttachFile");
+
+                    b.Property<string>("Extention");
+
+                    b.Property<long>("HistoryEducationalId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HistoryEducationalId");
+
+                    b.ToTable("DegreeAttaches");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.EducationalInfo", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("HolyDefenseTeacher");
+
+                    b.Property<int>("MaxUnit");
+
+                    b.Property<long>("PersonId");
+
+                    b.Property<bool>("ReligiousTeacher");
+
+                    b.Property<bool>("Status");
+
+                    b.Property<int>("TeacherTypeId");
+
+                    b.Property<long>("TermId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.HasIndex("TermId");
+
+                    b.ToTable("EducationalInfos");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.HistoryEducational", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("AverageScore");
+
+                    b.Property<string>("DegreeDate");
+
+                    b.Property<long>("DegreeId");
+
+                    b.Property<int?>("DegreeStatus");
+
+                    b.Property<string>("EndDate");
+
+                    b.Property<long>("PersonId");
+
+                    b.Property<long>("UniversityId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("HistoryEducationals");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.Person", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NationalCode");
+
+                    b.Property<string>("PersonnelCode");
+
+                    b.Property<string>("TeacherCode");
+
+                    b.HasKey("Id");
+
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.PersonDetail", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EnlistCode");
+
+                    b.Property<int?>("EnlistId");
+
+                    b.Property<int?>("EthnicityId");
+
+                    b.Property<int?>("IndigenousSituationId");
+
+                    b.Property<int?>("NationalityId");
+
+                    b.Property<long>("PersonId");
+
+                    b.Property<int?>("ReligionId");
+
+                    b.Property<int?>("SubReligionId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId")
+                        .IsUnique();
+
+                    b.ToTable("PersonDetail");
                 });
 
             modelBuilder.Entity("Official.Persistence.EFCore.Identity.AppRole", b =>
@@ -320,6 +468,59 @@ namespace Official.Persistence.EFCore.Migrations
                     b.HasOne("Official.Domain.Model.Menu.Menu")
                         .WithMany("SubMenus")
                         .HasForeignKey("MenuId");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.BirthCertificate", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithOne("BirthCertificate")
+                        .HasForeignKey("Official.Domain.Model.Person.BirthCertificate", "PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.Contact", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithOne("Contact")
+                        .HasForeignKey("Official.Domain.Model.Person.Contact", "PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.DegreeAttach", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.HistoryEducational", "HistoryEducational")
+                        .WithMany("DegreeAttaches")
+                        .HasForeignKey("HistoryEducationalId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.EducationalInfo", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithMany("EducationalInfos")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Official.Domain.Model.CommonEntity.Term", "Term")
+                        .WithMany("EducationalInfos")
+                        .HasForeignKey("TermId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.HistoryEducational", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithMany("HistoryEducationals")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.PersonDetail", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithOne("PersonDetail")
+                        .HasForeignKey("Official.Domain.Model.Person.PersonDetail", "PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Official.Persistence.EFCore.Identity.AppRoleClaim", b =>

@@ -24,3 +24,12 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Release\netcoreapp2
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Release\netcoreapp2.2\Official.Config.DI.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Release\netcoreapp2.2\Official.Config.DI.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Release\netcoreapp2.2\Official.Config.DI.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Release\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml

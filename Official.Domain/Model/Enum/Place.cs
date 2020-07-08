@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Official.Domain.Model.Enum
 {
-    public sealed class Place : AggregateRoot
+    public sealed class Place : Entity
     {
         public long PlaceId { get; set; }
         public int Type { get; private set; }
