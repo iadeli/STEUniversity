@@ -12,10 +12,7 @@ using Official.Persistence.EFCore.Jwt;
 
 namespace Official.Interface.RestApi
 {
-    [ServiceFilter(typeof(LoggingActionFilter))]
-    [Route("api/[controller]")]
-    [ApiController]
-    [Authorize]
+    [ApiController, Route("api/[controller]"), AllowAnonymous, ServiceFilter(typeof(LoggingActionFilter))]
     public class PlaceQueryController : ControllerBase
     {
         private readonly IPlaceFacadeQuery _query;

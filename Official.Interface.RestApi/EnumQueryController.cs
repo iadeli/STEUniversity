@@ -11,9 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Official.Interface.RestApi
 {
-    [ServiceFilter(typeof(LoggingActionFilter))]
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Route("api/[controller]"), AllowAnonymous, ServiceFilter(typeof(LoggingActionFilter))]
     public class EnumQueryController : ControllerBase
     {
         private readonly IEnumFacadeQuery _query;

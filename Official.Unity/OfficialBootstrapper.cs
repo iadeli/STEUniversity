@@ -8,6 +8,7 @@ using Official.Application.Command.Person;
 using Official.Application.Command.User;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.User;
+using Official.Domain.Model.Person.EducationalInfoRepository;
 using Official.Domain.Model.Person.IPersonRepository;
 using Official.Domain.Model.Person.IUserRepository;
 using Official.Domain.Model.Security;
@@ -27,8 +28,8 @@ namespace Official.Config.DI
             services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
             services.AddScoped<LoggingActionFilter>();
 
-            services.AddScoped<IPersonRepository, PersonRepository>();
-            services.AddScoped<ICommandHandler<CreatePersonCommand>, PersonCommandHandlers>();
+            //services.AddScoped<IJwtRepository, JwtRepository>();
+            services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository()));
 
             //services.AddScoped<IUserRepository, UserRepository>();
             var serviceProvider = services.BuildServiceProvider();
@@ -37,11 +38,18 @@ namespace Official.Config.DI
             var context = serviceProvider.GetRequiredService<STEDbContext>();
             services.Add(new ServiceDescriptor(typeof(IUserRepository), new UserRepository(userManager, signInManager, context)));
 
-            //services.AddScoped<IJwtRepository, JwtRepository>();
-            services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository()));
-
             services.AddScoped<ICommandHandler<CreateUserCommand>, UserCommandHandlers>();
             services.AddScoped<ICommandHandler<LoginCommand>, UserCommandHandlers>();
+
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<ICommandHandler<CreatePersonCommand>, PersonCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdatePersonCommand>, PersonCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeletePersonCommand>, PersonCommandHandlers>();
+
+            services.AddScoped<IEducationalInfoRepository, EducationalInfoRepository>();
+            services.AddScoped<ICommandHandler<CreateEducationalInfoCommand>, EducationalInfoCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateEducationalInfoCommand>, EducationalInfoCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteEducationalInfoCommand>, EducationalInfoCommandHandlers>();
         }
     }
 }

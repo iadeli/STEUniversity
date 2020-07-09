@@ -26,6 +26,10 @@ namespace Official.Persistence.EFCore.Context
         public DbSet<Term> Terms { get; set; }
 
         public DbSet<Person> Persons { get; set; }
+        public DbSet<BirthCertificate> BirthCertificates { get; set; }
+        public DbSet<PersonDetail> PersonDetails { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+
         public DbSet<EducationalInfo> EducationalInfos { get; set; }
         public DbSet<HistoryEducational> HistoryEducationals { get; set; }
         public DbSet<DegreeAttach> DegreeAttaches { get; set; }

@@ -11,7 +11,7 @@ namespace Official.Application.Command.User
 {
     public class UserCommandHandlers : ICommandHandler<LoginCommand>, ICommandHandler<CreateUserCommand>
     {
-        private readonly IUserRepository _userRepository; 
+        private readonly IUserRepository _userRepository;
         private readonly IJwtRepository _jwtRepository;
         public UserCommandHandlers(IUserRepository userRepository, IJwtRepository jwtRepository)
         {
@@ -35,9 +35,9 @@ namespace Official.Application.Command.User
 
                 command.IsLogin = await _userRepository.Login(command.UserName.Trim(), command.Password.Trim());
 
-                if (!command.IsLogin)
+                if (!(command.IsLogin ?? false))
                 {
-                    throw new Exception("نام کاربری یا کلمه عبور اشتباه است"); 
+                    throw new Exception("نام کاربری یا کلمه عبور اشتباه است");
                 }
 
                 var jwtToken = await _jwtRepository.CreateToken(command.UserName);

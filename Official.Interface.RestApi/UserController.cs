@@ -12,9 +12,7 @@ using System.Threading.Tasks;
 
 namespace Official.Interface.RestApi
 {
-    [ServiceFilter(typeof(LoggingActionFilter))]
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class UserController : ControllerBase
     {
         private readonly ICommandBus _bus;
@@ -28,8 +26,7 @@ namespace Official.Interface.RestApi
         /// </summary>
         /// <param name="command">پارامترهای ورودی</param>
         /// <returns></returns>
-        [HttpPost("Login")]
-        [AllowAnonymous]
+        [HttpPost("Login"), AllowAnonymous]
         public async Task<IActionResult> Login(LoginCommand command)
         {
             try

@@ -7,15 +7,15 @@ namespace Official.Domain.Model.Person
 {
     public sealed class Person : AggregateRoot
     {
-        public string TeacherCode { get; set; }
-        public string PersonnelCode { get; set; }
+        public string TeacherCode { get; private set; }
+        public string PersonnelCode { get; private set; }
         public string NationalCode { get; private set; }
 
         public BirthCertificate BirthCertificate { get; set; }
         public PersonDetail PersonDetail { get; set; }
         public Contact Contact { get; set; }
         public IList<EducationalInfo> EducationalInfos { get; private set; }
-        public IList<HistoryEducational> HistoryEducationals { get; set; }
+        public IList<HistoryEducational> HistoryEducationals { get; private set; }
 
         private Person()
         {

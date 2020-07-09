@@ -70,7 +70,11 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                return _context.Persons.Find(id);
+                var person = _context.Persons.Find(id);
+                person.BirthCertificate = await _context.BirthCertificates.Where(a => a.PersonId == id).FirstOrDefaultAsync();
+                person.PersonDetail = await _context.PersonDetails.Where(a => a.PersonId == id).FirstOrDefaultAsync();
+                person.Contact = await _context.Contacts.Where(a => a.PersonId == id).FirstOrDefaultAsync();
+                return person;
             }
             catch (Exception e)
             {
@@ -98,21 +102,9 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                Person person = _context.Persons.Find(id);
+                Person person = await GetById(id);
                 _context.Persons.Remove(person);
                 await Save();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<List<Person>> Get()
-        {
-            try
-            {
-                return _context.Persons.ToList();
             }
             catch (Exception e)
             {

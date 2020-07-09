@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Official.Domain.Model.Person
 {
-    public class BirthCertificate : Entity
+    public class BirthCertificate : ValueObject<BirthCertificate>
     {
+        //public long Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string EFirstName { get; private set; }
@@ -25,5 +26,22 @@ namespace Official.Domain.Model.Person
         public long PersonId { get; set; }
 
         public Person Person { get; set; }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return FirstName;
+            yield return LastName;
+            yield return EFirstName;
+            yield return ELastName;
+            yield return FatherName;
+            yield return No;
+            yield return IssueCityId;
+            yield return BirthCountryId;
+            yield return BirthCityId;
+            yield return GenderId;
+            yield return PrefixId;
+            yield return MarriedId;
+            yield return PersonId;
+        }
     }
 }

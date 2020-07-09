@@ -11,7 +11,7 @@ namespace Official.Persistence.EFCore.Mappings
     {
         public void Configure(EntityTypeBuilder<PersonDetail> builder)
         {
-            builder.HasKey(a => a.Id);
+            builder.HasKey(a => a.PersonId);
 
             builder.HasOne<Person>(a => a.Person).WithOne(a => a.PersonDetail).HasForeignKey<PersonDetail>(a => a.PersonId);
         }

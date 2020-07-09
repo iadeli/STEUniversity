@@ -29,13 +29,18 @@ namespace Official.Application.Command.Person
                     throw new Exception("کد ملی وارد شده نامعتبر است");
                 }
 
-                var person = _personRepository.IsExistsNationalCode(command.Id, command.NationalCode, create);
-                if(person != null)
+                var isExistsNationalCode = await _personRepository.IsExistsNationalCode(command.Id, command.NationalCode, create);
+                if(isExistsNationalCode)
                 {
                     throw new Exception("کد ملی تکراری است");
                 }
 
                 var entity = Domain.Model.Person.Person.Instance;
+                entity = command.Adapt(entity);
+                entity.BirthCertificate = command.Adapt(entity.BirthCertificate);
+                entity.PersonDetail = command.Adapt(entity.PersonDetail);
+                entity.Contact = command.Adapt(entity.Contact);
+
                 command.Adapt(entity);
                 entity = await _personRepository.Create(entity);
                 var dto = entity.Adapt(command);
@@ -51,7 +56,7 @@ namespace Official.Application.Command.Person
         {
             try
             {
-                const int create = 2;
+                const int update = 2;
 
                 var input = command.NationalCode.PadLeft(10, '0');
                 if (!Regex.IsMatch(input, @"^\d{10}$"))
@@ -59,14 +64,18 @@ namespace Official.Application.Command.Person
                     throw new Exception("کد ملی وارد شده نامعتبر است");
                 }
 
-                var person = _personRepository.IsExistsNationalCode(command.Id, command.NationalCode, create);
-                if (person != null)
+                var isExistsNationalCode = await _personRepository.IsExistsNationalCode(command.Id, command.NationalCode, update);
+                if (isExistsNationalCode)
                 {
                     throw new Exception("کد ملی تکراری است");
                 }
 
                 var entity = await _personRepository.GetById(command.Id);
-                entity.Adapt(command);
+                entity = command.Adapt(entity);
+                entity.BirthCertificate = command.Adapt(entity.BirthCertificate);
+                entity.PersonDetail = command.Adapt(entity.PersonDetail);
+                entity.Contact = command.Adapt(entity.Contact);
+
                 entity = await _personRepository.Update(entity);
                 var dto = entity.Adapt(command);
                 return dto;

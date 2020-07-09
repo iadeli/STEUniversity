@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person;
@@ -12,9 +13,7 @@ using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi
 {
-    [ServiceFilter(typeof(LoggingActionFilter))]
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class PersonController : ControllerBase
     {
         private readonly ICommandBus _bus;
@@ -63,11 +62,11 @@ namespace Official.Interface.RestApi
         }
 
         /// <summary>
-        /// حذف اطلاهات فردی
+        /// حذف اطلاعات فردی
         /// </summary>
         /// <param name="Id">شناسه فرد</param>
         /// <returns></returns>
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> Delete(long Id)
         {
             try

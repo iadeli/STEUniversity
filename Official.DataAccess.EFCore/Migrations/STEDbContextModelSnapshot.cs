@@ -103,9 +103,7 @@ namespace Official.Persistence.EFCore.Migrations
 
             modelBuilder.Entity("Official.Domain.Model.Person.BirthCertificate", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<long>("PersonId");
 
                     b.Property<int?>("BirthCityId");
 
@@ -133,23 +131,16 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("No");
 
-                    b.Property<long>("PersonId");
-
                     b.Property<int>("PrefixId");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonId");
 
-                    b.HasIndex("PersonId")
-                        .IsUnique();
-
-                    b.ToTable("BirthCertificate");
+                    b.ToTable("BirthCertificates");
                 });
 
             modelBuilder.Entity("Official.Domain.Model.Person.Contact", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<long>("PersonId");
 
                     b.Property<string>("Address");
 
@@ -161,8 +152,6 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("NecessaryContactNumber");
 
-                    b.Property<long>("PersonId");
-
                     b.Property<string>("PostBox");
 
                     b.Property<string>("PostalCode");
@@ -171,12 +160,9 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("WorkplacePhoneNumber");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonId");
 
-                    b.HasIndex("PersonId")
-                        .IsUnique();
-
-                    b.ToTable("Contact");
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("Official.Domain.Model.Person.DegreeAttach", b =>
@@ -273,9 +259,7 @@ namespace Official.Persistence.EFCore.Migrations
 
             modelBuilder.Entity("Official.Domain.Model.Person.PersonDetail", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<long>("PersonId");
 
                     b.Property<string>("EnlistCode");
 
@@ -287,18 +271,13 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int?>("NationalityId");
 
-                    b.Property<long>("PersonId");
-
                     b.Property<int?>("ReligionId");
 
                     b.Property<int?>("SubReligionId");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonId");
 
-                    b.HasIndex("PersonId")
-                        .IsUnique();
-
-                    b.ToTable("PersonDetail");
+                    b.ToTable("PersonDetails");
                 });
 
             modelBuilder.Entity("Official.Persistence.EFCore.Identity.AppRole", b =>

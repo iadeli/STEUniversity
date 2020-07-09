@@ -44,9 +44,9 @@ namespace ServiceHost
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(options => options.Filters.Add(new AuthorizeFilter()));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("Official.Interface.RestApi")));
+            services.AddMvc(options => options.Filters.Add(new AuthorizeFilter()));
 
             services.AddScoped<UserStore<AppUser, AppRole, STEDbContext, long, AppUserClaim, AppUserRole, AppUserLogin, AppUserToken, AppRoleClaim>, ApplicationUserStore>();
             services.AddScoped<UserManager<AppUser>, ApplicationUserManager>();
@@ -134,6 +134,7 @@ namespace ServiceHost
             services.AddScoped<IEnumFacadeQuery, EnumFacadeQuery>();
             services.AddScoped<IPlaceFacadeQuery, PlaceFacadeQuery>();
             services.AddScoped<IPersonFacadeQuery, PersonFacadeQuery>();
+            services.AddScoped<IEducationalInfoFacadeQuery, EducationalInfoFacadeQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

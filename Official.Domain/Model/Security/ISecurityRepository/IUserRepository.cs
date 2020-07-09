@@ -8,7 +8,7 @@ namespace Official.Domain.Model.Person.IUserRepository
     public interface IUserRepository : IDisposable
     {
         Task<bool> Login(string userName, string password);
-        Task<bool> Register(string userName, string password);
+        bool Register(string userName, string password);
         Task<bool> Create(string userName, string password, long personId);
         Task<bool> IsExistsUserName(string userName);
     }

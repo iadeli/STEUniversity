@@ -54,7 +54,7 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task<bool> Register(string userName, string password)
+        public bool Register(string userName, string password)
         {
             try
             {

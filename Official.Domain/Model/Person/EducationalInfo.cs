@@ -20,5 +20,21 @@ namespace Official.Domain.Model.Person
 
         public Person Person { get; private set; }
         public Term Term { get; private set; }
+
+        private EducationalInfo()
+        {
+        }
+        private static EducationalInfo instance = null;
+        public static EducationalInfo Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new EducationalInfo();
+                }
+                return instance;
+            }
+        }
     }
 }

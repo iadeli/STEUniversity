@@ -7,7 +7,7 @@ namespace Official.Domain.Model.Person
 {
     public class PersonDetail : ValueObject<PersonDetail>
     {
-        public long Id { get; set; }
+        //public long Id { get; private set; }
         public int? EnlistId { get; private set; }
         public string EnlistCode { get; private set; }
         public int? ReligionId { get; private set; }
@@ -22,7 +22,6 @@ namespace Official.Domain.Model.Person
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
-            yield return Id;
             yield return EnlistId;
             yield return EnlistCode;
             yield return ReligionId;

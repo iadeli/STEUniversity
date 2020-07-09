@@ -13,6 +13,5 @@ namespace Official.Domain.Model.Person.IPersonRepository
 
         Task<Person> GetById(long id);
         Task<bool> IsExistsNationalCode(long? id, string nationalCode, int actionType);
-        Task<List<Person>> Get();
     }
 }

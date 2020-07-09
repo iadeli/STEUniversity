@@ -11,9 +11,7 @@ using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi
 {
-    [ServiceFilter(typeof(LoggingActionFilter))]
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class MenuQueryController : ControllerBase
     {
         private readonly IMenuFacadeQuery _query;

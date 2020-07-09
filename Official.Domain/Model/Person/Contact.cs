@@ -7,7 +7,7 @@ namespace Official.Domain.Model.Person
 {
     public class Contact : ValueObject<Contact>
     {
-        public long Id { get; set; }
+        //public long Id { get; private set; }
         public string Address { get; private set; }
         public string PostalCode { get; private set; }
         public string PostBox { get; private set; }
@@ -24,7 +24,6 @@ namespace Official.Domain.Model.Person
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
-            yield return Id;
             yield return Address;
             yield return PostalCode;
             yield return PostBox;

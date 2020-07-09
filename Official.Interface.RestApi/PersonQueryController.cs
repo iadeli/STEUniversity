@@ -11,9 +11,7 @@ using Official.QueryModel.Model;
 
 namespace Official.Interface.RestApi
 {
-    [ServiceFilter(typeof(LoggingActionFilter))]
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class PersonQueryController : ControllerBase
     {
         private readonly IPersonFacadeQuery _query;

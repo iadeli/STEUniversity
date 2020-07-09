@@ -4,6 +4,40 @@
         <name>Official.Interface.RestApi</name>
     </assembly>
     <members>
+        <member name="M:Official.Interface.RestApi.EducationalInfoController.Post(Official.Application.Contracts.Command.Person.CreateEducationalInfoCommand)">
+            <summary>
+            افزودن اطلاعات آموزشی
+            </summary>
+            <param name="command">فیلد های اطلاعات آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EducationalInfoController.Put(Official.Application.Contracts.Command.Person.UpdateEducationalInfoCommand)">
+            <summary>
+            ویرایش اطلاعات آموزشی
+            </summary>
+            <param name="command">فیلدهای اطلاعات آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EducationalInfoController.Delete(System.Int64)">
+            <summary>
+            حذف اطلاعات آموزشی
+            </summary>
+            <param name="Id">شناسه اطلاعات آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EducationalInfoQueryController.Get">
+            <summary>
+            دریافت اطلاعات آموزشی
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EducationalInfoQueryController.GetById(System.Int32)">
+            <summary>
+            دریافت اطلاعات آموزشی براساس شناسه
+            </summary>
+            <param name="id">شناسه اطلاعات آموزشی</param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.EnumQueryController.GetByName(System.String)">
             <summary>
             دریافت لیست کمبو
@@ -39,7 +73,7 @@
         </member>
         <member name="M:Official.Interface.RestApi.PersonController.Delete(System.Int64)">
             <summary>
-            حذف اطلاهات فردی
+            حذف اطلاعات فردی
             </summary>
             <param name="Id">شناسه فرد</param>
             <returns></returns>
