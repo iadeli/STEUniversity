@@ -1,10 +1,6 @@
-﻿using Official.Domain.Model.Security.ISecurityRepository;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Official.Domain.Model.Security
+namespace Official.Domain.Model.Security.ISecurityRepository
 {
     public interface IJwtRepository
     {

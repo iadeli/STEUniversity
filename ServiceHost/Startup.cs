@@ -19,9 +19,11 @@ using Official.Framework.DI;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Enum;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Menu;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
+using Official.Interface.Facade.Contracts.IFacadeQuery.Term;
 using Official.Interface.Facade.Query.FacadeQuery.Enum;
 using Official.Interface.Facade.Query.FacadeQuery.Menu;
 using Official.Interface.Facade.Query.FacadeQuery.Person;
+using Official.Interface.Facade.Query.FacadeQuery.Term;
 using Official.Persistence.EFCore.Context;
 using Official.Persistence.EFCore.Identity;
 using Official.Persistence.EFCore.Jwt;
@@ -130,11 +132,13 @@ namespace ServiceHost
             FrameworkBootstrapper.WireUp(services);
             OfficialBootstrapper.WireUp(services, _officialConfig.ConnectionStrings.MainDbConnection);
 
-            services.AddScoped<IMenuFacadeQuery, MenuFacadeQuery>();
             services.AddScoped<IEnumFacadeQuery, EnumFacadeQuery>();
             services.AddScoped<IPlaceFacadeQuery, PlaceFacadeQuery>();
+            services.AddScoped<IMenuFacadeQuery, MenuFacadeQuery>();
+            services.AddScoped<ITermFacadeQuery, TermFacadeQuery>();
             services.AddScoped<IPersonFacadeQuery, PersonFacadeQuery>();
             services.AddScoped<IEducationalInfoFacadeQuery, EducationalInfoFacadeQuery>();
+            services.AddScoped<IHistoryEducationalFacadeQuery, HistoryEducationalFacadeQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

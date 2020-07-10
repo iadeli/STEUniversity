@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
 
 namespace Official.Application.Command.Person
 {
@@ -37,7 +38,7 @@ namespace Official.Application.Command.Person
         {
             try
             {
-                var entity = _educationalInfoRepository.GetById(command.Id);
+                var entity = await _educationalInfoRepository.GetById(command.Id);
                 entity = command.Adapt(entity);
                 entity = await _educationalInfoRepository.Update(entity);
                 var dto = entity.Adapt(command);

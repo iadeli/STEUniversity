@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Official.Domain.Model.Person.IUserRepository;
 using Official.Domain.Model.Security;
+using Official.Domain.Model.Security.ISecurityRepository;
 
 namespace Official.Application.Command.User
 {

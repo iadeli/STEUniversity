@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Official.Domain.Model.Person.IUserRepository;
+using Official.Domain.Model.Security.ISecurityRepository;
 using Official.Persistence.EFCore.Context;
 
 namespace Official.Persistence.EFCore.Repositories

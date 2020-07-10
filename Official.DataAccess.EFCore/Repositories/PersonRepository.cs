@@ -70,7 +70,7 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                var person = _context.Persons.Find(id);
+                var person = await _context.Persons.FindAsync(id);
                 person.BirthCertificate = await _context.BirthCertificates.Where(a => a.PersonId == id).FirstOrDefaultAsync();
                 person.PersonDetail = await _context.PersonDetails.Where(a => a.PersonId == id).FirstOrDefaultAsync();
                 person.Contact = await _context.Contacts.Where(a => a.PersonId == id).FirstOrDefaultAsync();

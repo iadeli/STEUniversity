@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Official.Domain.Model.Person.IUserRepository
+namespace Official.Domain.Model.Security.ISecurityRepository
 {
     public interface IUserRepository : IDisposable
     {

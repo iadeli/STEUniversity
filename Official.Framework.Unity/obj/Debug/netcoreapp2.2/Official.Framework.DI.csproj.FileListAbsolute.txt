@@ -47,6 +47,7 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\net
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfoInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Unity\obj\Debug\netcoreapp2.2\Official.Framework.DI.AssemblyInfo.cs

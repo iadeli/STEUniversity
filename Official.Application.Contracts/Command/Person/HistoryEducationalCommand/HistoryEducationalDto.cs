@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Official.Application.Contracts.Command.Person
+﻿namespace Official.Application.Contracts.Command.Person.HistoryEducationalCommand
 {
     public class HistoryEducationalDto
     {
+        public long Id { get; set; }
         public long UniversityId { get; set; }
         public long DegreeId { get; set; }
         public long AverageScore { get; set; }

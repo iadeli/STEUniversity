@@ -5,13 +5,20 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Official.Application.Attribute;
 using Official.Application.Command.Person;
+using Official.Application.Command.Term;
 using Official.Application.Command.User;
 using Official.Application.Contracts.Command.Person;
+using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
+using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
+using Official.Application.Contracts.Command.Person.PersonCommand;
+using Official.Application.Contracts.Command.Term;
 using Official.Application.Contracts.Command.User;
+using Official.Domain.Model.CommonEntity.Term.ITermRepository;
 using Official.Domain.Model.Person.EducationalInfoRepository;
+using Official.Domain.Model.Person.IHistoryEducationalRepository;
 using Official.Domain.Model.Person.IPersonRepository;
-using Official.Domain.Model.Person.IUserRepository;
 using Official.Domain.Model.Security;
+using Official.Domain.Model.Security.ISecurityRepository;
 using Official.Framework.Application;
 using Official.Persistence.EFCore;
 using Official.Persistence.EFCore.Context;
@@ -50,6 +57,16 @@ namespace Official.Config.DI
             services.AddScoped<ICommandHandler<CreateEducationalInfoCommand>, EducationalInfoCommandHandlers>();
             services.AddScoped<ICommandHandler<UpdateEducationalInfoCommand>, EducationalInfoCommandHandlers>();
             services.AddScoped<ICommandHandler<DeleteEducationalInfoCommand>, EducationalInfoCommandHandlers>();
+
+            services.AddScoped<ITermRepository, TermRepository>();
+            services.AddScoped<ICommandHandler<CreateTermCommand>, TermCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateTermCommand>, TermCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteTermCommand>, TermCommandHandlers>();
+
+            services.AddScoped<IHistoryEducationalRepository, HistoryEducationalRepository>();
+            services.AddScoped<ICommandHandler<CreateHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
         }
     }
 }

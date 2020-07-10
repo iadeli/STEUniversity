@@ -70,7 +70,7 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                var educationalInfo = _context.EducationalInfos.Find(id);
+                var educationalInfo = await _context.EducationalInfos.FindAsync(id);
                 _context.EducationalInfos.Remove(educationalInfo);
                 await Save();
             }
@@ -80,11 +80,11 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public EducationalInfo GetById(long id)
+        public async Task<EducationalInfo> GetById(long id)
         {
             try
             {
-                var educationalInfo = _context.EducationalInfos.Find(id);
+                var educationalInfo = await _context.EducationalInfos.FindAsync(id);
                 return educationalInfo;
             }
             catch (Exception e)

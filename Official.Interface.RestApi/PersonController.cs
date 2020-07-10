@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person;
+using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
 

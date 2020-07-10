@@ -28,6 +28,7 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\bin\Debug\netcoreapp2.2\Official.Application.Contracts.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\bin\Debug\netcoreapp2.2\Official.Application.Contracts.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\bin\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.AssemblyInfoInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.AssemblyInfo.cs

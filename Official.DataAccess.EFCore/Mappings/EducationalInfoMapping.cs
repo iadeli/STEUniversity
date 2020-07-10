@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Official.Domain.Model.CommonEntity;
+using Official.Domain.Model.CommonEntity.Term;
 using Official.Domain.Model.Person;
 
 namespace Official.Persistence.EFCore.Mappings

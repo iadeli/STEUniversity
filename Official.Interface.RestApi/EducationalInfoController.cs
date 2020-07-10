@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
 
 namespace Official.Interface.RestApi
 {
@@ -25,6 +26,7 @@ namespace Official.Interface.RestApi
         /// </summary>
         /// <param name="command">فیلد های اطلاعات آموزشی</param>
         /// <returns></returns>
+        [HttpPost]
         public async Task<IActionResult> Post(CreateEducationalInfoCommand command)
         {
             try

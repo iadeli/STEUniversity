@@ -20,9 +20,17 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
 
         public async Task<List<EducationalInfoQuery>> Get()
         {
-            var sql = "select * from EducationalInfos";
-            var data = await _connection.QueryAsync<EducationalInfoQuery>(sql);
-            return data.ToList();
+            try
+            {
+                var sql = "select * from EducationalInfos";
+                var data = await _connection.QueryAsync<EducationalInfoQuery>(sql);
+                return data.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
         }
 
         public async Task<EducationalInfoQuery> GetById(int id)

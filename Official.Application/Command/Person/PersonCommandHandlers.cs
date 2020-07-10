@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Mapster;
 using Official.Application.Contracts.Command.Person;
+using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Domain.Model.Person.IPersonRepository;
 using Official.Framework.Application;
 
@@ -41,7 +42,6 @@ namespace Official.Application.Command.Person
                 entity.PersonDetail = command.Adapt(entity.PersonDetail);
                 entity.Contact = command.Adapt(entity.Contact);
 
-                command.Adapt(entity);
                 entity = await _personRepository.Create(entity);
                 var dto = entity.Adapt(command);
                 return dto;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Official.Application.Contracts.Command.Person
+﻿namespace Official.Application.Contracts.Command.Person.EducationalInfoCommand
 {
     public class DeleteEducationalInfoCommand : EducationalInfoDto
     {

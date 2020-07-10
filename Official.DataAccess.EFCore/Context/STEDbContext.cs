@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Official.Domain.Model.CommonEntity;
-using Official.Domain.Model.Enum;
-using Official.Domain.Model.Menu;
+using Official.Domain.Model.CommonEntity.Enum;
+using Official.Domain.Model.CommonEntity.Menu;
+using Official.Domain.Model.CommonEntity.Term;
 using Official.Domain.Model.Person;
 using Official.Persistence.EFCore.Identity;
 using Official.Persistence.EFCore.Mappings;
