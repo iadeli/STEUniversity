@@ -19,26 +19,7 @@ namespace Official.Persistence.EFCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Term", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FromYear");
-
-                    b.Property<int>("No");
-
-                    b.Property<string>("Title");
-
-                    b.Property<string>("ToYear");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Terms");
-                });
-
-            modelBuilder.Entity("Official.Domain.Model.Enum.Enumuration", b =>
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Enum.Enumuration", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -57,7 +38,7 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("Enumurations");
                 });
 
-            modelBuilder.Entity("Official.Domain.Model.Enum.Place", b =>
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Enum.Place", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,7 +55,7 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("Places");
                 });
 
-            modelBuilder.Entity("Official.Domain.Model.Menu.Menu", b =>
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,6 +80,25 @@ namespace Official.Persistence.EFCore.Migrations
                     b.HasIndex("MenuId");
 
                     b.ToTable("Menus");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Term.Term", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FromYear");
+
+                    b.Property<int>("No");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("ToYear");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Terms");
                 });
 
             modelBuilder.Entity("Official.Domain.Model.Person.BirthCertificate", b =>
@@ -211,6 +211,19 @@ namespace Official.Persistence.EFCore.Migrations
                     b.HasIndex("TermId");
 
                     b.ToTable("EducationalInfos");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.HireStage", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HireStages");
                 });
 
             modelBuilder.Entity("Official.Domain.Model.Person.HistoryEducational", b =>
@@ -442,9 +455,9 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Official.Domain.Model.Menu.Menu", b =>
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
-                    b.HasOne("Official.Domain.Model.Menu.Menu")
+                    b.HasOne("Official.Domain.Model.CommonEntity.Menu.Menu")
                         .WithMany("SubMenus")
                         .HasForeignKey("MenuId");
                 });
@@ -480,7 +493,7 @@ namespace Official.Persistence.EFCore.Migrations
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Official.Domain.Model.CommonEntity.Term", "Term")
+                    b.HasOne("Official.Domain.Model.CommonEntity.Term.Term", "Term")
                         .WithMany("EducationalInfos")
                         .HasForeignKey("TermId")
                         .OnDelete(DeleteBehavior.Cascade);

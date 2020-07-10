@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Official.Domain.Model.Person.EducationalInfoRepository
+namespace Official.Domain.Model.Person.IEducationalInfoRepository
 {
     public interface IEducationalInfoRepository : IDisposable
     {

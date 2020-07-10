@@ -1,12 +1,12 @@
 ﻿using Mapster;
 using Official.Application.Contracts.Command.Person;
-using Official.Domain.Model.Person.EducationalInfoRepository;
 using Official.Framework.Application;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
+using Official.Domain.Model.Person.IEducationalInfoRepository;
 
 namespace Official.Application.Command.Person
 {

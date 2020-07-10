@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Official.Domain.Model.Person;
-using Official.Domain.Model.Person.EducationalInfoRepository;
 using Official.Persistence.EFCore.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Domain.Model.Person.IEducationalInfoRepository;
 
 namespace Official.Persistence.EFCore.Repositories
 {

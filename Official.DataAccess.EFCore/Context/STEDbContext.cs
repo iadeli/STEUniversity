@@ -25,6 +25,7 @@ namespace Official.Persistence.EFCore.Context
         }
 
         public DbSet<Term> Terms { get; set; }
+        public DbSet<HireStage> HireStages { get; set; }
 
         public DbSet<Person> Persons { get; set; }
         public DbSet<BirthCertificate> BirthCertificates { get; set; }

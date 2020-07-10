@@ -9,12 +9,14 @@ using Official.Application.Command.Term;
 using Official.Application.Command.User;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
+using Official.Application.Contracts.Command.Person.HireStageCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Term;
 using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.CommonEntity.Term.ITermRepository;
-using Official.Domain.Model.Person.EducationalInfoRepository;
+using Official.Domain.Model.Person.IEducationalInfoRepository;
+using Official.Domain.Model.Person.IHireStageRepository;
 using Official.Domain.Model.Person.IHistoryEducationalRepository;
 using Official.Domain.Model.Person.IPersonRepository;
 using Official.Domain.Model.Security;
@@ -31,9 +33,9 @@ namespace Official.Config.DI
     {
         public static void WireUp(IServiceCollection services, string connectionString)
         {
-            services.AddScoped<STEDbContext>(sp => new OfficialContextFactory().CreateDbContext(new string[] { }));
-            services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
-            services.AddScoped<LoggingActionFilter>();
+            services.AddSingleton<STEDbContext>(sp => new OfficialContextFactory().CreateDbContext(new string[] { }));
+            services.AddSingleton<IDbConnection>(sp => new SqlConnection(connectionString));
+            services.AddSingleton<LoggingActionFilter>();
 
             //services.AddScoped<IJwtRepository, JwtRepository>();
             services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository()));
@@ -67,6 +69,11 @@ namespace Official.Config.DI
             services.AddScoped<ICommandHandler<CreateHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
             services.AddScoped<ICommandHandler<UpdateHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
             services.AddScoped<ICommandHandler<DeleteHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
+
+            services.AddScoped<IHireStageRepository, HireStageRepository>();
+            services.AddScoped<ICommandHandler<CreateHireStageCommand>, HireStageCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateHireStageCommand>, HireStageCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteHireStageCommand>, HireStageCommandHandlers>();
         }
     }
 }

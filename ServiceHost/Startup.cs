@@ -139,6 +139,7 @@ namespace ServiceHost
             services.AddScoped<IPersonFacadeQuery, PersonFacadeQuery>();
             services.AddScoped<IEducationalInfoFacadeQuery, EducationalInfoFacadeQuery>();
             services.AddScoped<IHistoryEducationalFacadeQuery, HistoryEducationalFacadeQuery>();
+            services.AddScoped<IHireStageFacadeQuery, HireStageFacadeQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

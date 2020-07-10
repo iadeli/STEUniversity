@@ -25,24 +25,25 @@
             <param name="Id">شناسه اطلاعات آموزشی</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.EducationalInfoQueryController.Get">
+        <member name="M:Official.Interface.RestApi.HireStageController.Post(Official.Application.Contracts.Command.Person.HireStageCommand.CreateHireStageCommand)">
             <summary>
-            دریافت اطلاعات آموزشی
+            افزودن وضعیت استخدامی
             </summary>
+            <param name="command">فیلد های وضعیت استخدامی</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.EducationalInfoQueryController.GetById(System.Int32)">
+        <member name="M:Official.Interface.RestApi.HireStageController.Put(Official.Application.Contracts.Command.Person.HireStageCommand.UpdateHireStageCommand)">
             <summary>
-            دریافت اطلاعات آموزشی براساس شناسه
+            ویرایش وضعیت استخدامی
             </summary>
-            <param name="id">شناسه اطلاعات آموزشی</param>
+            <param name="command">فیلدهای وضعیت استخدامی</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.EnumQueryController.GetByName(System.String)">
+        <member name="M:Official.Interface.RestApi.HireStageController.Delete(System.Int64)">
             <summary>
-            دریافت لیست کمبو
+            حذف وضعیت استخدامی
             </summary>
-            <param name="Name">نام کمبو</param>
+            <param name="Id">شناسه وضعیت استخدامی</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.HistoryEducationalController.Post(Official.Application.Contracts.Command.Person.HistoryEducationalCommand.CreateHistoryEducationalCommand)">
@@ -64,6 +65,95 @@
             حذف سوابق تحصیلی
             </summary>
             <param name="Id">شناسه سوابق تحصیلی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.PersonController.Post(Official.Application.Contracts.Command.Person.PersonCommand.CreatePersonCommand)">
+            <summary>
+            افزودن اطلاعات فردی
+            </summary>
+            <param name="command">فیلدهای اطلاعات فردی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.PersonController.Put(Official.Application.Contracts.Command.Person.PersonCommand.UpdatePersonCommand)">
+            <summary>
+            ویرایش اطلاعات فردی
+            </summary>
+            <param name="command">فیلدهای اطلاعات فردی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.PersonController.Delete(System.Int64)">
+            <summary>
+            حذف اطلاعات فردی
+            </summary>
+            <param name="Id">شناسه فرد</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.TermController.Post(Official.Application.Contracts.Command.Term.CreateTermCommand)">
+            <summary>
+            افزودن ترم آموزشی
+            </summary>
+            <param name="command">فیلد های ترم آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.TermController.Put(Official.Application.Contracts.Command.Term.UpdateTermCommand)">
+            <summary>
+            ویرایش ترم آموزشی
+            </summary>
+            <param name="command">فیلدهای ترم آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.TermController.Delete(System.Int64)">
+            <summary>
+            حذف ترم آموزشی
+            </summary>
+            <param name="Id">شناسه ترم آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.UserController.Login(Official.Application.Contracts.Command.User.LoginCommand)">
+            <summary>
+            احراز هویت
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.UserController.Create(Official.Application.Contracts.Command.User.CreateUserCommand)">
+            <summary>
+            ایجاد کاربر
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EducationalInfoQueryController.Get">
+            <summary>
+            دریافت اطلاعات آموزشی
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EducationalInfoQueryController.GetById(System.Int32)">
+            <summary>
+            دریافت اطلاعات آموزشی براساس شناسه
+            </summary>
+            <param name="id">شناسه اطلاعات آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.EnumQueryController.GetByName(System.String)">
+            <summary>
+            دریافت لیست کمبو
+            </summary>
+            <param name="Name">نام کمبو</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.HireStageQueryController.Get">
+            <summary>
+            دریافت وضعیت استخدامی
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.HireStageQueryController.GetById(System.Int32)">
+            <summary>
+            دریافت وضعیت استخدامی براساس شناسه
+            </summary>
+            <param name="id">شناسه وضعیت استخدامی</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.HistoryEducationalQueryController.Get">
@@ -91,27 +181,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.PersonController.Post(Official.Application.Contracts.Command.Person.PersonCommand.CreatePersonCommand)">
-            <summary>
-            افزودن اطلاعات فردی
-            </summary>
-            <param name="command">فیلدهای اطلاعات فردی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.PersonController.Put(Official.Application.Contracts.Command.Person.PersonCommand.UpdatePersonCommand)">
-            <summary>
-            ویرایش اطلاعات فردی
-            </summary>
-            <param name="command">فیلدهای اطلاعات فردی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.PersonController.Delete(System.Int64)">
-            <summary>
-            حذف اطلاعات فردی
-            </summary>
-            <param name="Id">شناسه فرد</param>
-            <returns></returns>
-        </member>
         <member name="M:Official.Interface.RestApi.PersonQueryController.Get">
             <summary>
             دریافت اطلاعات فردی
@@ -133,27 +202,6 @@
             <param name="placeId">شناسه پدر</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.TermController.Post(Official.Application.Contracts.Command.Term.CreateTermCommand)">
-            <summary>
-            افزودن ترم آموزشی
-            </summary>
-            <param name="command">فیلد های ترم آموزشی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.TermController.Put(Official.Application.Contracts.Command.Term.UpdateTermCommand)">
-            <summary>
-            ویرایش ترم آموزشی
-            </summary>
-            <param name="command">فیلدهای ترم آموزشی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.TermController.Delete(System.Int64)">
-            <summary>
-            حذف ترم آموزشی
-            </summary>
-            <param name="Id">شناسه ترم آموزشی</param>
-            <returns></returns>
-        </member>
         <member name="M:Official.Interface.RestApi.TermQueryController.Get">
             <summary>
             دریافت ترم آموزشی
@@ -165,20 +213,6 @@
             دریافت ترم آموزشی براساس شناسه
             </summary>
             <param name="id">شناسه ترم آموزشی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.UserController.Login(Official.Application.Contracts.Command.User.LoginCommand)">
-            <summary>
-            احراز هویت
-            </summary>
-            <param name="command">پارامترهای ورودی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.UserController.Create(Official.Application.Contracts.Command.User.CreateUserCommand)">
-            <summary>
-            ایجاد کاربر
-            </summary>
-            <param name="command">پارامترهای ورودی</param>
             <returns></returns>
         </member>
     </members>
