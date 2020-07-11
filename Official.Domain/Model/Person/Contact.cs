@@ -1,6 +1,7 @@
 ﻿using Official.Domain.Model.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Official.Domain.Model.Person

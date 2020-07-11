@@ -13,6 +13,9 @@ namespace Official.Persistence.EFCore.Mappings
         {
             builder.HasKey(a => a.Id);
 
+            builder.Property(a => a.EndDate).HasMaxLength(10);
+            builder.Property(a => a.DegreeDate).HasMaxLength(10).IsRequired();
+
             builder.HasMany<DegreeAttach>(a => a.DegreeAttaches).WithOne(a => a.HistoryEducational).IsRequired();
             builder.HasOne<Person>(a => a.Person).WithMany(a => a.HistoryEducationals).HasForeignKey(a => a.PersonId).IsRequired();
         }

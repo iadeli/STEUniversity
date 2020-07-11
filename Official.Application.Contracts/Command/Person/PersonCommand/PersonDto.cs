@@ -1,4 +1,6 @@
-﻿namespace Official.Application.Contracts.Command.Person.PersonCommand
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Official.Application.Contracts.Command.Person.PersonCommand
 {
     public class PersonDto
     {
@@ -35,6 +37,8 @@
         public string PostBox { get; set; }
         public string Mobile { get; set; }
         public string WorkplacePhoneNumber { get; set; }
+
+        [EmailAddress(ErrorMessage = "ایمیل وارد شده معتبر نیست")]
         public string Email { get; set; }
         public string WorkAddress { get; set; }
         public string NecessaryContactNumber { get; set; }

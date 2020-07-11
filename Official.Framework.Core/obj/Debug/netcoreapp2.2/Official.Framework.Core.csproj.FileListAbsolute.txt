@@ -26,7 +26,6 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\bin\Debug\netcoreapp2.2\Official.Framework.Core.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.AssemblyInfoInputs.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.AssemblyInfo.cs

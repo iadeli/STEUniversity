@@ -11,10 +11,10 @@ namespace Official.Domain.Model.Person
     public sealed class EducationalInfo : Entity
     {
         public int MaxUnit { get; private set; }
-        public bool Status { get; private set; }
+        public bool? Status { get; private set; }
         public int TeacherTypeId { get; private set; }
-        public bool ReligiousTeacher { get; set; }
-        public bool HolyDefenseTeacher { get; set; }
+        public bool? ReligiousTeacher { get; set; }
+        public bool? HolyDefenseTeacher { get; set; }
 
         public long TermId { get; private set; }
         public long PersonId { get; private set; }

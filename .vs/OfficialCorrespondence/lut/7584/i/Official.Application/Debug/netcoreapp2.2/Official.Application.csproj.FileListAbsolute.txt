@@ -5,3 +5,4 @@ C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Off
 C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.dll
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache

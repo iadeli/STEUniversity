@@ -76,10 +76,6 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csproj.CopyComplete
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.dll
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.pdb
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csprojAssemblyReference.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Config.DI.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Config.DI.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Official.Config.DI.pdb
@@ -108,6 +104,10 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Unity\obj\Debug\netcoreapp2.2\Official.Config.DI.pdb

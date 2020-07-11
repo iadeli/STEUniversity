@@ -27,11 +27,14 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("EnumFiled");
 
-                    b.Property<string>("EnumName");
+                    b.Property<string>("EnumName")
+                        .IsRequired();
 
-                    b.Property<string>("EnumTitle");
+                    b.Property<string>("EnumTitle")
+                        .IsRequired();
 
-                    b.Property<string>("EnumValue");
+                    b.Property<string>("EnumValue")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -44,7 +47,8 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<long>("PlaceId");
 
@@ -61,7 +65,8 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Icon");
+                    b.Property<string>("Icon")
+                        .HasMaxLength(500);
 
                     b.Property<int?>("Level");
 
@@ -69,7 +74,8 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int?>("Order");
 
-                    b.Property<string>("Path");
+                    b.Property<string>("Path")
+                        .HasMaxLength(500);
 
                     b.Property<string>("SystemId");
 
@@ -88,13 +94,15 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("FromYear");
+                    b.Property<string>("FromYear")
+                        .HasMaxLength(10);
 
                     b.Property<int>("No");
 
                     b.Property<string>("Title");
 
-                    b.Property<string>("ToYear");
+                    b.Property<string>("ToYear")
+                        .HasMaxLength(10);
 
                     b.HasKey("Id");
 
@@ -109,7 +117,8 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int?>("BirthCountryId");
 
-                    b.Property<string>("BirthDate");
+                    b.Property<string>("BirthDate")
+                        .HasMaxLength(10);
 
                     b.Property<int?>("BirthProvinceId");
 
@@ -119,7 +128,7 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("FatherName");
 
-                    b.Property<int>("GenderId");
+                    b.Property<int?>("GenderId");
 
                     b.Property<int?>("IssueCityId");
 
@@ -127,7 +136,7 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("No");
 
-                    b.Property<int>("PrefixId");
+                    b.Property<int?>("PrefixId");
 
                     b.HasKey("PersonId");
 
@@ -144,17 +153,21 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("Mobile");
+                    b.Property<string>("Mobile")
+                        .HasMaxLength(11);
 
-                    b.Property<string>("NecessaryContactNumber");
+                    b.Property<string>("NecessaryContactNumber")
+                        .HasMaxLength(11);
 
                     b.Property<string>("PostBox");
 
-                    b.Property<string>("PostalCode");
+                    b.Property<string>("PostalCode")
+                        .HasMaxLength(10);
 
                     b.Property<string>("WorkAddress");
 
-                    b.Property<string>("WorkplacePhoneNumber");
+                    b.Property<string>("WorkplacePhoneNumber")
+                        .HasMaxLength(11);
 
                     b.HasKey("PersonId");
 
@@ -167,9 +180,12 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<byte[]>("AttachFile");
+                    b.Property<byte[]>("AttachFile")
+                        .IsRequired();
 
-                    b.Property<string>("Extention");
+                    b.Property<string>("Extention")
+                        .IsRequired()
+                        .HasMaxLength(500);
 
                     b.Property<long>("HistoryEducationalId");
 
@@ -186,15 +202,15 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("HolyDefenseTeacher");
+                    b.Property<bool?>("HolyDefenseTeacher");
 
                     b.Property<int>("MaxUnit");
 
                     b.Property<long>("PersonId");
 
-                    b.Property<bool>("ReligiousTeacher");
+                    b.Property<bool?>("ReligiousTeacher");
 
-                    b.Property<bool>("Status");
+                    b.Property<bool?>("Status");
 
                     b.Property<int>("TeacherTypeId");
 
@@ -215,7 +231,8 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -230,13 +247,16 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<long>("AverageScore");
 
-                    b.Property<string>("DegreeDate");
+                    b.Property<string>("DegreeDate")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.Property<long>("DegreeId");
 
                     b.Property<int?>("DegreeStatus");
 
-                    b.Property<string>("EndDate");
+                    b.Property<string>("EndDate")
+                        .HasMaxLength(10);
 
                     b.Property<long>("PersonId");
 
@@ -255,15 +275,21 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .IsRequired();
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .IsRequired();
 
-                    b.Property<string>("NationalCode");
+                    b.Property<string>("NationalCode")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
-                    b.Property<string>("PersonnelCode");
+                    b.Property<string>("PersonnelCode")
+                        .IsRequired();
 
-                    b.Property<string>("TeacherCode");
+                    b.Property<string>("TeacherCode")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

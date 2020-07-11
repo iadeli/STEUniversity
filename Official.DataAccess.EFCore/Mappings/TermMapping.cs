@@ -15,6 +15,9 @@ namespace Official.Persistence.EFCore.Mappings
         {
             builder.HasKey(a => a.Id);
 
+            builder.Property(a => a.FromYear).HasMaxLength(10);
+            builder.Property(a => a.ToYear).HasMaxLength(10);
+
             builder.HasMany<EducationalInfo>(a => a.EducationalInfos).WithOne(a => a.Term).HasForeignKey(a => a.TermId);
         }
     }

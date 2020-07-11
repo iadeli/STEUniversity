@@ -13,6 +13,12 @@ namespace Official.Persistence.EFCore.Mappings
         {
             builder.HasKey(a => a.Id);
 
+            builder.Property(a => a.NationalCode).HasMaxLength(10).IsRequired();
+            builder.Property(a => a.PersonnelCode).IsRequired();
+            builder.Property(a => a.TeacherCode).IsRequired();
+            builder.Property(a => a.FirstName).IsRequired();
+            builder.Property(a => a.LastName).IsRequired();
+
             builder.HasOne<BirthCertificate>(a => a.BirthCertificate).WithOne(a => a.Person).HasForeignKey<BirthCertificate>(a => a.PersonId).IsRequired();
             builder.HasOne<PersonDetail>(a => a.PersonDetail).WithOne(a => a.Person).HasForeignKey<PersonDetail>(a => a.PersonId).IsRequired();
             builder.HasOne<Contact>(a => a.Contact).WithOne(a => a.Person).HasForeignKey<Contact>(a => a.PersonId).IsRequired();

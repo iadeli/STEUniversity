@@ -13,6 +13,11 @@ namespace Official.Persistence.EFCore.Mappings
         {
             builder.HasKey(a => a.PersonId);
 
+            builder.Property(a => a.PostalCode).HasMaxLength(10);
+            builder.Property(a => a.Mobile).HasMaxLength(11);
+            builder.Property(a => a.WorkplacePhoneNumber).HasMaxLength(11);
+            builder.Property(a => a.NecessaryContactNumber).HasMaxLength(11);
+
             builder.HasOne<Person>(a => a.Person).WithOne(a => a.Contact).HasForeignKey<Contact>(a => a.PersonId);
         }
     }

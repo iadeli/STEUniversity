@@ -17,8 +17,8 @@ namespace Official.Domain.Model.Person
         public int? BirthProvinceId { get; private set; }
         public int? BirthCityId { get; private set; }
         public string BirthDate { get; private set; }
-        public int GenderId { get; private set; }
-        public int PrefixId { get; private set; }
+        public int? GenderId { get; private set; }
+        public int? PrefixId { get; private set; }
         public int? MarriedId { get; private set; }
 
         public long PersonId { get; set; }

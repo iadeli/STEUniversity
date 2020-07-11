@@ -70,10 +70,6 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.dll
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.pdb
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Official.Application.pdb
@@ -91,6 +87,10 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcore
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application\obj\Debug\netcoreapp2.2\Official.Application.pdb
