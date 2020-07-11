@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -86,6 +87,21 @@ namespace Official.Persistence.EFCore.Repositories
             {
                 var term = await _context.Terms.FindAsync(id);
                 return term;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<bool> IsExistsTerm(Term term, int action)
+        {
+            try
+            {
+                var isExistsTerm = await _context.Terms.Where(a => a.No == term.No && a.FromYear == term.FromYear).AnyAsync();
+                if(action == 2)
+                    isExistsTerm = await _context.Terms.Where(a => a.Id != term.Id && a.No == term.No && a.FromYear == term.FromYear).AnyAsync();
+                return isExistsTerm;
             }
             catch (Exception e)
             {

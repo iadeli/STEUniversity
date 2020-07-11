@@ -56,13 +56,13 @@ namespace Official.Application.Command.User
         {
             try
             {
-                var isExistsUser = await _userRepository.IsExistsUserName(command.UserName);
+                var isExistsUser = await _userRepository.IsExistsUserName(command.UserName.Trim());
                 if (isExistsUser)
                 {
                     throw new Exception("این نام کاربری قبلا ثبت شده است");
                 }
 
-                command.Succeeded = await _userRepository.Create(command.UserName, command.Password, command.PersonId);
+                command.Succeeded = await _userRepository.Create(command.UserName.Trim(), command.Password.Trim(), command.PersonId);
                 return command;
             }
             catch (Exception e)

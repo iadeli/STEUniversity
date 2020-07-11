@@ -34,7 +34,7 @@ namespace Official.Persistence.EFCore.Repositories
                     signingCredentials: creds
                 );
 
-                var results = JwtToken.Instance;
+                var results = new JwtToken(); //JwtToken.Instance;
 
                 results.Token = new JwtSecurityTokenHandler().WriteToken(token);
                 results.Expiration = token.ValidTo;

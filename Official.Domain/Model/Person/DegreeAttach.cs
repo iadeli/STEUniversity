@@ -8,7 +8,7 @@ namespace Official.Domain.Model.Person
     public class DegreeAttach : ValueObject<DegreeAttach>
     {
         public long Id { get; set; }
-        public byte AttachFile { get; set; }
+        public byte[] AttachFile { get; set; }
         public string Extention { get; set; }
 
         public long HistoryEducationalId { get; set; }
@@ -22,5 +22,18 @@ namespace Official.Domain.Model.Person
             yield return Extention;
             yield return HistoryEducationalId;
         }
+
+        //private static DegreeAttach instance = null;
+        //public static DegreeAttach Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //        {
+        //            instance = new DegreeAttach();
+        //        }
+        //        return instance;
+        //    }
+        //}
     }
 }

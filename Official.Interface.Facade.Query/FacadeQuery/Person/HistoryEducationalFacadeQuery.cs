@@ -23,7 +23,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = "select * from HistoryEducationals";
+                var sql = "select * from HistoryEducationals he inner join DegreeAttaches da on he.Id = da.HistoryEducationalId ";
                 var data = await _connection.QueryAsync<HistoryEducationalQuery>(sql);
                 return data.ToList();
             }
@@ -37,7 +37,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = "select * from HistoryEducationals where Id = @Id";
+                var sql = "select * from HistoryEducationals he inner join DegreeAttaches da on he.Id = da.HistoryEducationalId where he.Id = @Id";
                 var data = await _connection.QueryFirstOrDefaultAsync<HistoryEducationalQuery>(sql, new { Id = id });
                 return data;
             }

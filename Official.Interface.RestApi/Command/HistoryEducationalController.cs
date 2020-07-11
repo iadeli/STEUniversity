@@ -68,7 +68,7 @@ namespace Official.Interface.RestApi
         {
             try
             {
-                var command = DeleteHistoryEducationalCommand.Instance;
+                var command = new DeleteHistoryEducationalCommand(); //DeleteHistoryEducationalCommand.Instance;
                 command.Id = Id;
                 var result = await _bus.Dispatch(command);
                 return Ok(result);

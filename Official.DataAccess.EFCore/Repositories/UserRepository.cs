@@ -70,7 +70,7 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                AppUser user = AppUser.Instance;
+                AppUser user = new AppUser(); //AppUser.Instance;
                 user.UserName = userName;
                 user.PersonId = personId;
                 IdentityResult result = await _userManager.CreateAsync(user, password);

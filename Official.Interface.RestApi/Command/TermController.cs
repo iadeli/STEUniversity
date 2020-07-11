@@ -68,7 +68,7 @@ namespace Official.Interface.RestApi
         {
             try
             {
-                var command = DeleteTermCommand.Instance;
+                var command = new DeleteTermCommand(); //DeleteTermCommand.Instance;
                 command.Id = Id;
                 var result = await _bus.Dispatch(command);
                 return Ok(result);

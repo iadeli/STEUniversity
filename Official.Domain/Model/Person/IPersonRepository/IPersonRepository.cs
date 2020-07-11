@@ -12,6 +12,8 @@ namespace Official.Domain.Model.Person.IPersonRepository
         Task Remove(long id);
 
         Task<Person> GetById(long id);
-        Task<bool> IsExistsNationalCode(long? id, string nationalCode, int actionType);
+        Task<bool> IsExistsTeacherCodeAsync(Person person, int action);
+        Task<bool> IsExistsNationalCodeAsync(Person person, int action);
+        Task<bool> IsExistsPersonalCodeAsync(Person person, int action);
     }
 }

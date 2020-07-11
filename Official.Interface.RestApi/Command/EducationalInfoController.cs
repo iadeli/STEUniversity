@@ -69,7 +69,7 @@ namespace Official.Interface.RestApi
         {
             try
             {
-                var command = DeleteEducationalInfoCommand.Instance;
+                var command = new DeleteEducationalInfoCommand(); //DeleteEducationalInfoCommand.Instance;
                 command.Id = Id;
                 var result = await _bus.Dispatch(command);
                 return Ok(result);

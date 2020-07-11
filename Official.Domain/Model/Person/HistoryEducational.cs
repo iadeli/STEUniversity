@@ -19,18 +19,23 @@ namespace Official.Domain.Model.Person
         public Person Person { get; set; }
         public List<DegreeAttach> DegreeAttaches { get; set; }
 
-
-        private static HistoryEducational instance = null;
-        public static HistoryEducational Instance
+        public HistoryEducational()
         {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new HistoryEducational();
-                }
-                return instance;
-            }
+            DegreeAttaches = new List<DegreeAttach>();
         }
+
+        //private static HistoryEducational instance = null;
+        //public static HistoryEducational Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //        {
+        //            instance = new HistoryEducational();
+        //        }
+        //        instance.DegreeAttaches.Clear();
+        //        return instance;
+        //    }
+        //}
     }
 }

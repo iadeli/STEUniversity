@@ -10,6 +10,9 @@
         public string DegreeDate { get; set; }
         public int? DegreeStatus { get; set; }
 
-        public long PersonId { get; private set; }
+        public long PersonId { get; set; }
+
+        public byte[] AttachFile { get; set; }
+        public string Extention { get; set; }
     }
 }

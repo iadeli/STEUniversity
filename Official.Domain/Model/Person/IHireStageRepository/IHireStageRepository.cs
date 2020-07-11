@@ -11,5 +11,6 @@ namespace Official.Domain.Model.Person.IHireStageRepository
         Task<HireStage> Update(HireStage educationalInfo);
         Task Remove(long id);
         Task<HireStage> GetById(long id);
+        Task<bool> IsExistsHireStage(HireStage hireStage, int update);
     }
 }

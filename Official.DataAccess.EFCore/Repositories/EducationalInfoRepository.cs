@@ -93,6 +93,21 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
+        public async Task<bool> IsExistsEducationalInfo(EducationalInfo entity, int action)
+        {
+            try
+            {
+                var isExists = await _context.EducationalInfos.Where(a => a.TermId == entity.TermId && a.PersonId == entity.PersonId).AnyAsync();
+                if(action == 2)
+                    isExists = await _context.EducationalInfos.Where(a => a.Id != entity.Id && a.TermId == entity.TermId && a.PersonId == entity.PersonId).AnyAsync();
+                return isExists;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         private async Task Save()
         {
             try
@@ -104,5 +119,6 @@ namespace Official.Persistence.EFCore.Repositories
                 throw e;
             }
         }
+
     }
 }

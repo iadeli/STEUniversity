@@ -82,15 +82,44 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task<bool> IsExistsNationalCode(long? id, string nationalCode, int actionType)
+        public async Task<bool> IsExistsTeacherCodeAsync(Person person, int action)
         {
             try
             {
-                if(actionType == 1)
-                {
-                    return await _context.Persons.Where(a => a.NationalCode == nationalCode).AnyAsync();
-                }
-                return await _context.Persons.Where(a => a.Id != id && a.NationalCode == nationalCode).AnyAsync();
+                if (action == 1)                
+                    return await _context.Persons.Where(a => a.TeacherCode == person.TeacherCode).AnyAsync();
+                
+                return await _context.Persons.Where(a => a.Id != person.Id && a.TeacherCode == person.TeacherCode).AnyAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<bool> IsExistsNationalCodeAsync(Person person, int action)
+        {
+            try
+            {
+                if (action == 1)                
+                    return await _context.Persons.Where(a => a.NationalCode == person.NationalCode).AnyAsync();
+                
+                return await _context.Persons.Where(a => a.Id != person.Id && a.NationalCode == person.NationalCode).AnyAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<bool> IsExistsPersonalCodeAsync(Person person, int action)
+        {
+            try
+            {
+                if (action == 1)                
+                    return await _context.Persons.Where(a => a.PersonnelCode == person.PersonnelCode).AnyAsync();
+                
+                return await _context.Persons.Where(a => a.Id != person.Id && a.PersonnelCode == person.PersonnelCode).AnyAsync();
             }
             catch (Exception e)
             {
@@ -123,5 +152,6 @@ namespace Official.Persistence.EFCore.Repositories
                 throw e;
             }
         }
+
     }
 }

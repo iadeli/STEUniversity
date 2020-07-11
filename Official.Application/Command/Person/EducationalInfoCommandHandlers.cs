@@ -22,8 +22,14 @@ namespace Official.Application.Command.Person
         {
             try
             {
-                var entity = Domain.Model.Person.EducationalInfo.Instance;
+                var entity = new Domain.Model.Person.EducationalInfo(); //Domain.Model.Person.EducationalInfo.Instance;
                 entity = command.Adapt(entity);
+
+                const int create = 1;
+                var isExistsEducationalInfo = await _educationalInfoRepository.IsExistsEducationalInfo(entity, create);
+                if (isExistsEducationalInfo)
+                    throw new Exception("اطلاعات آموزشی وارد شده تکراری است");
+
                 entity = await _educationalInfoRepository.Create(entity);
                 var dto = entity.Adapt(command);
                 return dto;
@@ -40,6 +46,12 @@ namespace Official.Application.Command.Person
             {
                 var entity = await _educationalInfoRepository.GetById(command.Id);
                 entity = command.Adapt(entity);
+
+                const int update = 2;
+                var isExistsEducationalInfo = await _educationalInfoRepository.IsExistsEducationalInfo(entity, update);
+                if (isExistsEducationalInfo)
+                    throw new Exception("اطلاعات آموزشی وارد شده تکراری است");
+
                 entity = await _educationalInfoRepository.Update(entity);
                 var dto = entity.Adapt(command);
                 return dto;
@@ -55,7 +67,7 @@ namespace Official.Application.Command.Person
             try
             {
                 await _educationalInfoRepository.Remove(command.Id);
-                return DeleteEducationalInfoCommand.Instance;
+                return new DeleteEducationalInfoCommand(); //DeleteEducationalInfoCommand.Instance;
             }
             catch (Exception e)
             {

@@ -119,13 +119,9 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<string>("FatherName");
 
-                    b.Property<string>("FirstName");
-
                     b.Property<int>("GenderId");
 
                     b.Property<int?>("IssueCityId");
-
-                    b.Property<string>("LastName");
 
                     b.Property<int?>("MarriedId");
 
@@ -171,7 +167,7 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<byte>("AttachFile");
+                    b.Property<byte[]>("AttachFile");
 
                     b.Property<string>("Extention");
 
@@ -258,6 +254,10 @@ namespace Official.Persistence.EFCore.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.Property<string>("NationalCode");
 

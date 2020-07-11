@@ -8,8 +8,6 @@ namespace Official.Domain.Model.Person
     public class BirthCertificate : ValueObject<BirthCertificate>
     {
         //public long Id { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
         public string EFirstName { get; private set; }
         public string ELastName { get; private set; }
         public string FatherName { get; private set; }
@@ -29,8 +27,6 @@ namespace Official.Domain.Model.Person
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
-            yield return FirstName;
-            yield return LastName;
             yield return EFirstName;
             yield return ELastName;
             yield return FatherName;

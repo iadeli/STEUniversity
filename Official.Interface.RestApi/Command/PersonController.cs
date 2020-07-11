@@ -72,7 +72,7 @@ namespace Official.Interface.RestApi
         {
             try
             {
-                var command = DeletePersonCommand.Instance;
+                var command = new DeletePersonCommand(); //DeletePersonCommand.Instance;
                 command.Id = Id;
                 var result = await _bus.Dispatch(command);
                 return Ok(result);

@@ -9,5 +9,6 @@ namespace Official.Domain.Model.Person.IEducationalInfoRepository
         Task<EducationalInfo> Update(EducationalInfo educationalInfo);
         Task Remove(long id);
         Task<EducationalInfo> GetById(long id);
+        Task<bool> IsExistsEducationalInfo(EducationalInfo entity, int update);
     }
 }

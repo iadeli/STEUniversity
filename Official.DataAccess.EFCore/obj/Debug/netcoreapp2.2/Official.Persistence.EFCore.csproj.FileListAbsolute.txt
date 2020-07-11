@@ -34,6 +34,10 @@ C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorres
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\Users\sama laptop\Documents\Projects\OfficialCorrespondence\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.deps.json
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
@@ -50,10 +54,6 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\n
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb

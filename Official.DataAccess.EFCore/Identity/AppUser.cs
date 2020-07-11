@@ -9,20 +9,20 @@ namespace Official.Persistence.EFCore.Identity
     {
         public long PersonId { get; set; }
 
-        private AppUser()
-        {
-        }
-        private static AppUser instance = null;
-        public static AppUser Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new AppUser();
-                }
-                return instance;
-            }
-        }
+        //private AppUser()
+        //{
+        //}
+        //private static AppUser instance = null;
+        //public static AppUser Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //        {
+        //            instance = new AppUser();
+        //        }
+        //        return instance;
+        //    }
+        //}
     }
 }

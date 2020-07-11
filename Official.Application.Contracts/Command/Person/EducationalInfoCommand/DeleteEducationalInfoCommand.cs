@@ -2,17 +2,17 @@
 {
     public class DeleteEducationalInfoCommand : EducationalInfoDto
     {
-        private static DeleteEducationalInfoCommand instance = null;
-        public static DeleteEducationalInfoCommand Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new DeleteEducationalInfoCommand();
-                }
-                return instance;
-            }
-        }
+        //private static DeleteEducationalInfoCommand instance = null;
+        //public static DeleteEducationalInfoCommand Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //        {
+        //            instance = new DeleteEducationalInfoCommand();
+        //        }
+        //        return instance;
+        //    }
+        //}
     }
 }

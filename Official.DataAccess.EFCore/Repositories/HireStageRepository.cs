@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Official.Domain.Model.Person;
@@ -88,6 +89,21 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
+        public async Task<bool> IsExistsHireStage(HireStage hireStage, int action)
+        {
+            try
+            {
+                var isExists = await _context.HireStages.Where(a => a.Name == hireStage.Name).AnyAsync();
+                if (action == 2)
+                    isExists = await _context.HireStages.Where(a => a.Id != hireStage.Id && a.Name == hireStage.Name).AnyAsync();
+                return isExists;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         private async Task Save()
         {
             try
@@ -99,6 +115,5 @@ namespace Official.Persistence.EFCore.Repositories
                 throw e;
             }
         }
-
     }
 }

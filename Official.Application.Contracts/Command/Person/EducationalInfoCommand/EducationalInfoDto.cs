@@ -9,7 +9,7 @@
         public bool ReligiousTeacher { get; set; }
         public bool HolyDefenseTeacher { get; set; }
 
-        public long TermId { get; private set; }
-        public long PersonId { get; private set; }
+        public long TermId { get; set; }
+        public long PersonId { get; set; }
     }
 }

@@ -69,7 +69,7 @@ namespace Official.Interface.RestApi
         {
             try
             {
-                var command = DeleteHireStageCommand.Instance;
+                var command = new DeleteHireStageCommand(); //DeleteHireStageCommand.Instance;
                 command.Id = Id;
                 var result = await _bus.Dispatch(command);
                 return Ok(result);
