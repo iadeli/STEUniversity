@@ -1,23 +1,23 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Official.Domain.Model.Common;
 using Official.Domain.Model.Person;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.CommonEntity.Term
 {
-    [AuditDisplay("ترم آموزشی")]
+    [DisplayAttribute(Name ="ترم آموزشی")]
     public sealed class Term : Entity
     {
-        [AuditDisplay("شماره")]
+        [DisplayAttribute(Name ="شماره")]
         public int No { get; set; }
 
-        [AuditDisplay("از سال")]
+        [DisplayAttribute(Name ="از سال")]
         public string FromYear { get; set; }
 
-        [AuditDisplay("تا سال")]
+        [DisplayAttribute(Name ="تا سال")]
         public string ToYear { get; set; }
 
-        [AuditDisplay("عنوان")]
+        [DisplayAttribute(Name ="عنوان")]
         public string Title { get; set; }
 
         public List<EducationalInfo> EducationalInfos { get; set; }

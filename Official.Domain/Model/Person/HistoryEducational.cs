@@ -1,39 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using Official.Domain.Model.Common;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("اطلاعات سوابق شغلی")]
+    [DisplayAttribute(Name ="اطلاعات سوابق شغلی")]
     public class HistoryEducational : Entity
     {
-        [AuditDisplay("نام دانشگاه")]
+        [DisplayAttribute(Name ="نام دانشگاه")]
         public long UniversityId { get; set; }
 
-        [AuditDisplay("عنوان مدرک")]
+        [DisplayAttribute(Name ="عنوان مدرک")]
         public long DegreeId { get; set; }
 
-        [AuditDisplay("مقطع تحصیلی")]
+        [DisplayAttribute(Name ="مقطع تحصیلی")]
         public long GradeId { get; set; }
 
-        [AuditDisplay("رشته تحصیلی")]
+        [DisplayAttribute(Name ="رشته تحصیلی")]
         public long MajorSubjectId { get; set; }
 
-        [AuditDisplay("معدل")]
+        [DisplayAttribute(Name ="معدل")]
         public long AverageScore { get; set; }
 
-        [AuditDisplay("تاریخ اتمام")]
+        [DisplayAttribute(Name ="تاریخ اتمام")]
         public string EndDate { get; set; }
 
-        [AuditDisplay("تاریخ مدرک")]
+        [DisplayAttribute(Name ="تاریخ مدرک")]
         public string DegreeDate { get; set; }
 
-        [AuditDisplay("وضعیت مدرک")]
+        [DisplayAttribute(Name ="وضعیت مدرک")]
         public int? DegreeStatus { get; set; }
 
-        [AuditDisplay("نام فرد")]
+        [DisplayAttribute(Name ="نام فرد")]
         public long PersonId { get; set; }
 
         public Person Person { get; set; }

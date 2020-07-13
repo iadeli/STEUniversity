@@ -1,7 +1,10 @@
-﻿namespace Official.Domain.Model.Common
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Official.Domain.Model.Common
 {
     public abstract class Entity
     {
+        [DisplayAttribute(Name = "شناسه")]
         public virtual long Id { get; protected set; }
 
         public override bool Equals(object obj)

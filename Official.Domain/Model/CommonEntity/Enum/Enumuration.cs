@@ -1,21 +1,21 @@
 ﻿using Official.Domain.Model.Common;
-using Z.EntityFramework.Plus;
+using System.ComponentModel.DataAnnotations;
 
 namespace Official.Domain.Model.CommonEntity.Enum
 {
-    [AuditDisplay("لیست کمبو")]
+    [DisplayAttribute(Name ="لیست کمبو")]
     public sealed class Enumuration : Entity
     {
-        [AuditDisplay("نام فیلد")]
+        [DisplayAttribute(Name ="نام فیلد")]
         public string EnumName { get; private set; }
 
-        [AuditDisplay("عنوان فیلد")]
+        [DisplayAttribute(Name ="عنوان فیلد")]
         public string EnumTitle { get; private set; }
 
-        [AuditDisplay("عنوان لاتین فیلد")]
+        [DisplayAttribute(Name ="عنوان لاتین فیلد")]
         public string EnumFiled { get; private set; }
 
-        [AuditDisplay("مقدار فیلد")]
+        [DisplayAttribute(Name ="مقدار فیلد")]
         public string EnumValue { get; private set; }
     }
 }

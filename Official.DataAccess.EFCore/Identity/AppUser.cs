@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Z.EntityFramework.Plus;
 
 namespace Official.Persistence.EFCore.Identity
 {
-    [AuditDisplay("اطلاعات کاربران")]
     public class AppUser : IdentityUser<long>
     {
-        [AuditDisplay("نام فرد")]
+        [DisplayAttribute(Name ="نام فرد")]
         public long PersonId { get; set; }
 
         //private AppUser()

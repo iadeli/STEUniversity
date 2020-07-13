@@ -10,7 +10,7 @@ using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi.Command
 {
-    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
+    [ApiController, Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
         private readonly ICommandBus _bus;

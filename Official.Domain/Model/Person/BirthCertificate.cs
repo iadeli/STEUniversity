@@ -1,52 +1,52 @@
 ﻿using Official.Domain.Model.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("اطلاعات شناسنامه")]
+    [DisplayAttribute(Name ="اطلاعات شناسنامه")]
     public class BirthCertificate : ValueObject<BirthCertificate>
     {
         //public long Id { get; private set; }
-        [AuditDisplay("نام لاتین")]
+        [DisplayAttribute(Name ="نام لاتین")]
         public string EFirstName { get; private set; }
 
-        [AuditDisplay("نام خانوادگی لاتین")]
+        [DisplayAttribute(Name ="نام خانوادگی لاتین")]
         public string ELastName { get; private set; }
 
-        [AuditDisplay("نام پدر")]
+        [DisplayAttribute(Name ="نام پدر")]
         public string FatherName { get; private set; }
 
-        [AuditDisplay("شماره شناسنامه")]
+        [DisplayAttribute(Name ="شماره شناسنامه")]
         public string No { get; private set; }
 
-        [AuditDisplay("شهر محل صدور")]
+        [DisplayAttribute(Name ="شهر محل صدور")]
         public int? IssueCityId { get; private set; }
 
-        [AuditDisplay("کشور محل تولد")]
+        [DisplayAttribute(Name ="کشور محل تولد")]
         public int? BirthCountryId { get; private set; }
 
-        [AuditDisplay("استان محل تولد")]
+        [DisplayAttribute(Name ="استان محل تولد")]
         public int? BirthProvinceId { get; private set; }
 
-        [AuditDisplay("شهر محل تولد")]
+        [DisplayAttribute(Name ="شهر محل تولد")]
         public int? BirthCityId { get; private set; }
 
-        [AuditDisplay("تاریخ تولد")]
+        [DisplayAttribute(Name ="تاریخ تولد")]
         public string BirthDate { get; private set; }
 
-        [AuditDisplay("اطلاعات شناسنامه")]
+        [DisplayAttribute(Name ="اطلاعات شناسنامه")]
         public int? GenderId { get; private set; }
 
-        [AuditDisplay("اطلاعات شناسنامه")]
+        [DisplayAttribute(Name ="اطلاعات شناسنامه")]
         public int? PrefixId { get; private set; }
 
-        [AuditDisplay("وضعیت تاهل")]
+        [DisplayAttribute(Name ="وضعیت تاهل")]
         public int? MarriedId { get; private set; }
 
-        [AuditDisplay("نام فرد")]
+        [DisplayAttribute(Name ="نام فرد")]
         public long PersonId { get; set; }
 
         public Person Person { get; set; }

@@ -8,7 +8,7 @@ using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi.Query
 {
-    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
+    [ApiController, Route("api/[controller]")]
     public class EducationalInfoQueryController : ControllerBase
     {
         private readonly IEducationalInfoFacadeQuery _query;

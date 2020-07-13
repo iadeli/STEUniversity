@@ -16,10 +16,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Official.Config.DI;
 using Official.Framework.DI;
+using Official.Interface.Facade.Contracts.IFacadeQuery.AuditEntry;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Enum;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Menu;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Term;
+using Official.Interface.Facade.Query.FacadeQuery.AuditEntry;
 using Official.Interface.Facade.Query.FacadeQuery.Enum;
 using Official.Interface.Facade.Query.FacadeQuery.HireStage;
 using Official.Interface.Facade.Query.FacadeQuery.Menu;
@@ -142,6 +144,7 @@ namespace ServiceHost
             services.AddScoped<IEducationalInfoFacadeQuery, EducationalInfoFacadeQuery>();
             services.AddScoped<IHistoryEducationalFacadeQuery, HistoryEducationalFacadeQuery>();
             services.AddScoped<IHireStageFacadeQuery, HireStageFacadeQuery>();
+            services.AddScoped<IAuditEntryFacadeQuery, AuditEntryFacadeQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

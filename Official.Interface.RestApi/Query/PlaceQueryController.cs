@@ -9,7 +9,7 @@ using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi.Query
 {
-    [ApiController, Route("api/[controller]"), AllowAnonymous, ServiceFilter(typeof(LoggingActionFilter))]
+    [ApiController, Route("api/[controller]"), AllowAnonymous]
     public class PlaceQueryController : ControllerBase
     {
         private readonly IPlaceFacadeQuery _query;

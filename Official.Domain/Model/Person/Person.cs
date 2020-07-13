@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using Official.Domain.Model.Common;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("اطلاعات فردی")]
+    [DisplayAttribute(Name ="اطلاعات فردی")]
     public sealed class Person : AggregateRoot
     {
-        [AuditDisplay("کد مدرس")]
+        [DisplayAttribute(Name ="کد مدرس")]
         public string TeacherCode { get; private set; }
 
-        [AuditDisplay("کد ملی")]
+        [DisplayAttribute(Name ="کد ملی")]
         public string NationalCode { get; private set; }
 
-        [AuditDisplay("کد پرسنلی")]
+        [DisplayAttribute(Name ="کد پرسنلی")]
         public string PersonnelCode { get; private set; }
 
-        [AuditDisplay("نام")]
+        [DisplayAttribute(Name ="نام")]
         public string FirstName { get; private set; }
 
-        [AuditDisplay("نام خانوادگی")]
+        [DisplayAttribute(Name ="نام خانوادگی")]
         public string LastName { get; private set; }
 
         public BirthCertificate BirthCertificate { get; set; }

@@ -123,6 +123,24 @@
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetAuditLog">
+            <summary>
+            دریافت رخداد فرم ها
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetAuditLogByFilter(Official.QueryModel.Model.AuditEntryQuery)">
+            <summary>
+            دریافت رخداد فرم ها براساس فیلتر
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetPropertyAuditLog(System.Int32)">
+            <summary>
+            دریافت جزئیات رخداد فرم ها
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Query.EducationalInfoQueryController.Get">
             <summary>
             دریافت اطلاعات آموزشی

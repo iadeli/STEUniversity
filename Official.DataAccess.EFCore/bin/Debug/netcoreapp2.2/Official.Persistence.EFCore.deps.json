@@ -1118,9 +1118,6 @@
         }
       },
       "Official.Domain/1.0.0": {
-        "dependencies": {
-          "Z.EntityFramework.Plus.EFCore": "2.0.53"
-        },
         "runtime": {
           "Official.Domain.dll": {}
         }

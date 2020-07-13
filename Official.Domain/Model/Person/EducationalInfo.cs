@@ -1,31 +1,31 @@
 ﻿using Official.Domain.Model.Common;
 using Official.Domain.Model.CommonEntity.Term;
-using Z.EntityFramework.Plus;
+using System.ComponentModel.DataAnnotations;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("اطلاعات شغلی")]
+    [DisplayAttribute(Name ="اطلاعات شغلی")]
     public sealed class EducationalInfo : Entity
     {
-        [AuditDisplay("سقف واحد")]
+        [DisplayAttribute(Name ="سقف واحد")]
         public int MaxUnit { get; private set; }
 
-        [AuditDisplay("وضعیت")]
+        [DisplayAttribute(Name ="فعال")]
         public bool? Status { get; private set; }
 
-        [AuditDisplay("نوع مدرس")]
+        [DisplayAttribute(Name ="نوع مدرس")]
         public int TeacherTypeId { get; private set; }
 
-        [AuditDisplay("مدرس معارف")]
+        [DisplayAttribute(Name ="مدرس معارف")]
         public bool? ReligiousTeacher { get; set; }
 
-        [AuditDisplay("مدرس دفاع مقدس")]
+        [DisplayAttribute(Name ="مدرس دفاع مقدس")]
         public bool? HolyDefenseTeacher { get; set; }
 
-        [AuditDisplay("ترم آموزشی")]
+        [DisplayAttribute(Name ="ترم آموزشی")]
         public long TermId { get; private set; }
 
-        [AuditDisplay("نام فرد")]
+        [DisplayAttribute(Name ="نام فرد")]
         public long PersonId { get; private set; }
 
         public Person Person { get; private set; }

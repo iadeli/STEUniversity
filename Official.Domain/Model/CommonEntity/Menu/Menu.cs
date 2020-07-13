@@ -1,31 +1,31 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Official.Domain.Model.Common;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.CommonEntity.Menu
 {
-    [AuditDisplay("منو")]
+    [DisplayAttribute(Name ="منو")]
     public sealed class Menu : Entity
     {
-        [AuditDisplay("نود پدر")]
+        [DisplayAttribute(Name ="نود پدر")]
         public long MenuId { get; set; }
 
-        [AuditDisplay("شناسه")]
+        [DisplayAttribute(Name ="شناسه")]
         public string SystemId { get; private set; }
 
-        [AuditDisplay("سطح")]
+        [DisplayAttribute(Name ="سطح")]
         public int? Level { get; private set; }
 
-        [AuditDisplay("ترتیب")]
+        [DisplayAttribute(Name ="ترتیب")]
         public int? Order { get; private set; }
 
-        [AuditDisplay("عنوان")]
+        [DisplayAttribute(Name ="عنوان")]
         public string Title { get; private set; }
 
-        [AuditDisplay("لینک")]
+        [DisplayAttribute(Name ="لینک")]
         public string Path { get; set; }
 
-        [AuditDisplay("آیکون")]
+        [DisplayAttribute(Name ="آیکون")]
         public string Icon { get; private set; }
 
         public List<Menu> SubMenus { get; private set; }

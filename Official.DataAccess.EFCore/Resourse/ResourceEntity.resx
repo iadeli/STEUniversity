@@ -141,14 +141,14 @@
   <data name="AuditEntry" xml:space="preserve">
     <value>وقایع سیستم</value>
   </data>
+  <data name="AuditEntryProperty" xml:space="preserve">
+    <value>جرئیات وقایع سیستم</value>
+  </data>
   <data name="BirthCertificate" xml:space="preserve">
     <value>اطلاعات شناسنامه ای افراد</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>دفترچه تماس افراد</value>
-  </data>
-  <data name="CustomAuditEntryProperty" xml:space="preserve">
-    <value>جرئیات وقایع سیستم</value>
   </data>
   <data name="DegreeAttach" xml:space="preserve">
     <value>پیوست مدارک سوابق آموزشی</value>

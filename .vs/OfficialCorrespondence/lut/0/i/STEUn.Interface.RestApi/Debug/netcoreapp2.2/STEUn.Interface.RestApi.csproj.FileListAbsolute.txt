@@ -1,0 +1,3 @@
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\STEUn.Interface.RestApi\Debug\netcoreapp2.2\STEUn.Interface.RestApi.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\STEUn.Interface.RestApi\Debug\netcoreapp2.2\STEUn.Interface.RestApi.AssemblyInfoInputs.cache
+C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\STEUn.Interface.RestApi\Debug\netcoreapp2.2\STEUn.Interface.RestApi.AssemblyInfo.cs

@@ -1,18 +1,18 @@
 ﻿using Official.Domain.Model.Common;
-using Z.EntityFramework.Plus;
+using System.ComponentModel.DataAnnotations;
 
 namespace Official.Domain.Model.CommonEntity.Enum
 {
-    [AuditDisplay("لیست کشور، استان و شهر")]
+    [DisplayAttribute(Name ="لیست کشور، استان و شهر")]
     public sealed class Place : Entity
     {
-        [AuditDisplay("نود پدر محل")]
+        [DisplayAttribute(Name ="نود پدر محل")]
         public long PlaceId { get; set; }
 
-        [AuditDisplay("نوع محل")]
+        [DisplayAttribute(Name ="نوع محل")]
         public int Type { get; private set; }
 
-        [AuditDisplay("نام محل")]
+        [DisplayAttribute(Name ="نام محل")]
         public string Name { get; private set; }
     }
 }

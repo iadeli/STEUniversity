@@ -9,7 +9,8 @@ using Official.Interface.Facade.Contracts.Utility;
 
 namespace Official.Interface.RestApi.Command
 {
-    [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
+    //[ServiceFilter(typeof(LoggingActionFilter))]
+    [ApiController, Route("api/[controller]")]
     public class EducationalInfoController : ControllerBase
     {
         private readonly ICommandBus _bus;

@@ -1,38 +1,38 @@
 ﻿using Official.Domain.Model.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("اطلاعات سایر فرد")]
+    [DisplayAttribute(Name ="اطلاعات سایر فرد")]
     public class PersonDetail : ValueObject<PersonDetail>
     {
-        //public long Id { get; private set; }
+        public long Id { get; private set; }
 
-        [AuditDisplay("شماره نظام وظیفه")]
+        [DisplayAttribute(Name ="شماره نظام وظیفه")]
         public int? EnlistId { get; private set; }
 
-        [AuditDisplay("کد نظام وظیفه")]
+        [DisplayAttribute(Name ="کد نظام وظیفه")]
         public string EnlistCode { get; private set; }
 
-        [AuditDisplay("دین")]
+        [DisplayAttribute(Name ="دین")]
         public int? ReligionId { get; private set; }
 
-        [AuditDisplay("مذهب")]
+        [DisplayAttribute(Name ="مذهب")]
         public int? SubReligionId { get; private set; }
 
-        [AuditDisplay("ملیت")]
+        [DisplayAttribute(Name ="ملیت")]
         public int? NationalityId { get; private set; }
 
-        [AuditDisplay("فومیت")]
+        [DisplayAttribute(Name ="فومیت")]
         public int? EthnicityId { get; private set; }
 
-        [AuditDisplay("بومی")]
+        [DisplayAttribute(Name ="بومی")]
         public int? IndigenousSituationId { get; private set; }
 
-        [AuditDisplay("نام فرد")]
+        [DisplayAttribute(Name ="نام فرد")]
         public long PersonId { get; set; }
 
         public Person Person { get; set; }

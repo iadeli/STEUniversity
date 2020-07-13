@@ -1,11 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Official.Domain.Model.Audit;
 using Official.Domain.Model.CommonEntity;
 using Official.Domain.Model.CommonEntity.Enum;
 using Official.Domain.Model.CommonEntity.HireStage;
@@ -24,7 +25,7 @@ namespace Official.Persistence.EFCore.Context
         private readonly string _user;
         public STEDbContext(DbContextOptions options) : base(options)
         {
-            _user = new UserResolverService(new HttpContextAccessor())?.GetUser(); // userService?.GetUser();
+            _user = new UserResolverService(new HttpContextAccessor())?.GetUser(); 
             ManageAuditConfig();
         }
 
@@ -33,7 +34,6 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
                 // ADD "Where(x => x.AuditEntryID == 0)" to allow multiple SaveChanges with same Audit
                 (context as STEDbContext)?.AuditEntries.AddRange(audit.Entries);
-
             AuditManager.DefaultConfiguration.ExcludeDataAnnotation();
             AuditManager.DefaultConfiguration.DataAnnotationDisplayName();
 
@@ -41,17 +41,13 @@ namespace Official.Persistence.EFCore.Context
             {
                 EntitySetName = Resourse.ResourceEntity.ResourceManager.GetString(arg.EntityEntry.Entity.GetType().Name)
             };
-            AuditManager.DefaultConfiguration.AuditEntryPropertyFactory = arg => new CustomAuditEntryProperty()
+            AuditManager.DefaultConfiguration.AuditEntryPropertyFactory = arg => new AuditEntryProperty()
             {
-                EnPropertyName = arg.PropertyName
+                RelationName = arg.EntityEntry.Entity.GetType().GetProperties().Where(a => a.Name == arg.PropertyName).Select(property => ((DisplayAttribute)property.GetCustomAttributes(typeof(DisplayAttribute), false).FirstOrDefault())?.Name).FirstOrDefault()
             };
 
-
-
             AuditManager.DefaultConfiguration.Format<Menu>(x => x.MenuId, x => Resourse.ResourceQuery.ResourceManager.GetString("MenuId") + x);
-
             AuditManager.DefaultConfiguration.Format<Place>(x => x.PlaceId, x => Resourse.ResourceQuery.ResourceManager.GetString("PlaceId") + x);
-
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.GenderId, x => Resourse.ResourceQuery.ResourceManager.GetString("GenderId") + x);
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.IssueCityId, x => Resourse.ResourceQuery.ResourceManager.GetString("IssueCityId") + x);
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.BirthCountryId, x => Resourse.ResourceQuery.ResourceManager.GetString("BirthCountryId") + x);
@@ -60,21 +56,16 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.PrefixId, x => Resourse.ResourceQuery.ResourceManager.GetString("PrefixId") + x);
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.MarriedId, x => Resourse.ResourceQuery.ResourceManager.GetString("MarriedId") + x);
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-
             AuditManager.DefaultConfiguration.Format<Contact>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-
             AuditManager.DefaultConfiguration.Format<DegreeAttach>(x => x.HistoryEducationalId, x => Resourse.ResourceQuery.ResourceManager.GetString("HistoryEducationalId") + $"{x})");
-
             AuditManager.DefaultConfiguration.Format<EducationalInfo>(x => x.TeacherTypeId, x => Resourse.ResourceQuery.ResourceManager.GetString("TeacherTypeId") + x);
             AuditManager.DefaultConfiguration.Format<EducationalInfo>(x => x.TermId, x => Resourse.ResourceQuery.ResourceManager.GetString("TermId") + x);
             AuditManager.DefaultConfiguration.Format<EducationalInfo>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-
             AuditManager.DefaultConfiguration.Format<HistoryEducational>(x => x.UniversityId, x => Resourse.ResourceQuery.ResourceManager.GetString("UniversityId") + x);
             AuditManager.DefaultConfiguration.Format<HistoryEducational>(x => x.GradeId, x => Resourse.ResourceQuery.ResourceManager.GetString("GradeId") + x);
             AuditManager.DefaultConfiguration.Format<HistoryEducational>(x => x.MajorSubjectId, x => Resourse.ResourceQuery.ResourceManager.GetString("MajorSubjectId") + x);
             AuditManager.DefaultConfiguration.Format<HistoryEducational>(x => x.DegreeId, x => Resourse.ResourceQuery.ResourceManager.GetString("DegreeId") + x);
             AuditManager.DefaultConfiguration.Format<HistoryEducational>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.EnlistId, x => Resourse.ResourceQuery.ResourceManager.GetString("EnlistId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.ReligionId, x => Resourse.ResourceQuery.ResourceManager.GetString("ReligionId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.SubReligionId, x => Resourse.ResourceQuery.ResourceManager.GetString("SubReligionId") + x);
@@ -82,13 +73,11 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.EthnicityId, x => Resourse.ResourceQuery.ResourceManager.GetString("EthnicityId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.IndigenousSituationId, x => Resourse.ResourceQuery.ResourceManager.GetString("IndigenousSituationId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-
             AuditManager.DefaultConfiguration.Format<AppUser>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new LetterMapping());
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PersonMapping).Assembly);
             base.OnModelCreating(modelBuilder);
         }
@@ -128,11 +117,9 @@ namespace Official.Persistence.EFCore.Context
             //}
             return rowAffecteds;
         }
-
-
+        
         public DbSet<AuditEntry> AuditEntries { get; set; }
-        public DbSet<CustomAuditEntryProperty> AuditEntryProperties { get; set; }
-
+        public DbSet<AuditEntryProperty> AuditEntryProperties { get; set; }
         public DbSet<AppUser> AspNetUsers { get; set; }
         public DbSet<AppRole> AspNetRoles { get; set; }
         public DbSet<AppUserRole> AspNetUserRoles { get; set; }
@@ -140,19 +127,15 @@ namespace Official.Persistence.EFCore.Context
         public DbSet<AppRoleClaim> AspNetRoleClaims { get; set; }
         public DbSet<AppUserLogin> AspNetUserLogins { get; set; }
         public DbSet<AppUserToken> AspNetUserTokens { get; set; }
-
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Place> Places { get; set; }
         public DbSet<Enumuration> Enumurations { get; set; }
-
         public DbSet<Term> Terms { get; set; }
         public DbSet<HireStage> HireStages { get; set; }
-
         public DbSet<Person> Persons { get; set; }
         public DbSet<BirthCertificate> BirthCertificates { get; set; }
         public DbSet<PersonDetail> PersonDetails { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-
         public DbSet<EducationalInfo> EducationalInfos { get; set; }
         public DbSet<HistoryEducational> HistoryEducationals { get; set; }
         public DbSet<DegreeAttach> DegreeAttaches { get; set; }

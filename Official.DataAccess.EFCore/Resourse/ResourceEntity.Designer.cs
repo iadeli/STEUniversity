@@ -133,6 +133,15 @@ namespace Official.Persistence.EFCore.Resourse {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to جرئیات وقایع سیستم.
+        /// </summary>
+        internal static string AuditEntryProperty {
+            get {
+                return ResourceManager.GetString("AuditEntryProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to اطلاعات شناسنامه ای افراد.
         /// </summary>
         internal static string BirthCertificate {
@@ -147,15 +156,6 @@ namespace Official.Persistence.EFCore.Resourse {
         internal static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to جرئیات وقایع سیستم.
-        /// </summary>
-        internal static string CustomAuditEntryProperty {
-            get {
-                return ResourceManager.GetString("CustomAuditEntryProperty", resourceCulture);
             }
         }
         

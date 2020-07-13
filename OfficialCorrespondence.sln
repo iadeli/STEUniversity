@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Official.Interface.Facade.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Official.Interface.Facade.Query", "Official.Interface.Facade.Query\Official.Interface.Facade.Query.csproj", "{8C70C487-B053-4811-86EB-0B296DC7E376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{07FF384E-2AB2-4485-902F-708BAA712422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{07FF384E-2AB2-4485-902F-708BAA712422}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1716,9 +1716,6 @@
       "Official.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Z.EntityFramework.Plus.EFCore": "2.0.53"
-        },
         "compile": {
           "bin/placeholder/Official.Domain.dll": {}
         },

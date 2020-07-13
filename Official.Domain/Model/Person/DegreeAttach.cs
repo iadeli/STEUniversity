@@ -1,25 +1,25 @@
 ﻿using Official.Domain.Model.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("پیوست مدرک سوابق شغلی")]
+    [DisplayAttribute(Name ="پیوست مدرک سوابق شغلی")]
     public class DegreeAttach : ValueObject<DegreeAttach>
     {
-        [AuditDisplay("شناسه")]
+        [DisplayAttribute(Name ="شناسه")]
         public long Id { get; set; }
 
-        [AuditDisplay("فایل پیوست")]
+        [DisplayAttribute(Name ="فایل پیوست")]
         public byte[] AttachFile { get; set; }
 
-        [AuditDisplay("پسوند فایل")]
+        [DisplayAttribute(Name ="پسوند فایل")]
         public string Extention { get; set; }
 
 
-        [AuditDisplay("مدرک رشته تحصیلی")]
+        [DisplayAttribute(Name ="مدرک رشته تحصیلی")]
         public long HistoryEducationalId { get; set; }
 
         public HistoryEducational HistoryEducational { get; set; }

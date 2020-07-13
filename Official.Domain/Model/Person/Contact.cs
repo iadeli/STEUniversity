@@ -3,43 +3,42 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
-    [AuditDisplay("اطلاعات دفترچه تماس فرد")]
+    [DisplayAttribute(Name ="اطلاعات دفترچه تماس فرد")]
     public class Contact : ValueObject<Contact>
     {
         //public long Id { get; private set; }
 
-        [AuditDisplay("آدرس")]
+        [DisplayAttribute(Name ="آدرس")]
         public string Address { get; private set; }
 
-        [AuditDisplay("کد پستی")]
+        [DisplayAttribute(Name ="کد پستی")]
         public string PostalCode { get; private set; }
 
-        [AuditDisplay("صندوق پستی")]
+        [DisplayAttribute(Name ="صندوق پستی")]
         public string PostBox { get; private set; }
 
-        [AuditDisplay("شماره موبایل")]
+        [DisplayAttribute(Name ="شماره موبایل")]
         public string Mobile { get; private set; }
 
-        [AuditDisplay("شماره محل کار")]
+        [DisplayAttribute(Name ="شماره محل کار")]
         public string WorkplacePhoneNumber { get; private set; }
 
-        [AuditDisplay("ایمیل")]
+        [DisplayAttribute(Name ="ایمیل")]
         public string Email { get; private set; }
 
-        [AuditDisplay("آدرس محل کار")]
+        [DisplayAttribute(Name ="آدرس محل کار")]
         public string WorkAddress { get; private set; }
 
-        [AuditDisplay("شماره تماس ضروری")]
+        [DisplayAttribute(Name ="شماره تماس ضروری")]
         public string NecessaryContactNumber { get; private set; }
 
-        [AuditDisplay("توضیحات")]
+        [DisplayAttribute(Name ="توضیحات")]
         public string Description { get; private set; }
 
-        [AuditDisplay("نام فرد")]
+        [DisplayAttribute(Name ="نام فرد")]
         public long PersonId { get; set; }
 
         public Person Person { get; set; }

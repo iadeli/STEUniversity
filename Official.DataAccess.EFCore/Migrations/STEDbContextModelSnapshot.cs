@@ -84,7 +84,7 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int?>("Level");
 
-                    b.Property<long?>("MenuId");
+                    b.Property<long>("MenuId");
 
                     b.Property<int?>("Order");
 
@@ -258,6 +258,10 @@ namespace Official.Persistence.EFCore.Migrations
                     b.Property<string>("EndDate")
                         .HasMaxLength(10);
 
+                    b.Property<long>("GradeId");
+
+                    b.Property<long>("MajorSubjectId");
+
                     b.Property<long>("PersonId");
 
                     b.Property<long>("UniversityId");
@@ -305,6 +309,8 @@ namespace Official.Persistence.EFCore.Migrations
                     b.Property<int?>("EnlistId");
 
                     b.Property<int?>("EthnicityId");
+
+                    b.Property<long>("Id");
 
                     b.Property<int?>("IndigenousSituationId");
 
@@ -516,9 +522,6 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.Property<int>("AuditEntryID");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired();
-
                     b.Property<string>("NewValueFormatted")
                         .HasColumnName("NewValue");
 
@@ -535,25 +538,15 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.HasIndex("AuditEntryID");
 
-                    b.ToTable("AuditEntryProperty");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("AuditEntryProperty");
-                });
-
-            modelBuilder.Entity("Official.Domain.Model.Audit.CustomAuditEntryProperty", b =>
-                {
-                    b.HasBaseType("Z.EntityFramework.Plus.AuditEntryProperty");
-
-                    b.Property<string>("EnPropertyName");
-
-                    b.HasDiscriminator().HasValue("CustomAuditEntryProperty");
+                    b.ToTable("AuditEntryProperties");
                 });
 
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
                     b.HasOne("Official.Domain.Model.CommonEntity.Menu.Menu")
                         .WithMany("SubMenus")
-                        .HasForeignKey("MenuId");
+                        .HasForeignKey("MenuId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Official.Domain.Model.Person.BirthCertificate", b =>
