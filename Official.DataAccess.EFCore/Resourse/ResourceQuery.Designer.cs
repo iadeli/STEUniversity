@@ -61,11 +61,209 @@ namespace Official.Persistence.EFCore.Resourse {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT [Name] FROM Places WHERE [Type] = 3 AND Id =.
+        /// </summary>
+        internal static string BirthCityId {
+            get {
+                return ResourceManager.GetString("BirthCityId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT [Name] FROM Places WHERE [Type] = 1 AND Id =.
+        /// </summary>
+        internal static string BirthCountryId {
+            get {
+                return ResourceManager.GetString("BirthCountryId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT [Name] FROM Places WHERE [Type] = 2 AND Id =.
+        /// </summary>
+        internal static string BirthProvinceId {
+            get {
+                return ResourceManager.GetString("BirthProvinceId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;MajorSubjectId&apos; AND EnumValue = (SELECT MajorSubjectId FROM HistoryEducationals h WHERE h.Id =.
+        /// </summary>
+        internal static string DegreeId {
+            get {
+                return ResourceManager.GetString("DegreeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;EnlistId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string EnlistId {
+            get {
+                return ResourceManager.GetString("EnlistId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;EthnicityId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string EthnicityId {
+            get {
+                return ResourceManager.GetString("EthnicityId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;GenderId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string GenderId {
+            get {
+                return ResourceManager.GetString("GenderId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;GradeId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string GradeId {
+            get {
+                return ResourceManager.GetString("GradeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 1 FirstName + &apos; &apos; + LastName FROM HistoryEducationals h INNER JOIN Persons p ON h.PersonId = p.Id WHERE h.PersonId =.
+        /// </summary>
+        internal static string HistoryEducationalId {
+            get {
+                return ResourceManager.GetString("HistoryEducationalId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;IndigenousSituationId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string IndigenousSituationId {
+            get {
+                return ResourceManager.GetString("IndigenousSituationId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT [Name] FROM Places WHERE [Type] = 3 AND Id =.
+        /// </summary>
+        internal static string IssueCityId {
+            get {
+                return ResourceManager.GetString("IssueCityId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;MajorSubjectId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string MajorSubjectId {
+            get {
+                return ResourceManager.GetString("MajorSubjectId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;MarriedId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string MarriedId {
+            get {
+                return ResourceManager.GetString("MarriedId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Title FROM Menus WHERE Id =.
+        /// </summary>
+        internal static string MenuId {
+            get {
+                return ResourceManager.GetString("MenuId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;NationalityId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string NationalityId {
+            get {
+                return ResourceManager.GetString("NationalityId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT FirstName + &apos; &apos; + LastName FROM Persons WHERE Id =.
+        /// </summary>
+        internal static string PersonId {
+            get {
+                return ResourceManager.GetString("PersonId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT [Name] FROM Places WHERE Id =.
+        /// </summary>
+        internal static string PlaceId {
+            get {
+                return ResourceManager.GetString("PlaceId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;PrefixId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string PrefixId {
+            get {
+                return ResourceManager.GetString("PrefixId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;ReligionId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string ReligionId {
+            get {
+                return ResourceManager.GetString("ReligionId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;SubReligionId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string SubReligionId {
+            get {
+                return ResourceManager.GetString("SubReligionId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;TeacherTypeId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string TeacherTypeId {
+            get {
+                return ResourceManager.GetString("TeacherTypeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Title FROM Terms WHERE Id =.
         /// </summary>
         internal static string TermId {
             get {
                 return ResourceManager.GetString("TermId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;UniversityId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string UniversityId {
+            get {
+                return ResourceManager.GetString("UniversityId", resourceCulture);
             }
         }
     }

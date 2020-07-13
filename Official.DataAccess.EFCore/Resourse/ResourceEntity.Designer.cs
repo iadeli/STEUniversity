@@ -61,11 +61,173 @@ namespace Official.Persistence.EFCore.Resourse {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to اطلاعات آمورشی.
+        ///   Looks up a localized string similar to نقش ها.
+        /// </summary>
+        internal static string AppRole {
+            get {
+                return ResourceManager.GetString("AppRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to خصوصیات نقش ها.
+        /// </summary>
+        internal static string AppRoleClaim {
+            get {
+                return ResourceManager.GetString("AppRoleClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کاربران.
+        /// </summary>
+        internal static string AppUser {
+            get {
+                return ResourceManager.GetString("AppUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to خصوصیات کاربران.
+        /// </summary>
+        internal static string AppUserClaim {
+            get {
+                return ResourceManager.GetString("AppUserClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ورود کاربران.
+        /// </summary>
+        internal static string AppUserLogin {
+            get {
+                return ResourceManager.GetString("AppUserLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to نقش کاربران.
+        /// </summary>
+        internal static string AppUserRole {
+            get {
+                return ResourceManager.GetString("AppUserRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to مجوز کاربران.
+        /// </summary>
+        internal static string AppUserToken {
+            get {
+                return ResourceManager.GetString("AppUserToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to وقایع سیستم.
+        /// </summary>
+        internal static string AuditEntry {
+            get {
+                return ResourceManager.GetString("AuditEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اطلاعات شناسنامه ای افراد.
+        /// </summary>
+        internal static string BirthCertificate {
+            get {
+                return ResourceManager.GetString("BirthCertificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to دفترچه تماس افراد.
+        /// </summary>
+        internal static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to جرئیات وقایع سیستم.
+        /// </summary>
+        internal static string CustomAuditEntryProperty {
+            get {
+                return ResourceManager.GetString("CustomAuditEntryProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to پیوست مدارک سوابق آموزشی.
+        /// </summary>
+        internal static string DegreeAttach {
+            get {
+                return ResourceManager.GetString("DegreeAttach", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اطلاعات آموزشی.
         /// </summary>
         internal static string EducationalInfo {
             get {
                 return ResourceManager.GetString("EducationalInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to لیست کمبوهای ثابت.
+        /// </summary>
+        internal static string Enumuration {
+            get {
+                return ResourceManager.GetString("Enumuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حالت های استخدامی.
+        /// </summary>
+        internal static string HireStage {
+            get {
+                return ResourceManager.GetString("HireStage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to سوابق آموزشی.
+        /// </summary>
+        internal static string HistoryEducational {
+            get {
+                return ResourceManager.GetString("HistoryEducational", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فهرست انتخاب.
+        /// </summary>
+        internal static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اطلاعات فردی.
+        /// </summary>
+        internal static string Person {
+            get {
+                return ResourceManager.GetString("Person", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ترم آموزشی.
+        /// </summary>
+        internal static string Term {
+            get {
+                return ResourceManager.GetString("Term", resourceCulture);
             }
         }
     }

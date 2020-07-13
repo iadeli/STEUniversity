@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Official.Domain.Model.Common;
+using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
+    [AuditDisplay("اطلاعات فردی")]
     public sealed class Person : AggregateRoot
     {
+        [AuditDisplay("کد مدرس")]
         public string TeacherCode { get; private set; }
+
+        [AuditDisplay("کد ملی")]
         public string NationalCode { get; private set; }
+
+        [AuditDisplay("کد پرسنلی")]
         public string PersonnelCode { get; private set; }
+
+        [AuditDisplay("نام")]
         public string FirstName { get; private set; }
+
+        [AuditDisplay("نام خانوادگی")]
         public string LastName { get; private set; }
 
         public BirthCertificate BirthCertificate { get; set; }

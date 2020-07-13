@@ -117,7 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppRole" xml:space="preserve">
+    <value>نقش ها</value>
+  </data>
+  <data name="AppRoleClaim" xml:space="preserve">
+    <value>خصوصیات نقش ها</value>
+  </data>
+  <data name="AppUser" xml:space="preserve">
+    <value>کاربران</value>
+  </data>
+  <data name="AppUserClaim" xml:space="preserve">
+    <value>خصوصیات کاربران</value>
+  </data>
+  <data name="AppUserLogin" xml:space="preserve">
+    <value>ورود کاربران</value>
+  </data>
+  <data name="AppUserRole" xml:space="preserve">
+    <value>نقش کاربران</value>
+  </data>
+  <data name="AppUserToken" xml:space="preserve">
+    <value>مجوز کاربران</value>
+  </data>
+  <data name="AuditEntry" xml:space="preserve">
+    <value>وقایع سیستم</value>
+  </data>
+  <data name="BirthCertificate" xml:space="preserve">
+    <value>اطلاعات شناسنامه ای افراد</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>دفترچه تماس افراد</value>
+  </data>
+  <data name="CustomAuditEntryProperty" xml:space="preserve">
+    <value>جرئیات وقایع سیستم</value>
+  </data>
+  <data name="DegreeAttach" xml:space="preserve">
+    <value>پیوست مدارک سوابق آموزشی</value>
+  </data>
   <data name="EducationalInfo" xml:space="preserve">
-    <value>اطلاعات آمورشی</value>
+    <value>اطلاعات آموزشی</value>
+  </data>
+  <data name="Enumuration" xml:space="preserve">
+    <value>لیست کمبوهای ثابت</value>
+  </data>
+  <data name="HireStage" xml:space="preserve">
+    <value>حالت های استخدامی</value>
+  </data>
+  <data name="HistoryEducational" xml:space="preserve">
+    <value>سوابق آموزشی</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>فهرست انتخاب</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>اطلاعات فردی</value>
+  </data>
+  <data name="Term" xml:space="preserve">
+    <value>ترم آموزشی</value>
   </data>
 </root>

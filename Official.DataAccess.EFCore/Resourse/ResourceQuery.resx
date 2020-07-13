@@ -117,7 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BirthCityId" xml:space="preserve">
+    <value>SELECT [Name] FROM Places WHERE [Type] = 3 AND Id =</value>
+  </data>
+  <data name="BirthCountryId" xml:space="preserve">
+    <value>SELECT [Name] FROM Places WHERE [Type] = 1 AND Id =</value>
+  </data>
+  <data name="BirthProvinceId" xml:space="preserve">
+    <value>SELECT [Name] FROM Places WHERE [Type] = 2 AND Id =</value>
+  </data>
+  <data name="DegreeId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'MajorSubjectId' AND EnumValue = (SELECT MajorSubjectId FROM HistoryEducationals h WHERE h.Id =</value>
+  </data>
+  <data name="EnlistId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'EnlistId' AND EnumValue =</value>
+  </data>
+  <data name="EthnicityId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'EthnicityId' AND EnumValue =</value>
+  </data>
+  <data name="GenderId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'GenderId' AND EnumValue =</value>
+  </data>
+  <data name="GradeId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'GradeId' AND EnumValue =</value>
+  </data>
+  <data name="HistoryEducationalId" xml:space="preserve">
+    <value>SELECT TOP 1 FirstName + ' ' + LastName FROM HistoryEducationals h INNER JOIN Persons p ON h.PersonId = p.Id WHERE h.PersonId =</value>
+  </data>
+  <data name="IndigenousSituationId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'IndigenousSituationId' AND EnumValue =</value>
+  </data>
+  <data name="IssueCityId" xml:space="preserve">
+    <value>SELECT [Name] FROM Places WHERE [Type] = 3 AND Id =</value>
+  </data>
+  <data name="MajorSubjectId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'MajorSubjectId' AND EnumValue =</value>
+  </data>
+  <data name="MarriedId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'MarriedId' AND EnumValue =</value>
+  </data>
+  <data name="MenuId" xml:space="preserve">
+    <value>SELECT Title FROM Menus WHERE Id =</value>
+  </data>
+  <data name="NationalityId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'NationalityId' AND EnumValue =</value>
+  </data>
+  <data name="PersonId" xml:space="preserve">
+    <value>SELECT FirstName + ' ' + LastName FROM Persons WHERE Id =</value>
+  </data>
+  <data name="PlaceId" xml:space="preserve">
+    <value>SELECT [Name] FROM Places WHERE Id =</value>
+  </data>
+  <data name="PrefixId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'PrefixId' AND EnumValue =</value>
+  </data>
+  <data name="ReligionId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'ReligionId' AND EnumValue =</value>
+  </data>
+  <data name="SubReligionId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'SubReligionId' AND EnumValue =</value>
+  </data>
+  <data name="TeacherTypeId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'TeacherTypeId' AND EnumValue =</value>
+  </data>
   <data name="TermId" xml:space="preserve">
     <value>SELECT Title FROM Terms WHERE Id =</value>
+  </data>
+  <data name="UniversityId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'UniversityId' AND EnumValue =</value>
   </data>
 </root>
