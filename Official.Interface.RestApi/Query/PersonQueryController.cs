@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
 using Official.Interface.Facade.Contracts.Utility;
-using Official.QueryModel.Model;
 
-namespace Official.Interface.RestApi
+namespace Official.Interface.RestApi.Query
 {
     [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class PersonQueryController : ControllerBase

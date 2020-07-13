@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Mapster;
-using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
-using Official.Application.Contracts.Command.Person.HireStageCommand;
+using Official.Application.Contracts.Command.HireStageCommand;
 using Official.Domain.Model.Person.IHireStageRepository;
 using Official.Framework.Application;
 
-namespace Official.Application.Command.Person
+namespace Official.Application.Command.HireStage
 {
     public class HireStageCommandHandlers : ICommandHandler<CreateHireStageCommand>, ICommandHandler<UpdateHireStageCommand>, ICommandHandler<DeleteHireStageCommand>
     {
@@ -22,7 +19,7 @@ namespace Official.Application.Command.Person
         {
             try
             {
-                var entity = new Domain.Model.Person.HireStage(); //Domain.Model.Person.HireStage.Instance;
+                var entity = new Domain.Model.CommonEntity.HireStage.HireStage(); //Domain.Model.Person.HireStage.Instance;
                 entity = command.Adapt(entity);
 
                 const int create = 1;

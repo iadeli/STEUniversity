@@ -1,15 +1,12 @@
 ﻿using Official.Domain.Model.Common;
-using Official.Domain.Model.CommonEntity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 using Official.Domain.Model.CommonEntity.Term;
+using Z.EntityFramework.Plus;
 
 namespace Official.Domain.Model.Person
 {
     public sealed class EducationalInfo : Entity
     {
+        [AuditDisplay("سقف واحد")]
         public int MaxUnit { get; private set; }
         public bool? Status { get; private set; }
         public int TeacherTypeId { get; private set; }

@@ -33,4 +33,3 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Deb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.AssemblyInfo.cs
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
-C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.csprojAssemblyReference.cache

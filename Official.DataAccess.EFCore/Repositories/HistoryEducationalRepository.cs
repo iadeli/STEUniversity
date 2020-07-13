@@ -131,11 +131,13 @@ namespace Official.Persistence.EFCore.Repositories
         public void Commit()
         {
             _transaction.Commit();
+            _transaction.Dispose();
         }
 
         public void Rollback()
         {
             _transaction.Rollback();
+            _transaction.Dispose();
         }
     }
 }

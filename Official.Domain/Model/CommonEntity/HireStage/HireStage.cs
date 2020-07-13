@@ -1,9 +1,6 @@
 ﻿using Official.Domain.Model.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Official.Domain.Model.Person
+namespace Official.Domain.Model.CommonEntity.HireStage
 {
     public class HireStage : Entity
     {

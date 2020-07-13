@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
-using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
 
-namespace Official.Interface.RestApi
+namespace Official.Interface.RestApi.Command
 {
     [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class PersonController : ControllerBase

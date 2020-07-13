@@ -59,6 +59,20 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("Places");
                 });
 
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.HireStage.HireStage", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HireStages");
+                });
+
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
                     b.Property<long>("Id")
@@ -223,20 +237,6 @@ namespace Official.Persistence.EFCore.Migrations
                     b.HasIndex("TermId");
 
                     b.ToTable("EducationalInfos");
-                });
-
-            modelBuilder.Entity("Official.Domain.Model.Person.HireStage", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HireStages");
                 });
 
             modelBuilder.Entity("Official.Domain.Model.Person.HistoryEducational", b =>
@@ -481,6 +481,74 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Z.EntityFramework.Plus.AuditEntry", b =>
+                {
+                    b.Property<int>("AuditEntryID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<string>("EntitySetName")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("EntityTypeName")
+                        .HasMaxLength(255);
+
+                    b.Property<int>("State");
+
+                    b.Property<string>("StateName")
+                        .HasMaxLength(255);
+
+                    b.HasKey("AuditEntryID");
+
+                    b.ToTable("AuditEntries");
+                });
+
+            modelBuilder.Entity("Z.EntityFramework.Plus.AuditEntryProperty", b =>
+                {
+                    b.Property<int>("AuditEntryPropertyID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AuditEntryID");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
+                    b.Property<string>("NewValueFormatted")
+                        .HasColumnName("NewValue");
+
+                    b.Property<string>("OldValueFormatted")
+                        .HasColumnName("OldValue");
+
+                    b.Property<string>("PropertyName")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("RelationName")
+                        .HasMaxLength(255);
+
+                    b.HasKey("AuditEntryPropertyID");
+
+                    b.HasIndex("AuditEntryID");
+
+                    b.ToTable("AuditEntryProperty");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("AuditEntryProperty");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Audit.CustomAuditEntryProperty", b =>
+                {
+                    b.HasBaseType("Z.EntityFramework.Plus.AuditEntryProperty");
+
+                    b.Property<string>("EnPropertyName");
+
+                    b.HasDiscriminator().HasValue("CustomAuditEntryProperty");
+                });
+
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
                     b.HasOne("Official.Domain.Model.CommonEntity.Menu.Menu")
@@ -583,6 +651,14 @@ namespace Official.Persistence.EFCore.Migrations
                     b.HasOne("Official.Persistence.EFCore.Identity.AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Z.EntityFramework.Plus.AuditEntryProperty", b =>
+                {
+                    b.HasOne("Z.EntityFramework.Plus.AuditEntry", "Parent")
+                        .WithMany("Properties")
+                        .HasForeignKey("AuditEntryID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

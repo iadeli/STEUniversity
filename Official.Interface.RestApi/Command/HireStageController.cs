@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
-using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
-using Official.Application.Contracts.Command.Person.HireStageCommand;
+using Official.Application.Contracts.Command.HireStageCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
 
-namespace Official.Interface.RestApi
+namespace Official.Interface.RestApi.Command
 {
     [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class HireStageController : ControllerBase

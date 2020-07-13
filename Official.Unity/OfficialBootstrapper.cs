@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Official.Application.Attribute;
+using Official.Application.Command.HireStage;
 using Official.Application.Command.Person;
 using Official.Application.Command.Term;
 using Official.Application.Command.User;
+using Official.Application.Contracts.Command.HireStageCommand;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
-using Official.Application.Contracts.Command.Person.HireStageCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Term;
@@ -26,6 +27,7 @@ using Official.Persistence.EFCore;
 using Official.Persistence.EFCore.Context;
 using Official.Persistence.EFCore.Identity;
 using Official.Persistence.EFCore.Repositories;
+using Official.Persistence.EFCore.Utility;
 
 namespace Official.Config.DI
 {
@@ -33,9 +35,10 @@ namespace Official.Config.DI
     {
         public static void WireUp(IServiceCollection services, string connectionString)
         {
-            services.AddSingleton<STEDbContext>(sp => new OfficialContextFactory().CreateDbContext(new string[] { }));
+            services.AddSingleton<STEDbContext>(sp => new STEContextFactory().CreateDbContext(new string[] { }));
             services.AddSingleton<IDbConnection>(sp => new SqlConnection(connectionString));
             services.AddSingleton<LoggingActionFilter>();
+            services.AddTransient<UserResolverService>();
 
             //services.AddScoped<IJwtRepository, JwtRepository>();
             services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository()));

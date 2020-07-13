@@ -1,15 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Net;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
-using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Official.Interface.RestApi
+namespace Official.Interface.RestApi.Command
 {
     [ApiController, Route("api/[controller]"), ServiceFilter(typeof(LoggingActionFilter))]
     public class HistoryEducationalController : ControllerBase

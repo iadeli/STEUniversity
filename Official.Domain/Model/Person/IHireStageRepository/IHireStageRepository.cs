@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Domain.Model.CommonEntity.HireStage;
 
 namespace Official.Domain.Model.Person.IHireStageRepository
 {

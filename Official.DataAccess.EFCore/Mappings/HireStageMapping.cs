@@ -4,6 +4,7 @@ using Official.Domain.Model.Person;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Official.Domain.Model.CommonEntity.HireStage;
 
 namespace Official.Persistence.EFCore.Mappings
 {

@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
 using Official.QueryModel.Model;
 
-namespace Official.Interface.Facade.Query.FacadeQuery.Person
+namespace Official.Interface.Facade.Query.FacadeQuery.HireStage
 {
     public class HireStageFacadeQuery : IHireStageFacadeQuery
     {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Official.Domain.Model.Person.IEducationalInfoRepository;
+using Z.EntityFramework.Plus;
 
 namespace Official.Persistence.EFCore.Repositories
 {
@@ -112,7 +113,16 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
+                //var audit = new Audit();
+                //audit.CreatedBy = "ZZZ Projects"; // Optional
                 await _context.SaveChangesAsync();
+                //var entries = audit.Entries;
+                //foreach (var entry in entries)
+                //{
+                //    foreach (var property in entry.Properties)
+                //    {
+                //    }
+                //}
             }
             catch (Exception e)
             {
