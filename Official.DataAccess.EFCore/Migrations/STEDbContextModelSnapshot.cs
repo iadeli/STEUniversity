@@ -123,6 +123,35 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("Terms");
                 });
 
+            modelBuilder.Entity("Official.Domain.Model.Log.ApiLog", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<string>("Method");
+
+                    b.Property<string>("Path");
+
+                    b.Property<string>("QueryString");
+
+                    b.Property<string>("RequestBody");
+
+                    b.Property<DateTime>("RequestTime");
+
+                    b.Property<string>("ResponseBody");
+
+                    b.Property<long>("ResponseMillis");
+
+                    b.Property<int>("StatusCode");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ApiLogs");
+                });
+
             modelBuilder.Entity("Official.Domain.Model.Person.BirthCertificate", b =>
                 {
                     b.Property<long>("PersonId");

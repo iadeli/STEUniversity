@@ -10,3 +10,15 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcor
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcoreapp2.2\Official.Application.Contracts.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.csprojAssemblyReference.cache
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.csproj.CopyComplete
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcoreapp2.2\Official.QueryModel.deps.json
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcoreapp2.2\Official.QueryModel.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcoreapp2.2\Official.QueryModel.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcoreapp2.2\Official.Application.Contracts.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\bin\Release\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.csprojAssemblyReference.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.AssemblyInfoInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.AssemblyInfo.cs
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.csproj.CopyComplete
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.QueryModel\obj\Release\netcoreapp2.2\Official.QueryModel.pdb

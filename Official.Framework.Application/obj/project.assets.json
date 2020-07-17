@@ -708,11 +708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Framework.Application\\Official.Framework.Application.csproj",
+      "projectUniqueName": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Framework.Application\\Official.Framework.Application.csproj",
       "projectName": "Official.Framework.Application",
-      "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Framework.Application\\Official.Framework.Application.csproj",
+      "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Framework.Application\\Official.Framework.Application.csproj",
       "packagesPath": "C:\\Users\\sama laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Framework.Application\\obj\\",
+      "outputPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Framework.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -731,8 +731,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Framework.Core\\Official.Framework.Core.csproj": {
-              "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Framework.Core\\Official.Framework.Core.csproj"
+            "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Framework.Core\\Official.Framework.Core.csproj": {
+              "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Framework.Core\\Official.Framework.Core.csproj"
             }
           }
         }

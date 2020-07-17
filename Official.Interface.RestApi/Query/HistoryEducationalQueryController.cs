@@ -53,5 +53,24 @@ namespace Official.Interface.RestApi.Query
                 return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
+
+        /// <summary>
+        /// دریافت سوابق تحصیلی براساس شناسه فرد
+        /// </summary>
+        /// <param name="id">شناسه فرد</param>
+        /// <returns></returns>
+        [HttpGet("Person/{personId}")]
+        public async Task<IActionResult> GetByPersonId(long personId)
+        {
+            try
+            {
+                var historyEducational = await _query.GetByPersonIdAsync(personId);
+                return Ok(historyEducational);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
     }
 }

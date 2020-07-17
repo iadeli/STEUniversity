@@ -53,6 +53,8 @@ namespace Official.Application.Command.Person
 
                 var degreeAttach = new DegreeAttach(); //DegreeAttach.Instance;
                 degreeAttach = command.Adapt(degreeAttach);
+                degreeAttach.Id = 0;
+                degreeAttach.HistoryEducationalId = entity.Id;
 
                 await _historyEducationalRepository.RemoveDegreeAttach(entity.Id);
 

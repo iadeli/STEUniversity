@@ -726,11 +726,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj",
+      "projectUniqueName": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj",
       "projectName": "Official.Interface.Facade.Contracts",
-      "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj",
+      "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj",
       "packagesPath": "C:\\Users\\sama laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\obj\\",
+      "outputPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -749,8 +749,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.QueryModel\\Official.QueryModel.csproj": {
-              "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.QueryModel\\Official.QueryModel.csproj"
+            "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.QueryModel\\Official.QueryModel.csproj": {
+              "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.QueryModel\\Official.QueryModel.csproj"
             }
           }
         }

@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Official.Domain.Model.Security;
 using Official.Domain.Model.Security.ISecurityRepository;
+using Mapster;
 
 namespace Official.Application.Command.User
 {
-    public class UserCommandHandlers : ICommandHandler<LoginCommand>, ICommandHandler<CreateUserCommand>
+    public class UserCommandHandlers : ICommandHandler<LoginCommand>, ICommandHandler<CreateUserCommand>, ICommandHandler<RefreshTokenCommand>
     {
         private readonly IUserRepository _userRepository;
         private readonly IJwtRepository _jwtRepository;
@@ -43,6 +44,7 @@ namespace Official.Application.Command.User
                 var jwtToken = await _jwtRepository.CreateToken(command.UserName);
                 command.Token = jwtToken.Token;
                 command.Expiration = jwtToken.Expiration;
+                command.Password = "********";
 
                 return command;
             }
@@ -63,6 +65,20 @@ namespace Official.Application.Command.User
                 }
 
                 command.Succeeded = await _userRepository.Create(command.UserName.Trim(), command.Password.Trim(), command.PersonId);
+                return command;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<RefreshTokenCommand> Handle(RefreshTokenCommand command)
+        {
+            try
+            {
+                var token = await _jwtRepository.RefreshToken(command.Token);
+                command = token.Adapt(command);
                 return command;
             }
             catch (Exception e)

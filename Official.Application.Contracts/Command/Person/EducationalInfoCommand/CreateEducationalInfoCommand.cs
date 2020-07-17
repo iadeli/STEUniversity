@@ -2,5 +2,6 @@
 {
     public class CreateEducationalInfoCommand : EducationalInfoDto
     {
+        public new long PersonId { get; set; }
     }
 }

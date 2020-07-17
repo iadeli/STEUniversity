@@ -40,6 +40,25 @@ namespace Official.Interface.RestApi.Command
         }
 
         /// <summary>
+        /// تمدید توکن
+        /// </summary>
+        /// <param name="command">پارامترهای ورودی</param>
+        /// <returns></returns>
+        [HttpPost("RefreshToken"), AllowAnonymous]
+        public async Task<IActionResult> RefreshToken(RefreshTokenCommand command)
+        {
+            try
+            {
+                var result = await _bus.Dispatch(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
+        /// <summary>
         /// ایجاد کاربر
         /// </summary>
         /// <param name="command">پارامترهای ورودی</param>

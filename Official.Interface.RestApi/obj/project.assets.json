@@ -1616,7 +1616,7 @@
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.7.78": {
+      "Z.EntityFramework.Extensions.EFCore/2.7.80": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -1633,14 +1633,14 @@
           "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {}
         }
       },
-      "Z.EntityFramework.Plus.EFCore/2.0.53": {
+      "Z.EntityFramework.Plus.EFCore/2.0.54": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "[2.0.0, 3.0.0)",
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.TypeExtensions": "4.5.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.7.78",
-          "Z.Expressions.Eval": "4.0.1"
+          "Z.EntityFramework.Extensions.EFCore": "2.7.80",
+          "Z.Expressions.Eval": "4.0.4"
         },
         "compile": {
           "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll": {}
@@ -1649,7 +1649,7 @@
           "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll": {}
         }
       },
-      "Z.Expressions.Eval/4.0.1": {
+      "Z.Expressions.Eval/4.0.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -1702,6 +1702,9 @@
       "Official.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Z.EntityFramework.Plus.EFCore": "2.0.54"
+        },
         "compile": {
           "bin/placeholder/Official.Domain.dll": {}
         },
@@ -1753,7 +1756,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Official.Domain": "1.0.0",
-          "Z.EntityFramework.Plus.EFCore": "2.0.53"
+          "Z.EntityFramework.Plus.EFCore": "2.0.54"
         },
         "compile": {
           "bin/placeholder/Official.Persistence.EFCore.dll": {}
@@ -5819,37 +5822,37 @@
         "system.xml.xpath.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.7.78": {
-      "sha512": "5Z5SJL4V0HmBCM8I57kfdFYmvhEuS7RRfzlGvtMcI+i6W1U43wpkWv0jOQiVptHUZONt22Wli+Do888gkbTmaw==",
+    "Z.EntityFramework.Extensions.EFCore/2.7.80": {
+      "sha512": "/je/0GSUtJIzbKKHGRB62ja2r6antYljWCEZV2RYTf3h+de+rilBFGS3iwG/N4MYCinxcfhps9HBsnymHmAykw==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.7.78",
+      "path": "z.entityframework.extensions.efcore/2.7.80",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.7.78.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.7.80.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
-    "Z.EntityFramework.Plus.EFCore/2.0.53": {
-      "sha512": "0uAkNPRlRll5aglb1oK/5hOwuh9ZrfDUWzZam+Khm88Ism8AQ7I8iSJ884JMumAevwI2AiCgSZf/8lnxR40ycA==",
+    "Z.EntityFramework.Plus.EFCore/2.0.54": {
+      "sha512": "+3MPlD6X4heMW5bem+mASvy+lLo/GFn261itUYw/Q0u5q7/+smmm1uIFKlE34/YTqEgy/yTxaR1FowD1Bg52nA==",
       "type": "package",
-      "path": "z.entityframework.plus.efcore/2.0.53",
+      "path": "z.entityframework.plus.efcore/2.0.54",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.deps.json",
         "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.xml",
-        "z.entityframework.plus.efcore.2.0.53.nupkg.sha512",
+        "z.entityframework.plus.efcore.2.0.54.nupkg.sha512",
         "z.entityframework.plus.efcore.nuspec"
       ]
     },
-    "Z.Expressions.Eval/4.0.1": {
-      "sha512": "pcNI8oIUmGrp1FYQ4fMhbYBEch33RdR7G6eXo1/KqmbPvzPiMRD6FxMApO2mQ2zb4HYm5kva7aURDcUbSMEkNA==",
+    "Z.Expressions.Eval/4.0.4": {
+      "sha512": "byOtdOa2TRT9x9d1eEZ0N+++uDQfHjV8j7vhs4t0NrGCOYQae+RjVEyTleJ9lb1yhY6N/a0gEshdZMKU3AXlwA==",
       "type": "package",
-      "path": "z.expressions.eval/4.0.1",
+      "path": "z.expressions.eval/4.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5861,7 +5864,7 @@
         "lib/netstandard2.0/Z.Expressions.Eval.xml",
         "lib/netstandard2.1/Z.Expressions.Eval.dll",
         "lib/netstandard2.1/Z.Expressions.Eval.xml",
-        "z.expressions.eval.4.0.1.nupkg.sha512",
+        "z.expressions.eval.4.0.4.nupkg.sha512",
         "z.expressions.eval.nuspec"
       ]
     },
@@ -5921,11 +5924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.RestApi\\Official.Interface.RestApi.csproj",
+      "projectUniqueName": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.RestApi\\Official.Interface.RestApi.csproj",
       "projectName": "Official.Interface.RestApi",
-      "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.RestApi\\Official.Interface.RestApi.csproj",
+      "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.RestApi\\Official.Interface.RestApi.csproj",
       "packagesPath": "C:\\Users\\sama laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.RestApi\\obj\\",
+      "outputPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.RestApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5944,14 +5947,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Application\\Official.Application.csproj": {
-              "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Application\\Official.Application.csproj"
+            "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Application\\Official.Application.csproj": {
+              "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Application\\Official.Application.csproj"
             },
-            "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.DataAccess.EFCore\\Official.Persistence.EFCore.csproj": {
-              "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.DataAccess.EFCore\\Official.Persistence.EFCore.csproj"
+            "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.DataAccess.EFCore\\Official.Persistence.EFCore.csproj": {
+              "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.DataAccess.EFCore\\Official.Persistence.EFCore.csproj"
             },
-            "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj": {
-              "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj"
+            "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj": {
+              "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Interface.Facade.Contracts\\Official.Interface.Facade.Contracts.csproj"
             }
           }
         }

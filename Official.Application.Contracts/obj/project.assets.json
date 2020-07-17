@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Application.Contracts\\Official.Application.Contracts.csproj",
+      "projectUniqueName": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Application.Contracts\\Official.Application.Contracts.csproj",
       "projectName": "Official.Application.Contracts",
-      "projectPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Application.Contracts\\Official.Application.Contracts.csproj",
+      "projectPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Application.Contracts\\Official.Application.Contracts.csproj",
       "packagesPath": "C:\\Users\\sama laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\BamPardazesh\\BE-OfficialCorrespondence\\Official.Application.Contracts\\obj\\",
+      "outputPath": "C:\\BamPardazesh\\Source\\STEUniversity\\BE-OfficialCorrespondence\\Official.Application.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -41,11 +41,30 @@ namespace Official.Interface.RestApi.Query
         /// <param name="id">شناسه اطلاعات آموزشی</param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(long id)
         {
             try
             {
                 var educationalInfo = await _query.GetById(id);
+                return Ok(educationalInfo);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
+        /// <summary>
+        /// دریافت اطلاعات آموزشی براساس شناسه فرد
+        /// </summary>
+        /// <param name="personId">شناسه فرد</param>
+        /// <returns></returns>
+        [HttpGet("Person/{personId}")]
+        public async Task<IActionResult> GetByPersonId(long personId)
+        {
+            try
+            {
+                var educationalInfo = await _query.GetByPersonId(personId);
                 return Ok(educationalInfo);
             }
             catch (Exception e)

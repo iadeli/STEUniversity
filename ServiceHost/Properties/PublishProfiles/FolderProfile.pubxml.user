@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="MainDbConnection">
-      <Value>Data Source=192.168.1.9%3bInitial Catalog=STEUniversity%3bPersist Security Info=True%3bUser ID=sa%3bPassword=bpt123%3b</Value>
+      <Value>Data Source=192.168.1.9%3bInitial Catalog=STEUniversity%3bPersist Security Info=True%3bUser ID=sa%3bPassword=bpt123%3bMultipleActiveResultSets=True%3b</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
 </Project>

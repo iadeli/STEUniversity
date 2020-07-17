@@ -12,6 +12,7 @@ using Official.Domain.Model.CommonEntity.Enum;
 using Official.Domain.Model.CommonEntity.HireStage;
 using Official.Domain.Model.CommonEntity.Menu;
 using Official.Domain.Model.CommonEntity.Term;
+using Official.Domain.Model.Log;
 using Official.Domain.Model.Person;
 using Official.Persistence.EFCore.Identity;
 using Official.Persistence.EFCore.Mappings;
@@ -57,7 +58,7 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.MarriedId, x => Resourse.ResourceQuery.ResourceManager.GetString("MarriedId") + x);
             AuditManager.DefaultConfiguration.Format<BirthCertificate>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
             AuditManager.DefaultConfiguration.Format<Contact>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-            AuditManager.DefaultConfiguration.Format<DegreeAttach>(x => x.HistoryEducationalId, x => Resourse.ResourceQuery.ResourceManager.GetString("HistoryEducationalId") + $"{x})");
+            AuditManager.DefaultConfiguration.Format<DegreeAttach>(x => x.HistoryEducationalId, x => Resourse.ResourceQuery.ResourceManager.GetString("HistoryEducationalId") + $"{x}");
             AuditManager.DefaultConfiguration.Format<EducationalInfo>(x => x.TeacherTypeId, x => Resourse.ResourceQuery.ResourceManager.GetString("TeacherTypeId") + x);
             AuditManager.DefaultConfiguration.Format<EducationalInfo>(x => x.TermId, x => Resourse.ResourceQuery.ResourceManager.GetString("TermId") + x);
             AuditManager.DefaultConfiguration.Format<EducationalInfo>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
@@ -104,7 +105,7 @@ namespace Official.Persistence.EFCore.Context
             //using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             //{
             var audit = new Audit();
-            audit.CreatedBy = _user;
+            audit.CreatedBy = _user ?? new UserResolverService(new HttpContextAccessor())?.GetUser();
             audit.PreSaveChanges(this);
             rowAffecteds = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
             audit.PostSaveChanges();
@@ -117,7 +118,8 @@ namespace Official.Persistence.EFCore.Context
             //}
             return rowAffecteds;
         }
-        
+
+        public DbSet<ApiLog> ApiLogs { get; set; }
         public DbSet<AuditEntry> AuditEntries { get; set; }
         public DbSet<AuditEntryProperty> AuditEntryProperties { get; set; }
         public DbSet<AppUser> AspNetUsers { get; set; }

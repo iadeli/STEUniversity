@@ -33,13 +33,27 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
 
         }
 
-        public async Task<EducationalInfoQuery> GetById(int id)
+        public async Task<EducationalInfoQuery> GetById(long id)
         {
             try
             {
                 var sql = "select * from EducationalInfos where Id = @Id";
                 var data = await _connection.QueryFirstOrDefaultAsync<EducationalInfoQuery>(sql, new { Id = id });
                 return data;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<List<EducationalInfoQuery>> GetByPersonId(long personId)
+        {
+            try
+            {
+                var sql = "select * from EducationalInfos where PersonId = @PersonId";
+                var data = await _connection.QueryAsync<EducationalInfoQuery>(sql, new { PersonId = personId });
+                return data.ToList();
             }
             catch (Exception e)
             {

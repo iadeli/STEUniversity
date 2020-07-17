@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="2.0.54" />
+  </ItemGroup>
+
 </Project>

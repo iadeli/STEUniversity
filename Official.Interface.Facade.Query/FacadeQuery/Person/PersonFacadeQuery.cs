@@ -36,7 +36,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = "select * from Persons p inner join BirthCertificates bc on p.Id = bc.PersonId inner join PersonDetails pd on p.Id = pd.PersonId inner join Contacts c on p.Id = c.PersonId WHERE ID = @Id";
+                var sql = "select * from Persons p inner join BirthCertificates bc on p.Id = bc.PersonId inner join PersonDetails pd on p.Id = pd.PersonId inner join Contacts c on p.Id = c.PersonId WHERE p.ID = @Id";
                 var data = await _connection.QueryFirstOrDefaultAsync<PersonQuery>(sql, new { Id = id });
                 return data;
             }

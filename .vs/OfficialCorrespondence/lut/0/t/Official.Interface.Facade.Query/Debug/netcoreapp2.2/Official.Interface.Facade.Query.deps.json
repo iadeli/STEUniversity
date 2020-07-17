@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "6195bb9d039170e241c4fdf9cebd2cc6ed1c14da"
+    "signature": "079218e213ad31da82c56352b8da38ba400c62eb"
   },
   "compilationOptions": {},
   "targets": {
@@ -1085,7 +1085,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.7.78": {
+      "Z.EntityFramework.Extensions.EFCore/2.7.80": {
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
@@ -1096,27 +1096,27 @@
         },
         "runtime": {
           "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {
-            "assemblyVersion": "2.7.78.0",
-            "fileVersion": "2.7.78.0"
+            "assemblyVersion": "2.7.80.0",
+            "fileVersion": "2.7.80.0"
           }
         }
       },
-      "Z.EntityFramework.Plus.EFCore/2.0.53": {
+      "Z.EntityFramework.Plus.EFCore/2.0.54": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.TypeExtensions": "4.5.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.7.78",
-          "Z.Expressions.Eval": "4.0.1"
+          "Z.EntityFramework.Extensions.EFCore": "2.7.80",
+          "Z.Expressions.Eval": "4.0.4"
         },
         "runtime": {
           "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll": {
-            "assemblyVersion": "2.0.53.0",
-            "fileVersion": "2.0.53.0"
+            "assemblyVersion": "2.0.54.0",
+            "fileVersion": "2.0.54.0"
           }
         }
       },
-      "Z.Expressions.Eval/4.0.1": {
+      "Z.Expressions.Eval/4.0.4": {
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
@@ -1133,8 +1133,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Z.Expressions.Eval.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
           }
         }
       },
@@ -1156,6 +1156,9 @@
         }
       },
       "Official.Domain/1.0.0": {
+        "dependencies": {
+          "Z.EntityFramework.Plus.EFCore": "2.0.54"
+        },
         "runtime": {
           "Official.Domain.dll": {}
         }
@@ -1187,7 +1190,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Official.Domain": "1.0.0",
-          "Z.EntityFramework.Plus.EFCore": "2.0.53",
+          "Z.EntityFramework.Plus.EFCore": "2.0.54",
           "Microsoft.IdentityModel.JsonWebTokens": "5.3.0.0",
           "Microsoft.IdentityModel.Tokens": "5.3.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.3.0.0"
@@ -2002,26 +2005,26 @@
       "path": "system.xml.xpath/4.3.0",
       "hashPath": "system.xml.xpath.4.3.0.nupkg.sha512"
     },
-    "Z.EntityFramework.Extensions.EFCore/2.7.78": {
+    "Z.EntityFramework.Extensions.EFCore/2.7.80": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5Z5SJL4V0HmBCM8I57kfdFYmvhEuS7RRfzlGvtMcI+i6W1U43wpkWv0jOQiVptHUZONt22Wli+Do888gkbTmaw==",
-      "path": "z.entityframework.extensions.efcore/2.7.78",
-      "hashPath": "z.entityframework.extensions.efcore.2.7.78.nupkg.sha512"
+      "sha512": "sha512-/je/0GSUtJIzbKKHGRB62ja2r6antYljWCEZV2RYTf3h+de+rilBFGS3iwG/N4MYCinxcfhps9HBsnymHmAykw==",
+      "path": "z.entityframework.extensions.efcore/2.7.80",
+      "hashPath": "z.entityframework.extensions.efcore.2.7.80.nupkg.sha512"
     },
-    "Z.EntityFramework.Plus.EFCore/2.0.53": {
+    "Z.EntityFramework.Plus.EFCore/2.0.54": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0uAkNPRlRll5aglb1oK/5hOwuh9ZrfDUWzZam+Khm88Ism8AQ7I8iSJ884JMumAevwI2AiCgSZf/8lnxR40ycA==",
-      "path": "z.entityframework.plus.efcore/2.0.53",
-      "hashPath": "z.entityframework.plus.efcore.2.0.53.nupkg.sha512"
+      "sha512": "sha512-+3MPlD6X4heMW5bem+mASvy+lLo/GFn261itUYw/Q0u5q7/+smmm1uIFKlE34/YTqEgy/yTxaR1FowD1Bg52nA==",
+      "path": "z.entityframework.plus.efcore/2.0.54",
+      "hashPath": "z.entityframework.plus.efcore.2.0.54.nupkg.sha512"
     },
-    "Z.Expressions.Eval/4.0.1": {
+    "Z.Expressions.Eval/4.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pcNI8oIUmGrp1FYQ4fMhbYBEch33RdR7G6eXo1/KqmbPvzPiMRD6FxMApO2mQ2zb4HYm5kva7aURDcUbSMEkNA==",
-      "path": "z.expressions.eval/4.0.1",
-      "hashPath": "z.expressions.eval.4.0.1.nupkg.sha512"
+      "sha512": "sha512-byOtdOa2TRT9x9d1eEZ0N+++uDQfHjV8j7vhs4t0NrGCOYQae+RjVEyTleJ9lb1yhY6N/a0gEshdZMKU3AXlwA==",
+      "path": "z.expressions.eval/4.0.4",
+      "hashPath": "z.expressions.eval.4.0.4.nupkg.sha512"
     },
     "Official.Application/1.0.0": {
       "type": "project",

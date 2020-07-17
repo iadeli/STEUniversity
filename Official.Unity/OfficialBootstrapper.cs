@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Official.Application.Attribute;
+using Official.Application.Command.ApiLog;
 using Official.Application.Command.HireStage;
 using Official.Application.Command.Person;
 using Official.Application.Command.Term;
 using Official.Application.Command.User;
 using Official.Application.Contracts.Command.HireStageCommand;
+using Official.Application.Contracts.Command.Log.ApiLog;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
@@ -16,6 +18,7 @@ using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Term;
 using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.CommonEntity.Term.ITermRepository;
+using Official.Domain.Model.Log.IApiLogRepository;
 using Official.Domain.Model.Person.IEducationalInfoRepository;
 using Official.Domain.Model.Person.IHireStageRepository;
 using Official.Domain.Model.Person.IHistoryEducationalRepository;
@@ -35,23 +38,28 @@ namespace Official.Config.DI
     {
         public static void WireUp(IServiceCollection services, string connectionString)
         {
-            services.AddSingleton<STEDbContext>(sp => new STEContextFactory().CreateDbContext(new string[] { }));
-            services.AddSingleton<IDbConnection>(sp => new SqlConnection(connectionString));
-            services.AddSingleton<LoggingActionFilter>();
-            services.AddTransient<UserResolverService>();
+            services.AddScoped<STEDbContext>(sp => new STEContextFactory().CreateDbContext(new string[] { }));
+            services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
+            //services.AddScoped<LoggingActionFilter>();
+            var serviceProvider = services.BuildServiceProvider();
+            var context = serviceProvider.GetRequiredService<STEDbContext>();
+            services.AddScoped<UserResolverService>();
 
             //services.AddScoped<IJwtRepository, JwtRepository>();
-            services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository()));
+            services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository(context)));
 
             //services.AddScoped<IUserRepository, UserRepository>();
-            var serviceProvider = services.BuildServiceProvider();
             var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
             var signInManager = serviceProvider.GetRequiredService<SignInManager<AppUser>>();
-            var context = serviceProvider.GetRequiredService<STEDbContext>();
+            
             services.Add(new ServiceDescriptor(typeof(IUserRepository), new UserRepository(userManager, signInManager, context)));
 
             services.AddScoped<ICommandHandler<CreateUserCommand>, UserCommandHandlers>();
             services.AddScoped<ICommandHandler<LoginCommand>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<RefreshTokenCommand>, UserCommandHandlers>();
+
+            services.AddScoped<IApiLogRepository, ApiLogRepository>();
+            services.AddScoped<ICommandHandler<CreateApiLogCommand>, ApiLogCommandHandlers>();
 
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<ICommandHandler<CreatePersonCommand>, PersonCommandHandlers>();

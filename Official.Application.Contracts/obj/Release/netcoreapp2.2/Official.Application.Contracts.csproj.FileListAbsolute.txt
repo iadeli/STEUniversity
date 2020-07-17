@@ -7,3 +7,12 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Rel
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.pdb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.csprojAssemblyReference.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\bin\Release\netcoreapp2.2\Official.Application.Contracts.deps.json
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\bin\Release\netcoreapp2.2\Official.Application.Contracts.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\bin\Release\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.csprojAssemblyReference.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.AssemblyInfoInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.AssemblyInfo.cs
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Release\netcoreapp2.2\Official.Application.Contracts.pdb

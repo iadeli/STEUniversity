@@ -9,6 +9,7 @@ namespace Official.Interface.Facade.Contracts.IFacadeQuery.Person
     public interface IHistoryEducationalFacadeQuery
     {
         Task<List<HistoryEducationalQuery>> GetAsync();
-        Task<HistoryEducationalQuery> GetByIdAsync(int id);
+        Task<HistoryEducationalQuery> GetByIdAsync(long id);
+        Task<List<HistoryEducationalQuery>> GetByPersonIdAsync(long personId);
     }
 }

@@ -116,6 +116,13 @@
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Command.UserController.RefreshToken(Official.Application.Contracts.Command.User.RefreshTokenCommand)">
+            <summary>
+            تمدید توکن
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Command.UserController.Create(Official.Application.Contracts.Command.User.CreateUserCommand)">
             <summary>
             ایجاد کاربر
@@ -147,11 +154,18 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.Query.EducationalInfoQueryController.GetById(System.Int32)">
+        <member name="M:Official.Interface.RestApi.Query.EducationalInfoQueryController.GetById(System.Int64)">
             <summary>
             دریافت اطلاعات آموزشی براساس شناسه
             </summary>
             <param name="id">شناسه اطلاعات آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.EducationalInfoQueryController.GetByPersonId(System.Int64)">
+            <summary>
+            دریافت اطلاعات آموزشی براساس شناسه فرد
+            </summary>
+            <param name="personId">شناسه فرد</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.EnumQueryController.GetByName(System.String)">
@@ -185,6 +199,13 @@
             دریافت سوابق تحصیلی براساس شناسه
             </summary>
             <param name="id">شناسه سوابق تحصیلی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.HistoryEducationalQueryController.GetByPersonId(System.Int64)">
+            <summary>
+            دریافت سوابق تحصیلی براساس شناسه فرد
+            </summary>
+            <param name="id">شناسه فرد</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.MenuQueryController.Get">

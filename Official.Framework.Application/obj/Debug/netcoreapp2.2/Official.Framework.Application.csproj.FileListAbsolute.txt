@@ -46,3 +46,15 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Deb
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.csproj.CopyComplete
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.dll
 C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.deps.json
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\bin\Debug\netcoreapp2.2\Official.Framework.Application.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.csprojAssemblyReference.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.AssemblyInfoInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.AssemblyInfo.cs
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.csproj.CopyComplete
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Application\obj\Debug\netcoreapp2.2\Official.Framework.Application.pdb

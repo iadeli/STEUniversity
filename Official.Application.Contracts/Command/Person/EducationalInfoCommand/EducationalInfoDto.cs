@@ -10,6 +10,6 @@
         public bool HolyDefenseTeacher { get; set; }
 
         public long TermId { get; set; }
-        public long PersonId { get; set; }
+        public long PersonId { get; private set; }
     }
 }

@@ -32,6 +32,7 @@ using Official.Persistence.EFCore.Identity;
 using Official.Persistence.EFCore.Jwt;
 using Official.Persistence.EFCore.Utility;
 using ServiceHost.Configs;
+using ServiceHost.Middleware;
 using ServiceHost.Utility;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -150,15 +151,12 @@ namespace ServiceHost
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMiddleware<ApiLoggingMiddleware>();
 
             app.UseAuthentication();
             app.UseCors(builder => builder.Apply(_officialConfig.CorsOption));

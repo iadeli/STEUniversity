@@ -6,6 +6,7 @@ namespace Official.Domain.Model.Security
     {
         public string Token { get; set; }
         public DateTime Expiration { get; set; }
+        //public long PersonId { get; set; }
 
         //private JwtToken()
         //{

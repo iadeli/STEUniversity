@@ -1,7 +1,0 @@
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.deps.json
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfoInputs.cache
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfo.cs
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CopyComplete
-C:\BamPardazesh\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll
