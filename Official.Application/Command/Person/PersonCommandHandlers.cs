@@ -11,14 +11,14 @@ using Official.Framework.Application;
 
 namespace Official.Application.Command.Person
 {
-    public class PersonCommandHandlers : ICommandHandler<CreatePersonCommand>, ICommandHandler<UpdatePersonCommand>, ICommandHandler<DeletePersonCommand>
+    public class PersonCommandHandlers : ICommandHandler<CreatePersonCommand, long>, ICommandHandler<UpdatePersonCommand, long>, ICommandHandler<DeletePersonCommand, int>
     {
         private readonly IPersonRepository _personRepository;
         public PersonCommandHandlers(IPersonRepository personRepository)
         {
             _personRepository = personRepository;
         }
-        public async Task<CreatePersonCommand> Handle(CreatePersonCommand command)
+        public async Task<long> Handle(CreatePersonCommand command)
         {
             try
             {
@@ -46,8 +46,7 @@ namespace Official.Application.Command.Person
                 entity.Contact = command.Adapt(entity.Contact);
 
                 entity = await _personRepository.Create(entity);
-                var dto = entity.Adapt(command);
-                return dto;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -55,7 +54,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<UpdatePersonCommand> Handle(UpdatePersonCommand command)
+        public async Task<long> Handle(UpdatePersonCommand command)
         {
             try
             {
@@ -83,8 +82,7 @@ namespace Official.Application.Command.Person
                 entity.Contact = command.Adapt(entity.Contact);
 
                 entity = await _personRepository.Update(entity);
-                var dto = entity.Adapt(command);
-                return dto;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -92,12 +90,11 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<DeletePersonCommand> Handle(DeletePersonCommand command)
+        public async Task<int> Handle(DeletePersonCommand command)
         {
             try
             {
-                await _personRepository.Remove(command.Id);
-                return new DeletePersonCommand(); //DeletePersonCommand.Instance;
+                return await _personRepository.Remove(command.Id);
             }
             catch (Exception e)
             {

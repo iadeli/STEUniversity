@@ -4650,6 +4650,9 @@
       "Official.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Mapster": "4.1.0"
+        },
         "compile": {
           "bin/placeholder/Official.Application.Contracts.dll": {}
         },

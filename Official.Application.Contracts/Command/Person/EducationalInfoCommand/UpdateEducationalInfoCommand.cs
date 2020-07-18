@@ -2,5 +2,6 @@
 {
     public class UpdateEducationalInfoCommand : EducationalInfoDto
     {
+        public new long Id { get; set; }
     }
 }

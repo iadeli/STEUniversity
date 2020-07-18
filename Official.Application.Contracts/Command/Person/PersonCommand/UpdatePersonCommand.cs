@@ -2,5 +2,6 @@
 {
     public class UpdatePersonCommand : PersonDto
     {
+        public new long Id { get; set; }
     }
 }

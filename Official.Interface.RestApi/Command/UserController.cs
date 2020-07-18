@@ -30,7 +30,7 @@ namespace Official.Interface.RestApi.Command
             try
             {
                 //var userId = this.User.Claims.FirstOrDefault(x => x.Type == "sub")?.Value;
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<LoginCommand, JwtTokenDto>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -45,11 +45,11 @@ namespace Official.Interface.RestApi.Command
         /// <param name="command">پارامترهای ورودی</param>
         /// <returns></returns>
         [HttpPost("RefreshToken"), AllowAnonymous]
-        public async Task<IActionResult> RefreshToken(RefreshTokenCommand command)
+        public async Task<IActionResult> RefreshToken(string token)
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<string, JwtTokenDto>(token);
                 return Ok(result);
             }
             catch (Exception e)
@@ -68,7 +68,7 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<CreateUserCommand, bool>(command);
                 return Ok(result);
             }
             catch (Exception e)

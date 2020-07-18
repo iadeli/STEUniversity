@@ -1,4 +1,5 @@
-﻿using Official.QueryModel.Model;
+﻿using Official.Application.Contracts.Command.Menu;
+using Official.QueryModel.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Official.Interface.Facade.Contracts.IFacadeQuery.Menu
 {
     public interface IMenuFacadeQuery
     {
-        Task<List<MenuQuery>> Get();
+        Task<List<MenuDto>> Get();
         Task<List<MenuQuery>> GetTree();
     }
 }

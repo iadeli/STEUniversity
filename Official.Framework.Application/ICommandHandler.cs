@@ -2,8 +2,8 @@
 
 namespace Official.Framework.Application
 {
-    public interface ICommandHandler<T>
+    public interface ICommandHandler<T,Z>
     {
-        Task<T> Handle(T command);
+        Task<Z> Handle(T command);
     }
 }

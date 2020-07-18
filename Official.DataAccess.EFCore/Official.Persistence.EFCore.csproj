@@ -8,6 +8,7 @@
     <Compile Remove="Migrations\20200708115955_STE-V2.3.2.cs" />
     <Compile Remove="Migrations\20200712160200_STE_V.0.1.0.cs" />
     <Compile Remove="Migrations\20200713085436_STE_V.0.1.1.cs" />
+    <Compile Remove="Migrations\20200717202338_STE_V.0.1.5.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.AspNetCore.Authentication.JwtBearer">
       <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.authentication.jwtbearer\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.ViewFeatures">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.viewfeatures\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore">
       <HintPath>..\..\..\..\..\.nuget\packages\microsoft.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>

@@ -67,13 +67,13 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task Remove(long id)
+        public async Task<int> Remove(long id)
         {
             try
             {
                 var term = await _context.Terms.FindAsync(id);
                 _context.Remove(term);
-                await Save();
+                return await Save();
             }
             catch (Exception e)
             {
@@ -109,11 +109,11 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        private async Task Save()
+        private async Task<int> Save()
         {
             try
             {
-                await _context.SaveChangesAsync();
+                return await _context.SaveChangesAsync();
             }
             catch (Exception e)
             {

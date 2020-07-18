@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using System.Linq;
+using Official.Application.Contracts.Command.AuditEntry;
+using Official.Application.Contracts.Command.Log.ApiLog;
+using Official.Application.Contracts.Command.Log.ApiLogItem;
 
 namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
 {
@@ -18,7 +21,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
             _connection = connection;
         }
 
-        public async Task<List<AuditEntryQuery>> GetAuditLogAsync()
+        public async Task<List<AuditEntryDto>> GetAuditLogAsync()
         {
             try
             {
@@ -31,7 +34,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
                             SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
                         ) pu ON ae.CreatedBy = pu.UserName
                     ";
-                var data = await _connection.QueryAsync<AuditEntryQuery>(sql);
+                var data = await _connection.QueryAsync<AuditEntryDto>(sql);
                 return data.ToList();
             }
             catch (Exception e)
@@ -40,7 +43,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
             }
         }
 
-        public async Task<List<AuditEntryQuery>> GetAuditLogByFilterAsync(AuditEntryQuery auditEntryQuery)
+        public async Task<List<AuditEntryDto>> GetAuditLogByFilterAsync(AuditEntryQuery auditEntryQuery)
         {
             try
             {
@@ -56,7 +59,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
                             (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa')) BETWEEN ISNULL(@FromDate, (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa'))) AND ISNULL(@ToDate, (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa'))) AND 
                             EntityTypeName = ISNULL(@EntityTypeName, EntityTypeName) AND [State] = ISNULL(@State, State) AND NationalCode = ISNULL(@NationalCode, NationalCode)
                      ";
-                var data = await _connection.QueryAsync<AuditEntryQuery>(sql, new { CreatedBy = auditEntryQuery.CreatedBy, FromDate = auditEntryQuery.FromDate, ToDate = auditEntryQuery.ToDate, EntityTypeName = auditEntryQuery.EntityTypeName, State = auditEntryQuery.State, NationalCode = auditEntryQuery.NationalCode });
+                var data = await _connection.QueryAsync<AuditEntryDto>(sql, new { CreatedBy = auditEntryQuery.CreatedBy, FromDate = auditEntryQuery.FromDate, ToDate = auditEntryQuery.ToDate, EntityTypeName = auditEntryQuery.EntityTypeName, State = auditEntryQuery.State, NationalCode = auditEntryQuery.NationalCode });
                 return data.ToList();
             }
             catch (Exception e)
@@ -110,5 +113,47 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
             }
             return _value;
         }
+
+        public async Task<List<ApiLogQuery>> GetApiLogAsync()
+        {
+            try
+            {
+                var sql = @" 
+                    select al.Id, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS RequestTime, ResponseMillis, StatusCode, Method, Path, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName 
+                    from ApiLogs al
+                    INNER JOIN(
+                        SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
+                    ) pu ON al.CreatedBy = pu.UserName ";
+                var data = await _connection.QueryAsync<ApiLogQuery>(sql);
+                return data.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<List<ApiLogQuery>> GetApiLogByFilterAsync(ApiLogFilter apiLogFilter)
+        {
+            try
+            {
+                var sql = @" 
+                    select al.Id, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS RequestTime, ResponseMillis, StatusCode, Method, Path, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName 
+                    from ApiLogs al
+                    INNER JOIN(
+                        SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
+                    ) pu ON al.CreatedBy = pu.UserName 
+                    WHERE (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) BETWEEN ISNULL(@FromDate, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa'))) AND ISNULL(@ToDate, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')))
+                    AND StatusCode = ISNULL(@StatusCode, StatusCode) AND Method = ISNULL(@Method, Method) AND [Path] = ISNULL(@Path, Path) 
+                    AND CreatedBy = ISNULL(@CreatedBy, CreatedBy) AND NationalCode = ISNULL(@NationalCode, NationalCode)";
+                var data = await _connection.QueryAsync<ApiLogQuery>(sql, new { FromDate = apiLogFilter.FromDate, ToDate = apiLogFilter.ToDate, StatusCode = apiLogFilter.StatusCode, Method = apiLogFilter.Method, Path = apiLogFilter.Path, CreatedBy = apiLogFilter.CreatedBy, NationalCode = apiLogFilter.NationalCode });
+                return data.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }

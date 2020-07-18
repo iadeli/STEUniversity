@@ -6,5 +6,6 @@ namespace Official.Application.Contracts.Command.Person.HistoryEducationalComman
 {
     public class UpdateHistoryEducationalCommand : HistoryEducationalDto
     {
+        public new long Id { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using Official.Domain.Model.Person.IEducationalInfoRepository;
 
 namespace Official.Application.Command.Person
 {
-    public class EducationalInfoCommandHandlers : ICommandHandler<CreateEducationalInfoCommand>, ICommandHandler<UpdateEducationalInfoCommand>, ICommandHandler<DeleteEducationalInfoCommand>
+    public class EducationalInfoCommandHandlers : ICommandHandler<CreateEducationalInfoCommand, long>, ICommandHandler<UpdateEducationalInfoCommand, long>, ICommandHandler<DeleteEducationalInfoCommand, int>
     {
         private readonly IEducationalInfoRepository _educationalInfoRepository;
         public EducationalInfoCommandHandlers(IEducationalInfoRepository educationalInfoRepository)
@@ -18,7 +18,7 @@ namespace Official.Application.Command.Person
             _educationalInfoRepository = educationalInfoRepository;
         }
 
-        public async Task<CreateEducationalInfoCommand> Handle(CreateEducationalInfoCommand command)
+        public async Task<long> Handle(CreateEducationalInfoCommand command)
         {
             try
             {
@@ -31,8 +31,7 @@ namespace Official.Application.Command.Person
                     throw new Exception("اطلاعات آموزشی وارد شده تکراری است");
 
                 entity = await _educationalInfoRepository.Create(entity);
-                var dto = entity.Adapt(command);
-                return dto;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -40,7 +39,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<UpdateEducationalInfoCommand> Handle(UpdateEducationalInfoCommand command)
+        public async Task<long> Handle(UpdateEducationalInfoCommand command)
         {
             try
             {
@@ -53,8 +52,7 @@ namespace Official.Application.Command.Person
                     throw new Exception("اطلاعات آموزشی وارد شده تکراری است");
 
                 entity = await _educationalInfoRepository.Update(entity);
-                var dto = entity.Adapt(command);
-                return dto;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -62,12 +60,11 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<DeleteEducationalInfoCommand> Handle(DeleteEducationalInfoCommand command)
+        public async Task<int> Handle(DeleteEducationalInfoCommand command)
         {
             try
             {
-                await _educationalInfoRepository.Remove(command.Id);
-                return new DeleteEducationalInfoCommand(); //DeleteEducationalInfoCommand.Instance;
+                return await _educationalInfoRepository.Remove(command.Id);
             }
             catch (Exception e)
             {

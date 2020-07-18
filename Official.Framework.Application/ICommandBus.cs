@@ -4,6 +4,6 @@ namespace Official.Framework.Application
 {
     public interface ICommandBus
     {
-        Task<T> Dispatch<T>(T command);
+        Task<Z> Dispatch<T,Z>(T command);
     }
 }

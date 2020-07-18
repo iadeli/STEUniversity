@@ -67,13 +67,13 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task Remove(long id)
+        public async Task<int> Remove(long id)
         {
             try
             {
                 var educationalInfo = await _context.EducationalInfos.FindAsync(id);
                 _context.EducationalInfos.Remove(educationalInfo);
-                await Save();
+                return await Save();
             }
             catch (Exception e)
             {
@@ -85,7 +85,7 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                var educationalInfo = await _context.EducationalInfos.FindAsync(id);
+                var educationalInfo = await _context.EducationalInfos.Where(a => a.Id == id).Include(a => a.Person).FirstOrDefaultAsync();
                 return educationalInfo;
             }
             catch (Exception e)
@@ -109,13 +109,13 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        private async Task Save()
+        private async Task<int> Save()
         {
             try
             {
                 //var audit = new Audit();
                 //audit.CreatedBy = "ZZZ Projects"; // Optional
-                await _context.SaveChangesAsync();
+                return await _context.SaveChangesAsync();
                 //var entries = audit.Entries;
                 //foreach (var entry in entries)
                 //{

@@ -141,6 +141,9 @@
   <data name="GradeId" xml:space="preserve">
     <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'GradeId' AND EnumValue =</value>
   </data>
+  <data name="HireTypeId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'HireTypeId' AND EnumValue =</value>
+  </data>
   <data name="HistoryEducationalId" xml:space="preserve">
     <value>SELECT TOP 1 FirstName + ' ' + LastName FROM HistoryEducationals h INNER JOIN Persons p ON h.PersonId = p.Id WHERE h.PersonId =</value>
   </data>

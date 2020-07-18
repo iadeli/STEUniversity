@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Official.Domain.Model.CommonEntity.HireStage;
 using Official.Domain.Model.Person;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace Official.Persistence.EFCore.Mappings
             builder.HasOne<Contact>(a => a.Contact).WithOne(a => a.Person).HasForeignKey<Contact>(a => a.PersonId).IsRequired();
             builder.HasMany<EducationalInfo>(a => a.EducationalInfos).WithOne(a => a.Person).HasForeignKey(a => a.PersonId);
             builder.HasMany<HistoryEducational>(a => a.HistoryEducationals).WithOne(a => a.Person).HasForeignKey(a => a.PersonId);
+            builder.HasMany<HireStage>(a => a.HireStages).WithOne(a => a.Person).HasForeignKey(a => a.PersonId);
         }
     }
 }

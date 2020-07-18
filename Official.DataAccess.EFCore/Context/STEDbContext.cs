@@ -7,6 +7,7 @@ using System.Transactions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Official.Domain.Model.Authorization;
 using Official.Domain.Model.CommonEntity;
 using Official.Domain.Model.CommonEntity.Enum;
 using Official.Domain.Model.CommonEntity.HireStage;
@@ -74,7 +75,9 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.EthnicityId, x => Resourse.ResourceQuery.ResourceManager.GetString("EthnicityId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.IndigenousSituationId, x => Resourse.ResourceQuery.ResourceManager.GetString("IndigenousSituationId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
-            AuditManager.DefaultConfiguration.Format<AppUser>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
+            AuditManager.DefaultConfiguration.Format<HireStage>(x => x.TermId, x => Resourse.ResourceQuery.ResourceManager.GetString("TermId") + x);
+            AuditManager.DefaultConfiguration.Format<HireStage>(x => x.HireTypeId, x => Resourse.ResourceQuery.ResourceManager.GetString("HireTypeId") + x);
+            AuditManager.DefaultConfiguration.Format<HireStage>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -122,6 +125,7 @@ namespace Official.Persistence.EFCore.Context
         public DbSet<ApiLog> ApiLogs { get; set; }
         public DbSet<AuditEntry> AuditEntries { get; set; }
         public DbSet<AuditEntryProperty> AuditEntryProperties { get; set; }
+        public DbSet<ControllerInfo> ControllerInfos { get; set; }
         public DbSet<AppUser> AspNetUsers { get; set; }
         public DbSet<AppRole> AspNetRoles { get; set; }
         public DbSet<AppUserRole> AspNetUserRoles { get; set; }

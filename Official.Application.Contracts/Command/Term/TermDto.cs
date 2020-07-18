@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mapster;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,10 +7,12 @@ namespace Official.Application.Contracts.Command.Term
 {
     public class TermDto
     {
-        public long Id { get; set; }
+        [AdaptIgnore]
+        public long Id { get; private set; }
         public int No { get; set; }
         public string FromYear { get; set; }
         public string ToYear { get; set; }
-        public string Title { get; set; }
+        [AdaptIgnore]
+        public string Title { get; private set; }
     }
 }

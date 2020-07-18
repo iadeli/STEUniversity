@@ -9,7 +9,7 @@ namespace Official.Domain.Model.Person.IHistoryEducationalRepository
     {
         Task<HistoryEducational> Create(HistoryEducational educationalInfo);
         Task<HistoryEducational> Update(HistoryEducational educationalInfo);
-        Task Remove(long id);
+        Task<int> Remove(long id);
         Task RemoveDegreeAttach(long id);
         Task<HistoryEducational> GetById(long id);
     }

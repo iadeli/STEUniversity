@@ -7,6 +7,5 @@ namespace Official.QueryModel.Model
 {
     public class PlaceQuery : PlaceDto
     {
-        public List<PlaceQuery> Places { get; set; }
     }
 }

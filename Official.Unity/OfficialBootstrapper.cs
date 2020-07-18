@@ -54,37 +54,37 @@ namespace Official.Config.DI
             
             services.Add(new ServiceDescriptor(typeof(IUserRepository), new UserRepository(userManager, signInManager, context)));
 
-            services.AddScoped<ICommandHandler<CreateUserCommand>, UserCommandHandlers>();
-            services.AddScoped<ICommandHandler<LoginCommand>, UserCommandHandlers>();
-            services.AddScoped<ICommandHandler<RefreshTokenCommand>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateUserCommand, bool>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<LoginCommand, JwtTokenDto>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<string, JwtTokenDto>, UserCommandHandlers>();
 
             services.AddScoped<IApiLogRepository, ApiLogRepository>();
-            services.AddScoped<ICommandHandler<CreateApiLogCommand>, ApiLogCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateApiLogCommand, long>, ApiLogCommandHandlers>();
 
             services.AddScoped<IPersonRepository, PersonRepository>();
-            services.AddScoped<ICommandHandler<CreatePersonCommand>, PersonCommandHandlers>();
-            services.AddScoped<ICommandHandler<UpdatePersonCommand>, PersonCommandHandlers>();
-            services.AddScoped<ICommandHandler<DeletePersonCommand>, PersonCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreatePersonCommand, long>, PersonCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdatePersonCommand, long>, PersonCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeletePersonCommand, int>, PersonCommandHandlers>();
 
             services.AddScoped<IEducationalInfoRepository, EducationalInfoRepository>();
-            services.AddScoped<ICommandHandler<CreateEducationalInfoCommand>, EducationalInfoCommandHandlers>();
-            services.AddScoped<ICommandHandler<UpdateEducationalInfoCommand>, EducationalInfoCommandHandlers>();
-            services.AddScoped<ICommandHandler<DeleteEducationalInfoCommand>, EducationalInfoCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateEducationalInfoCommand, long>, EducationalInfoCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateEducationalInfoCommand, long>, EducationalInfoCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteEducationalInfoCommand, int>, EducationalInfoCommandHandlers>();
 
             services.AddScoped<ITermRepository, TermRepository>();
-            services.AddScoped<ICommandHandler<CreateTermCommand>, TermCommandHandlers>();
-            services.AddScoped<ICommandHandler<UpdateTermCommand>, TermCommandHandlers>();
-            services.AddScoped<ICommandHandler<DeleteTermCommand>, TermCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateTermCommand, long>, TermCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateTermCommand, long>, TermCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteTermCommand, int>, TermCommandHandlers>();
 
             services.AddScoped<IHistoryEducationalRepository, HistoryEducationalRepository>();
-            services.AddScoped<ICommandHandler<CreateHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
-            services.AddScoped<ICommandHandler<UpdateHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
-            services.AddScoped<ICommandHandler<DeleteHistoryEducationalCommand>, HistoryEducationalCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateHistoryEducationalCommand, long>, HistoryEducationalCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateHistoryEducationalCommand, long>, HistoryEducationalCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteHistoryEducationalCommand, int>, HistoryEducationalCommandHandlers>();
 
             services.AddScoped<IHireStageRepository, HireStageRepository>();
-            services.AddScoped<ICommandHandler<CreateHireStageCommand>, HireStageCommandHandlers>();
-            services.AddScoped<ICommandHandler<UpdateHireStageCommand>, HireStageCommandHandlers>();
-            services.AddScoped<ICommandHandler<DeleteHireStageCommand>, HireStageCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateHireStageCommand, long>, HireStageCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateHireStageCommand, long>, HireStageCommandHandlers>();
+            services.AddScoped<ICommandHandler<DeleteHireStageCommand, int>, HireStageCommandHandlers>();
         }
     }
 }

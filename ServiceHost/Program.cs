@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore;
+﻿using Mapster;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Official.Persistence.EFCore.Context;
+using Official.Persistence.EFCore.Utility;
 
 namespace ServiceHost
 {
@@ -18,10 +20,10 @@ namespace ServiceHost
                 try
                 {
                     var context = services.GetRequiredService<STEDbContext>();
-                    context.Database.Migrate(); 
-                    //SeedData.Initialize(services); 
+                    context.Database.Migrate();
+                    SeedData.Initialize(services);
                 }
-                catch 
+                catch
                 {
                 }
             }

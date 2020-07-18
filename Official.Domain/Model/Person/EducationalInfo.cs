@@ -17,10 +17,10 @@ namespace Official.Domain.Model.Person
         public int TeacherTypeId { get; private set; }
 
         [DisplayAttribute(Name ="مدرس معارف")]
-        public bool? ReligiousTeacher { get; set; }
+        public bool? ReligiousTeacher { get; private set; }
 
         [DisplayAttribute(Name ="مدرس دفاع مقدس")]
-        public bool? HolyDefenseTeacher { get; set; }
+        public bool? HolyDefenseTeacher { get; private set; }
 
         [DisplayAttribute(Name ="ترم آموزشی")]
         public long TermId { get; private set; }

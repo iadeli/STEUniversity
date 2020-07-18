@@ -133,6 +133,15 @@ namespace Official.Persistence.EFCore.Resourse {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;HireTypeId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string HireTypeId {
+            get {
+                return ResourceManager.GetString("HireTypeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT TOP 1 FirstName + &apos; &apos; + LastName FROM HistoryEducationals h INNER JOIN Persons p ON h.PersonId = p.Id WHERE h.PersonId =.
         /// </summary>
         internal static string HistoryEducationalId {

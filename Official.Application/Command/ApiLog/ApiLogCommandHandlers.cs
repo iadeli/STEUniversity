@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Official.Application.Command.ApiLog
 {
-    public class ApiLogCommandHandlers : ICommandHandler<CreateApiLogCommand>
+    public class ApiLogCommandHandlers : ICommandHandler<CreateApiLogCommand, long>
     {
         private readonly IApiLogRepository _apiLogRepository;
         public ApiLogCommandHandlers(IApiLogRepository apiLogRepository)
@@ -17,15 +17,14 @@ namespace Official.Application.Command.ApiLog
             _apiLogRepository = apiLogRepository;
         }
 
-        public async Task<CreateApiLogCommand> Handle(CreateApiLogCommand command)
+        public async Task<long> Handle(CreateApiLogCommand command)
         {
             try
             {
                 var entity = new Domain.Model.Log.ApiLog();
                 entity = command.Adapt(entity);
                 entity = await _apiLogRepository.Create(entity);
-                command = entity.Adapt(command);
-                return command;
+                return entity.Id;
             }
             catch (Exception e)
             {

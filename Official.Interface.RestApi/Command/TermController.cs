@@ -28,7 +28,7 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<CreateTermCommand, long>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -47,7 +47,7 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<UpdateTermCommand, long>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -66,9 +66,8 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var command = new DeleteTermCommand(); //DeleteTermCommand.Instance;
-                command.Id = Id;
-                var result = await _bus.Dispatch(command);
+                var command = new DeleteTermCommand() { Id = Id };
+                var result = await _bus.Dispatch<DeleteTermCommand, int>(command);
                 return Ok(result);
             }
             catch (Exception e)

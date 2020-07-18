@@ -30,7 +30,7 @@ namespace Official.Interface.RestApi.Command
             try
             {
                 var userId = this.User.Claims.FirstOrDefault(x => x.Type == "sub")?.Value;
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<CreatePersonCommand, long>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -49,7 +49,7 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<UpdatePersonCommand, long>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -68,9 +68,8 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var command = new DeletePersonCommand(); //DeletePersonCommand.Instance;
-                command.Id = Id;
-                var result = await _bus.Dispatch(command);
+                var command = new DeletePersonCommand() { Id = Id };
+                var result = await _bus.Dispatch<DeletePersonCommand, int>(command);
                 return Ok(result);
             }
             catch (Exception e)

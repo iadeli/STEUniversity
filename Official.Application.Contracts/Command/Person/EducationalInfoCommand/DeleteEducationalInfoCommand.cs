@@ -2,6 +2,7 @@
 {
     public class DeleteEducationalInfoCommand : EducationalInfoDto
     {
+        public new long Id { get; set; }
         //private static DeleteEducationalInfoCommand instance = null;
         //public static DeleteEducationalInfoCommand Instance
         //{

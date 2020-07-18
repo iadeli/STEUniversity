@@ -116,6 +116,13 @@
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Command.UserController.RefreshToken(System.String)">
+            <summary>
+            تمدید توکن
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Command.UserController.Create(Official.Application.Contracts.Command.User.CreateUserCommand)">
             <summary>
             ایجاد کاربر
@@ -138,6 +145,18 @@
         <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetPropertyAuditLog(System.Int32)">
             <summary>
             دریافت جزئیات رخداد فرم ها
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetApiLogAsync">
+            <summary>
+            دریافت رخداد درخواست ها
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetApiLogByFilter(Official.Application.Contracts.Command.Log.ApiLogItem.ApiLogFilter)">
+            <summary>
+            دریافت رخداد درخواست ها براساس فیلتر
             </summary>
             <returns></returns>
         </member>
@@ -179,6 +198,13 @@
             دریافت وضعیت استخدامی براساس شناسه
             </summary>
             <param name="id">شناسه وضعیت استخدامی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.HireStageQueryController.GetById(System.Int64)">
+            <summary>
+            دریافت وضعیت استخدامی براساس شناسه فرد
+            </summary>
+            <param name="PersonId">شناسه فرد</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.HistoryEducationalQueryController.Get">

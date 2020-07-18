@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using Official.Domain.Model.Common;
+using Official.Domain.Model.CommonEntity.HireStage;
 
 namespace Official.Domain.Model.Person
 {
@@ -30,6 +31,7 @@ namespace Official.Domain.Model.Person
         public Contact Contact { get; set; }
         public IList<EducationalInfo> EducationalInfos { get; private set; }
         public IList<HistoryEducational> HistoryEducationals { get; private set; }
+        public IList<HireStage> HireStages { get; set; }
 
         //private Person()
         //{

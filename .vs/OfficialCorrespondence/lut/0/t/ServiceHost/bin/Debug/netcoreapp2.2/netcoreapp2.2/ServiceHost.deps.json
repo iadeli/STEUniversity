@@ -468,6 +468,9 @@
         }
       },
       "Official.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Mapster": "4.1.0"
+        },
         "runtime": {
           "Official.Application.Contracts.dll": {}
         },

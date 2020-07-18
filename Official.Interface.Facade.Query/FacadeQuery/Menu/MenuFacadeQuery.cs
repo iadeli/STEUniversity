@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using Official.Application.Contracts.Command.Menu;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Menu;
 using Official.Persistence.EFCore.Context;
 using Official.QueryModel.Model;
@@ -21,12 +22,12 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Menu
             _context = context;
         }
 
-        public async Task<List<MenuQuery>> Get()
+        public async Task<List<MenuDto>> Get()
         {
             try
             {
                 var sql = "SELECT * FROM Menus";
-                var data = await _connection.QueryAsync<MenuQuery>(sql);
+                var data = await _connection.QueryAsync<MenuDto>(sql);
                 return data.ToList();
             }
             catch (Exception e)

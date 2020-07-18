@@ -7,7 +7,7 @@ namespace Official.QueryModel.Model
 {
     public class AuditEntryQuery : AuditEntryDto
     {
-        public string NationalCode { get; set; }
-        public string FullName { get; private set; }
+        public string FromDate { get; set; }
+        public string ToDate { get; set; }
     }
 }

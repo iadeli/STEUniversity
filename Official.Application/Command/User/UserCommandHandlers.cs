@@ -10,7 +10,7 @@ using Mapster;
 
 namespace Official.Application.Command.User
 {
-    public class UserCommandHandlers : ICommandHandler<LoginCommand>, ICommandHandler<CreateUserCommand>, ICommandHandler<RefreshTokenCommand>
+    public class UserCommandHandlers : ICommandHandler<LoginCommand, JwtTokenDto>, ICommandHandler<CreateUserCommand, bool>, ICommandHandler<string, JwtTokenDto>
     {
         private readonly IUserRepository _userRepository;
         private readonly IJwtRepository _jwtRepository;
@@ -20,33 +20,28 @@ namespace Official.Application.Command.User
             _jwtRepository = jwtRepository;
         }
 
-        public async Task<LoginCommand> Handle(LoginCommand command)
+        public async Task<JwtTokenDto> Handle(LoginCommand command)
         {
             try
             {
                 if (string.IsNullOrWhiteSpace(command.UserName))
-                {
                     throw new Exception("نام کاربری نمی تواند خالی باشد");
-                }
 
                 if (string.IsNullOrWhiteSpace(command.Password))
-                {
                     throw new Exception("کلمه عبور نمی تواند خالی باشد");
-                }
 
-                command.IsLogin = await _userRepository.Login(command.UserName.Trim(), command.Password.Trim());
+                var isLogin = await _userRepository.Login(command.UserName.Trim(), command.Password.Trim());
 
-                if (!(command.IsLogin ?? false))
-                {
+                if (!isLogin)
                     throw new Exception("نام کاربری یا کلمه عبور اشتباه است");
-                }
 
                 var jwtToken = await _jwtRepository.CreateToken(command.UserName);
-                command.Token = jwtToken.Token;
-                command.Expiration = jwtToken.Expiration;
-                command.Password = "********";
-
-                return command;
+                var dto = new JwtTokenDto()
+                {
+                    Expiration = jwtToken.Expiration,
+                    Token = jwtToken.Token
+                };
+                return dto;
             }
             catch (Exception e)
             {
@@ -54,7 +49,7 @@ namespace Official.Application.Command.User
             }
         }
 
-        public async Task<CreateUserCommand> Handle(CreateUserCommand command)
+        public async Task<bool> Handle(CreateUserCommand command)
         {
             try
             {
@@ -64,8 +59,8 @@ namespace Official.Application.Command.User
                     throw new Exception("این نام کاربری قبلا ثبت شده است");
                 }
 
-                command.Succeeded = await _userRepository.Create(command.UserName.Trim(), command.Password.Trim(), command.PersonId);
-                return command;
+                var succeeded = await _userRepository.Create(command.UserName.Trim(), command.Password.Trim(), command.PersonId);
+                return succeeded;
             }
             catch (Exception e)
             {
@@ -73,13 +68,17 @@ namespace Official.Application.Command.User
             }
         }
 
-        public async Task<RefreshTokenCommand> Handle(RefreshTokenCommand command)
+        public async Task<JwtTokenDto> Handle(string token)
         {
             try
             {
-                var token = await _jwtRepository.RefreshToken(command.Token);
-                command = token.Adapt(command);
-                return command;
+                var jwtToken = await _jwtRepository.RefreshToken(token);
+                var dto = new JwtTokenDto()
+                {
+                    Expiration = jwtToken.Expiration,
+                    Token = jwtToken.Token
+                };
+                return dto;
             }
             catch (Exception e)
             {

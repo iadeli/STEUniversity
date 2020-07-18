@@ -10,7 +10,7 @@ namespace Official.Domain.Model.CommonEntity.Term.ITermRepository
     {
         Task<Term> Create(Term educationalInfo);
         Task<Term> Update(Term educationalInfo);
-        Task Remove(long id);
+        Task<int> Remove(long id);
         Task<Term> GetById(long id);
         Task<bool> IsExistsTerm(Term term, int create);
     }

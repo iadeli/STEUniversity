@@ -7,5 +7,6 @@ namespace Official.QueryModel.Model
 {
     public class ApiLogQuery : ApiLogDto
     {
+        public new string RequestTime { get; set; }
     }
 }

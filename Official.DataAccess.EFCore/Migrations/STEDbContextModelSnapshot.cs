@@ -65,10 +65,22 @@ namespace Official.Persistence.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Description");
+
+                    b.Property<int>("HireTypeId");
+
                     b.Property<string>("Name")
                         .IsRequired();
 
+                    b.Property<long>("PersonId");
+
+                    b.Property<long>("TermId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.HasIndex("TermId");
 
                     b.ToTable("HireStages");
                 });
@@ -568,6 +580,19 @@ namespace Official.Persistence.EFCore.Migrations
                     b.HasIndex("AuditEntryID");
 
                     b.ToTable("AuditEntryProperties");
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.CommonEntity.HireStage.HireStage", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithMany("HireStages")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Official.Domain.Model.CommonEntity.Term.Term", "Term")
+                        .WithMany("HireStages")
+                        .HasForeignKey("TermId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Official.Interface.Facade.Contracts.Utility;
 using Official.QueryModel.Model;
 using Official.Interface.Facade.Contracts.IFacadeQuery.AuditEntry;
+using Official.Application.Contracts.Command.Log.ApiLogItem;
 
 namespace Official.Interface.RestApi.Query
 {
@@ -73,5 +74,42 @@ namespace Official.Interface.RestApi.Query
                 return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
+
+        /// <summary>
+        /// دریافت رخداد درخواست ها
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("ApiLog")]
+        public async Task<IActionResult> GetApiLogAsync()
+        {
+            try
+            {
+                var apiLogs = await _query.GetApiLogAsync();
+                return Ok(apiLogs);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
+        /// <summary>
+        /// دریافت رخداد درخواست ها براساس فیلتر
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("ApiLog")]
+        public async Task<IActionResult> GetApiLogByFilter(ApiLogFilter apiLogFilter)
+        {
+            try
+            {
+                var apiLogs = await _query.GetApiLogByFilterAsync(apiLogFilter);
+                return Ok(apiLogs);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
     }
 }

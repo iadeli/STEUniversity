@@ -10,7 +10,7 @@ using Official.Framework.Application;
 
 namespace Official.Application.Command.Term
 {
-    public class TermCommandHandlers : ICommandHandler<CreateTermCommand>, ICommandHandler<UpdateTermCommand>, ICommandHandler<DeleteTermCommand>
+    public class TermCommandHandlers : ICommandHandler<CreateTermCommand, long>, ICommandHandler<UpdateTermCommand, long>, ICommandHandler<DeleteTermCommand, int>
     {
         private readonly ITermRepository _termRepository;
         public TermCommandHandlers(ITermRepository termRepository)
@@ -18,35 +18,36 @@ namespace Official.Application.Command.Term
             _termRepository = termRepository;
         }
 
-        public async Task<CreateTermCommand> Handle(CreateTermCommand command)
+        public async Task<long> Handle(CreateTermCommand command)
         {
             try
             {
                 const int create = 1;
-                if (Convert.ToInt32(command.FromYear) + 1 != Convert.ToInt32(command.ToYear))
+
+                var entity = new Domain.Model.CommonEntity.Term.Term();
+                entity = command.Adapt(entity);
+
+                if (Convert.ToInt32(entity.FromYear) + 1 != Convert.ToInt32(entity.ToYear))
                 {
                     throw new Exception("بازه سال وارد شده غیرمجاز می باشد");
                 }
 
-                if (command.No == 1)
+                if (entity.No == 1)
                 {
-                    command.Title = $"نیم سال اول سال تحصیلی {command.ToYear}-{command.FromYear}";
+                    entity.Title = $"نیم سال اول سال تحصیلی {entity.ToYear}-{entity.FromYear}";
                 }
-                else if (command.No == 2)
+                else if (entity.No == 2)
                 {
-                    command.Title = $"نیم سال دوم سال تحصیلی {command.ToYear}-{command.FromYear}";
+                    entity.Title = $"نیم سال دوم سال تحصیلی {entity.ToYear}-{entity.FromYear}";
                 }
-                else if (command.No == 3)
+                else if (entity.No == 3)
                 {
-                    command.Title = $"دوره تابستان سال تحصیلی {command.ToYear}-{command.FromYear}";
+                    entity.Title = $"دوره تابستان سال تحصیلی {entity.ToYear}-{entity.FromYear}";
                 }
                 else
                 {
                     throw new Exception("شماره ترم بین 1 تا 3 می باشد");
                 }
-
-                var entity = new Domain.Model.CommonEntity.Term.Term(); //Domain.Model.CommonEntity.Term.Term.Instance;
-                entity = command.Adapt(entity);
 
                 var isExistsTerm = await _termRepository.IsExistsTerm(entity, create);
                 if (isExistsTerm)
@@ -55,8 +56,7 @@ namespace Official.Application.Command.Term
                 }
 
                 entity = await _termRepository.Create(entity);
-                command = entity.Adapt(command);
-                return command;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -64,35 +64,36 @@ namespace Official.Application.Command.Term
             }
         }
 
-        public async Task<UpdateTermCommand> Handle(UpdateTermCommand command)
+        public async Task<long> Handle(UpdateTermCommand command)
         {
             try
             {
                 const int update = 2;
-                if (Convert.ToInt32(command.FromYear) + 1 != Convert.ToInt32(command.ToYear))
+
+                var entity = await _termRepository.GetById(command.Id);
+                entity = command.Adapt(entity);
+
+                if (Convert.ToInt32(entity.FromYear) + 1 != Convert.ToInt32(entity.ToYear))
                 {
                     throw new Exception("بازه سال وارد شده غیرمجاز می باشد");
                 }
 
-                if (command.No == 1)
+                if (entity.No == 1)
                 {
-                    command.Title = $"نیم سال اول سال تحصیلی {command.ToYear}-{command.FromYear}";
+                    entity.Title = $"نیم سال اول سال تحصیلی {entity.ToYear}-{entity.FromYear}";
                 }
-                else if (command.No == 2)
+                else if (entity.No == 2)
                 {
-                    command.Title = $"نیم سال دوم سال تحصیلی {command.ToYear}-{command.FromYear}";
+                    entity.Title = $"نیم سال دوم سال تحصیلی {entity.ToYear}-{entity.FromYear}";
                 }
-                else if (command.No == 3)
+                else if (entity.No == 3)
                 {
-                    command.Title = $"دوره تابستان سال تحصیلی {command.ToYear}-{command.FromYear}";
+                    entity.Title = $"دوره تابستان سال تحصیلی {entity.ToYear}-{entity.FromYear}";
                 }
                 else
                 {
                     throw new Exception("شماره ترم بین 1 تا 3 می باشد");
                 }
-
-                var entity = await _termRepository.GetById(command.Id);
-                entity = command.Adapt(entity);
 
                 var isExistsTerm = await _termRepository.IsExistsTerm(entity, update);
                 if (isExistsTerm)
@@ -101,8 +102,7 @@ namespace Official.Application.Command.Term
                 }
 
                 entity = await _termRepository.Update(entity);
-                command = entity.Adapt(command);
-                return command;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -110,12 +110,11 @@ namespace Official.Application.Command.Term
             }
         }
 
-        public async Task<DeleteTermCommand> Handle(DeleteTermCommand command)
+        public async Task<int> Handle(DeleteTermCommand command)
         {
             try
             {
-                await _termRepository.Remove(command.Id);
-                return new DeleteTermCommand(); //DeleteTermCommand.Instance;
+                return await _termRepository.Remove(command.Id);
             }
             catch (Exception e)
             {

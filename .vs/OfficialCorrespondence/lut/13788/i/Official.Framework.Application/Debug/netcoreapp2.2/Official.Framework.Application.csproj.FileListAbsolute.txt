@@ -1,7 +1,0 @@
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.deps.json
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.AssemblyInfoInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.AssemblyInfo.cs
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.csproj.CopyComplete
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Framework.Application\Debug\netcoreapp2.2\Official.Framework.Application.dll

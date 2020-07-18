@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Mapster;
+using System.ComponentModel.DataAnnotations;
 
 namespace Official.Application.Contracts.Command.Person.PersonCommand
 {
     public class PersonDto
     {
-        public long Id { get; set; }
+        [AdaptIgnore]
+        public long Id { get; private set; }
         public string TeacherCode { get; set; }
         public string PersonnelCode { get; set; }
         public string NationalCode { get; set; }
@@ -43,8 +45,5 @@ namespace Official.Application.Contracts.Command.Person.PersonCommand
         public string WorkAddress { get; set; }
         public string NecessaryContactNumber { get; set; }
         public string Description { get; set; }
-
-        public long PersonId { get; set; }
-
     }
 }

@@ -11,7 +11,7 @@ using Official.Domain.Model.Person;
 
 namespace Official.Application.Command.Person
 {
-    public class HistoryEducationalCommandHandlers : ICommandHandler<CreateHistoryEducationalCommand>, ICommandHandler<UpdateHistoryEducationalCommand>, ICommandHandler<DeleteHistoryEducationalCommand>
+    public class HistoryEducationalCommandHandlers : ICommandHandler<CreateHistoryEducationalCommand, long>, ICommandHandler<UpdateHistoryEducationalCommand, long>, ICommandHandler<DeleteHistoryEducationalCommand, int>
     {
         private readonly IHistoryEducationalRepository _historyEducationalRepository;
         public HistoryEducationalCommandHandlers(IHistoryEducationalRepository historyEducationalRepository)
@@ -19,7 +19,7 @@ namespace Official.Application.Command.Person
             _historyEducationalRepository = historyEducationalRepository;
         }
 
-        public async Task<CreateHistoryEducationalCommand> Handle(CreateHistoryEducationalCommand command)
+        public async Task<long> Handle(CreateHistoryEducationalCommand command)
         {
             try
             {
@@ -32,9 +32,7 @@ namespace Official.Application.Command.Person
                 historyEducational.DegreeAttaches.Add(degreeAttache);
 
                 historyEducational = await _historyEducationalRepository.Create(historyEducational);
-
-                command = historyEducational.Adapt(command);
-                return command;
+                return historyEducational.Id;
             }
             catch (Exception e)
             {
@@ -42,7 +40,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<UpdateHistoryEducationalCommand> Handle(UpdateHistoryEducationalCommand command)
+        public async Task<long> Handle(UpdateHistoryEducationalCommand command)
         {
             try
             {
@@ -61,11 +59,8 @@ namespace Official.Application.Command.Person
                 entity.DegreeAttaches.Add(degreeAttach);
 
                 entity = await _historyEducationalRepository.Update(entity);
-                command = entity.Adapt(command);
-
                 _historyEducationalRepository.Commit();
-
-                return command;
+                return entity.Id;
             }
             catch (Exception e)
             {
@@ -74,12 +69,11 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<DeleteHistoryEducationalCommand> Handle(DeleteHistoryEducationalCommand command)
+        public async Task<int> Handle(DeleteHistoryEducationalCommand command)
         {
             try
             {
-                await _historyEducationalRepository.Remove(command.Id);
-                return new DeleteHistoryEducationalCommand(); //DeleteHistoryEducationalCommand.Instance;
+                return await _historyEducationalRepository.Remove(command.Id);
             }
             catch (Exception e)
             {

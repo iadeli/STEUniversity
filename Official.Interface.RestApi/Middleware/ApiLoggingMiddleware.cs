@@ -132,7 +132,7 @@ namespace ServiceHost.Middleware
                 ResponseBody = responseBody
             };
 
-            await _bus.Dispatch(apiLogDto);
+            await _bus.Dispatch<CreateApiLogCommand, long>(apiLogDto);
 
             //StringBuilder sb = new StringBuilder();
             //sb.Append(path);

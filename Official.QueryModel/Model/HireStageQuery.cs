@@ -7,5 +7,6 @@ namespace Official.QueryModel.Model
 {
     public class HireStageQuery : HireStageDto
     {
+        public bool IsFacultymember { get; set; }
     }
 }

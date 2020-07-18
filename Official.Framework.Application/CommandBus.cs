@@ -13,9 +13,9 @@ namespace Official.Framework.Application
             _serviceLocator = serviceLocator;
         }
 
-        public async Task<T> Dispatch<T>(T command)
+        public async Task<Z> Dispatch<T,Z>(T command)
         {
-            var handler = _serviceLocator.GetInstance<ICommandHandler<T>>();
+            var handler = _serviceLocator.GetInstance<ICommandHandler<T,Z>>();
             return await handler.Handle(command);
         }
     }

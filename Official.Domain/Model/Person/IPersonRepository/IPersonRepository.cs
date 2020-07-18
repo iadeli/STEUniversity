@@ -9,7 +9,7 @@ namespace Official.Domain.Model.Person.IPersonRepository
     {
         Task<Person> Create(Person person);
         Task<Person> Update(Person person);
-        Task Remove(long id);
+        Task<int> Remove(long id);
 
         Task<Person> GetById(long id);
         Task<bool> IsExistsTeacherCodeAsync(Person person, int action);

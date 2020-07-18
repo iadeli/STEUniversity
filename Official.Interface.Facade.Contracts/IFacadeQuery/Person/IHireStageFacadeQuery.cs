@@ -10,5 +10,6 @@ namespace Official.Interface.Facade.Contracts.IFacadeQuery.Person
     {
         Task<List<HireStageQuery>> Get();
         Task<HireStageQuery> GetById(int id);
+        Task<List<HireStageQuery>> GetByPersonId(long personId);
     }
 }

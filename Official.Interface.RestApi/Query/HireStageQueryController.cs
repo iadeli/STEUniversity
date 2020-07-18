@@ -53,5 +53,25 @@ namespace Official.Interface.RestApi.Query
                 return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
+
+        /// <summary>
+        /// دریافت وضعیت استخدامی براساس شناسه فرد
+        /// </summary>
+        /// <param name="PersonId">شناسه فرد</param>
+        /// <returns></returns>
+        [HttpGet("Person/{PersonId}")]
+        public async Task<IActionResult> GetById(long PersonId)
+        {
+            try
+            {
+                var hireStage = await _query.GetByPersonId(PersonId);
+                return Ok(hireStage);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
     }
 }

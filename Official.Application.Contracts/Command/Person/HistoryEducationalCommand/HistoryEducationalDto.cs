@@ -1,8 +1,11 @@
-﻿namespace Official.Application.Contracts.Command.Person.HistoryEducationalCommand
+﻿using Mapster;
+
+namespace Official.Application.Contracts.Command.Person.HistoryEducationalCommand
 {
     public class HistoryEducationalDto
     {
-        public long Id { get; set; }
+        [AdaptIgnore]
+        public long Id { get; private set; }
         public long UniversityId { get; set; }
         public long DegreeId { get; set; }
         public long GradeId { get; set; }
@@ -12,7 +15,8 @@
         public string DegreeDate { get; set; }
         public int? DegreeStatus { get; set; }
 
-        public long PersonId { get; set; }
+        [AdaptIgnore]
+        public long PersonId { get; private set; }
 
         public byte[] AttachFile { get; set; }
         public string Extention { get; set; }

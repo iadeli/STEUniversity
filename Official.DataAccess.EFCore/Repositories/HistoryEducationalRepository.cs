@@ -63,13 +63,13 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task Remove(long id)
+        public async Task<int> Remove(long id)
         {
             try
             {
                 var historyEducational = await GetById(id);
                 _context.HistoryEducationals.Remove(historyEducational);
-                await Save();
+                return await Save();
             }
             catch (Exception e)
             {
@@ -111,11 +111,11 @@ namespace Official.Persistence.EFCore.Repositories
             GC.SuppressFinalize(this);
         }
 
-        private async Task Save()
+        private async Task<int> Save()
         {
             try
             {
-                await _context.SaveChangesAsync();
+                return await _context.SaveChangesAsync();
             }
             catch (Exception e)
             {

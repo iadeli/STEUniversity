@@ -28,7 +28,7 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<CreateHireStageCommand, long>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -47,7 +47,7 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var result = await _bus.Dispatch(command);
+                var result = await _bus.Dispatch<UpdateHireStageCommand, long>(command);
                 return Ok(result);
             }
             catch (Exception e)
@@ -66,9 +66,8 @@ namespace Official.Interface.RestApi.Command
         {
             try
             {
-                var command = new DeleteHireStageCommand(); //DeleteHireStageCommand.Instance;
-                command.Id = Id;
-                var result = await _bus.Dispatch(command);
+                var command = new DeleteHireStageCommand() { Id = Id };
+                var result = await _bus.Dispatch<DeleteHireStageCommand, int>(command);
                 return Ok(result);
             }
             catch (Exception e)

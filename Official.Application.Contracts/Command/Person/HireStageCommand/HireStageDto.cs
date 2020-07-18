@@ -1,0 +1,16 @@
+﻿using Mapster;
+
+namespace Official.Application.Contracts.Command.HireStageCommand
+{
+    public class HireStageDto
+    {
+        [AdaptIgnore]
+        public long Id { get; private set; }
+        public string Name { get; set; }
+        public long TermId { get; set; }
+        public string Description { get; set; }
+        public int HireTypeId { get; set; }
+        [AdaptIgnore]
+        public long PersonId { get; private set; }
+    }
+}

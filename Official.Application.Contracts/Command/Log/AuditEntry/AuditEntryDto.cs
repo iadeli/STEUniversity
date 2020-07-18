@@ -6,15 +6,16 @@ namespace Official.Application.Contracts.Command.AuditEntry
 {
     public class AuditEntryDto
     {
-        public int AuditEntryID { get; set; }
+        public int AuditEntryID { get; private set; }
         public string CreatedBy { get; set; }
-        public string CreatedDate { get; set; }
-        public string EntitySetName { get; set; }
+        public string CreatedDate { get; private set; }
+        public string EntitySetName { get; private set; }
         public string EntityTypeName { get; set; }
         public int State { get; set; }
-        public string StateName { get; set; }
+        public string StateName { get; private set; }
 
-        public string FromDate { get; set; }
-        public string ToDate { get; set; }
+        public string NationalCode { get; set; }
+        public string FullName { get; private set; }
+
     }
 }
