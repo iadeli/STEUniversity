@@ -7,9 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using System.Linq;
-using Official.Application.Contracts.Command.AuditEntry;
-using Official.Application.Contracts.Command.Log.ApiLog;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
+using Official.Application.Contracts.Command.Log.AuditEntry;
 
 namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
 {

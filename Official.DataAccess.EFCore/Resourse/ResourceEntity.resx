@@ -171,7 +171,13 @@
   <data name="Person" xml:space="preserve">
     <value>اطلاعات فردی</value>
   </data>
+  <data name="Place" xml:space="preserve">
+    <value>اسامی شهرها</value>
+  </data>
   <data name="Term" xml:space="preserve">
     <value>ترم آموزشی</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>اطلاعات کاربران</value>
   </data>
 </root>

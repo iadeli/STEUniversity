@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Menu;
 using Official.Interface.Facade.Contracts.Utility;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Query
 {
@@ -21,7 +23,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت لیست منو
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet, Authorize(Policy = View)]
         public async Task<IActionResult> Get()
         {
             try
@@ -39,7 +41,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت ساختار درختی منو
         /// </summary>
         /// <returns></returns>
-        [HttpGet("Tree")]
+        [HttpGet("Tree"), Authorize(Policy = View)]
         public async Task<IActionResult> GetTree()
         {
             try

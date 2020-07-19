@@ -1184,8 +1184,7 @@
           "Z.EntityFramework.Plus.EFCore": "2.0.54",
           "Microsoft.IdentityModel.JsonWebTokens": "5.3.0.0",
           "Microsoft.IdentityModel.Tokens": "5.3.0.0",
-          "System.IdentityModel.Tokens.Jwt": "5.3.0.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0.0"
+          "System.IdentityModel.Tokens.Jwt": "5.3.0.0"
         },
         "runtime": {
           "Official.Persistence.EFCore.dll": {}
@@ -1260,14 +1259,6 @@
           "System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "5.3.0.0",
             "fileVersion": "5.3.0.51005"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Mvc.ViewFeatures.Reference/2.2.0.0": {
-        "runtime": {
-          "Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.0"
           }
         }
       }
@@ -2111,11 +2102,6 @@
       "sha512": ""
     },
     "System.IdentityModel.Tokens.Jwt.Reference/5.3.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.AspNetCore.Mvc.ViewFeatures.Reference/2.2.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

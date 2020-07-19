@@ -1,11 +1,11 @@
 ﻿using Mapster;
-using Official.Application.Contracts.Command.Log.ApiLog;
 using Official.Domain.Model.Log.IApiLogRepository;
 using Official.Framework.Application;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Application.Contracts.Command.Log.ApiLogItem;
 
 namespace Official.Application.Command.ApiLog
 {

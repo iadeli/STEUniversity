@@ -7,7 +7,7 @@ using Dapper;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
 using Official.QueryModel.Model;
 
-namespace Official.Interface.Facade.Query.FacadeQuery.HireStage
+namespace Official.Interface.Facade.Query.FacadeQuery.Person
 {
     public class HireStageFacadeQuery : IHireStageFacadeQuery
     {

@@ -1,8 +1,0 @@
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Application\Debug\netcoreapp2.2\Official.Application.deps.json
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Application\Debug\netcoreapp2.2\Official.Application.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.csprojAssemblyReference.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.AssemblyInfoInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.AssemblyInfo.cs
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.csproj.CopyComplete
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Application\Debug\netcoreapp2.2\Official.Application.dll

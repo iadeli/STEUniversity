@@ -1,6 +1,6 @@
 ﻿using Mapster;
 
-namespace Official.Application.Contracts.Command.HireStageCommand
+namespace Official.Application.Contracts.Command.Person.HireStageCommand
 {
     public class HireStageDto
     {

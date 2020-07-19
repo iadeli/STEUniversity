@@ -21,7 +21,7 @@ namespace ServiceHost
                 {
                     var context = services.GetRequiredService<STEDbContext>();
                     context.Database.Migrate();
-                    SeedData.Initialize(services);
+                    SeedData.InitializeAsync(services);
                 }
                 catch
                 {

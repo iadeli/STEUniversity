@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Official.Application.Contracts.Command.Log.ApiLog
+namespace Official.Application.Contracts.Command.Log.ApiLogItem
 {
     public class ApiLogDto
     {

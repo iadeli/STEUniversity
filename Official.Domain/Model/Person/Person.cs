@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using Official.Domain.Model.Common;
-using Official.Domain.Model.CommonEntity.HireStage;
 
 namespace Official.Domain.Model.Person
 {

@@ -1,11 +1,10 @@
-﻿using Official.Application.Contracts.Command.AuditEntry;
-using Official.Application.Contracts.Command.Log.ApiLog;
-using Official.Application.Contracts.Command.Log.ApiLogItem;
+﻿using Official.Application.Contracts.Command.Log.ApiLogItem;
 using Official.QueryModel.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Official.Application.Contracts.Command.Log.AuditEntry;
 
 namespace Official.Interface.Facade.Contracts.IFacadeQuery.AuditEntry
 {

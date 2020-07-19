@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Person;
 using Official.Interface.Facade.Contracts.Utility;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Query
 {
@@ -21,7 +23,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت وضعیت استخدامی
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet, Authorize(Policy = View)]
         public async Task<IActionResult> Get()
         {
             try
@@ -40,7 +42,7 @@ namespace Official.Interface.RestApi.Query
         /// </summary>
         /// <param name="id">شناسه وضعیت استخدامی</param>
         /// <returns></returns>
-        [HttpGet("{id}")]
+        [HttpGet("{id}"), Authorize(Policy = View)]
         public async Task<IActionResult> GetById(int id)
         {
             try
@@ -59,8 +61,8 @@ namespace Official.Interface.RestApi.Query
         /// </summary>
         /// <param name="PersonId">شناسه فرد</param>
         /// <returns></returns>
-        [HttpGet("Person/{PersonId}")]
-        public async Task<IActionResult> GetById(long PersonId)
+        [HttpGet("Person/{PersonId}"), Authorize(Policy = View)]
+        public async Task<IActionResult> GetByPersonId(long PersonId)
         {
             try
             {

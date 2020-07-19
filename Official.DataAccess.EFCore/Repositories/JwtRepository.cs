@@ -46,13 +46,20 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
+                var userId = _context.Users.Where(a => a.UserName == userName).Select(a => a.Id).FirstOrDefault();
                 var personId = _context.Users.Where(a => a.UserName == userName).Select(a => a.PersonId).FirstOrDefault();
-                var claims = new[]
+                var roleIdList = _context.AspNetUserRoles.Where(a => a.UserId == userId).Select(a => a.RoleId).ToList();
+                var claims = new List<Claim>
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, userName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.UniqueName, personId.ToString()),
+                    new Claim("user_id", userId.ToString()),
                 };
+                foreach (var roleId in roleIdList)
+                {
+                    claims.Add(new Claim("role_id", roleId.ToString()));
+                }
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(MvsJwtTokens.Key));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
                 var token = new JwtSecurityToken(

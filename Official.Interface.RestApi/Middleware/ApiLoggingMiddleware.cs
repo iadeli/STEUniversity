@@ -1,18 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
-using Microsoft.Extensions.Logging;
-using Official.Application.Contracts.Command.Log.ApiLog;
-using Official.Framework.Application;
-using Official.Persistence.EFCore.Utility;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Internal;
+using Official.Application.Contracts.Command.Log.ApiLogItem;
+using Official.Framework.Application;
+using Official.Persistence.EFCore.Utility;
 
-namespace ServiceHost.Middleware
+namespace Official.Interface.RestApi.Middleware
 {
     public class ApiLoggingMiddleware
     {

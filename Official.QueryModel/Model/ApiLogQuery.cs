@@ -1,7 +1,7 @@
-﻿using Official.Application.Contracts.Command.Log.ApiLog;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Official.Application.Contracts.Command.Log.ApiLogItem;
 
 namespace Official.QueryModel.Model
 {

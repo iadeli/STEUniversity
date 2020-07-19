@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Official.Domain.Model.CommonEntity.HireStage;
 using Official.Domain.Model.Person;
 using System;
 using System.Collections.Generic;

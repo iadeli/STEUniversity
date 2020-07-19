@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Command
 {
@@ -23,7 +25,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">فیلدهای سوابق تحصیلی</param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost, Authorize(Policy = Add)]
         public async Task<IActionResult> Post(CreateHistoryEducationalCommand command)
         {
             try
@@ -42,7 +44,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">فیلدهای سوابق تحصیلی</param>
         /// <returns></returns>
-        [HttpPut]
+        [HttpPut, Authorize(Policy = Edit)]
         public async Task<IActionResult> Put(UpdateHistoryEducationalCommand command)
         {
             try
@@ -61,8 +63,8 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="Id">شناسه سوابق تحصیلی</param>
         /// <returns></returns>
-        [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete(long Id)
+        [HttpDelete("{Id}"), Authorize(Policy = Delete)]
+        public async Task<IActionResult> Remove(long Id)
         {
             try
             {

@@ -21,6 +21,6 @@ namespace Official.Domain.Model.CommonEntity.Term
         public string Title { get; set; }
 
         public List<EducationalInfo> EducationalInfos { get; set; }
-        public List<HireStage.HireStage> HireStages { get; set; }
+        public List<HireStage> HireStages { get; set; }
     }
 }

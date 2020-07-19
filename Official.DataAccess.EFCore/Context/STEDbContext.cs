@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Official.Domain.Model.Authorization;
 using Official.Domain.Model.CommonEntity;
 using Official.Domain.Model.CommonEntity.Enum;
-using Official.Domain.Model.CommonEntity.HireStage;
 using Official.Domain.Model.CommonEntity.Menu;
 using Official.Domain.Model.CommonEntity.Term;
 using Official.Domain.Model.Log;

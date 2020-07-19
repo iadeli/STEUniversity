@@ -19,6 +19,23 @@ namespace Official.Persistence.EFCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Official.Domain.Model.Authorization.ControllerInfo", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Action");
+
+                    b.Property<string>("Controller");
+
+                    b.Property<string>("Policy");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ControllerInfos");
+                });
+
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Enum.Enumuration", b =>
                 {
                     b.Property<long>("Id")

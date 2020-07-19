@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "a8e63d3cf5c0984467f412101f7331f46e7536bd"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Official.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Mapster": "4.1.0",
+          "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime": "1.9.0.0"
+        },
+        "runtime": {
+          "Official.Application.Contracts.dll": {}
+        }
+      },
+      "Mapster/4.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mapster.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime/1.9.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Official.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mapster/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a8MLjFJKclB5IAM4rBP4+f/bR9wWHZ6mOZJMxIB/bEhEK9Dc31d/9CX3OFMQ73VLVrdj5acfoiz8UFdT146d7w==",
+      "path": "mapster/4.1.0",
+      "hashPath": "mapster.4.1.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime/1.9.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

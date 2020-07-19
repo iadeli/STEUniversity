@@ -8,6 +8,8 @@ using Official.Interface.Facade.Contracts.Utility;
 using Official.QueryModel.Model;
 using Official.Interface.Facade.Contracts.IFacadeQuery.AuditEntry;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
+using Microsoft.AspNetCore.Authorization;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Query
 {
@@ -25,7 +27,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت رخداد فرم ها
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet, Authorize(Policy = View)]
         public async Task<IActionResult> GetAuditLog()
         {
             try
@@ -43,7 +45,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت رخداد فرم ها براساس فیلتر
         /// </summary>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost, Authorize(Policy = View)]
         public async Task<IActionResult> GetAuditLogByFilter(AuditEntryQuery auditEntryQuery)
         {
             try
@@ -61,7 +63,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت جزئیات رخداد فرم ها
         /// </summary>
         /// <returns></returns>
-        [HttpGet("{AuditLogId}")]
+        [HttpGet("{AuditLogId}"), Authorize(Policy = View)]
         public async Task<IActionResult> GetPropertyAuditLog(int AuditLogId)
         {
             try
@@ -79,7 +81,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت رخداد درخواست ها
         /// </summary>
         /// <returns></returns>
-        [HttpGet("ApiLog")]
+        [HttpGet("ApiLog"), Authorize(Policy = View)]
         public async Task<IActionResult> GetApiLogAsync()
         {
             try
@@ -97,7 +99,7 @@ namespace Official.Interface.RestApi.Query
         /// دریافت رخداد درخواست ها براساس فیلتر
         /// </summary>
         /// <returns></returns>
-        [HttpPost("ApiLog")]
+        [HttpPost("ApiLog"), Authorize(Policy = View)]
         public async Task<IActionResult> GetApiLogByFilter(ApiLogFilter apiLogFilter)
         {
             try

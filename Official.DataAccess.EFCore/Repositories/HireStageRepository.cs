@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Official.Domain.Model.CommonEntity.HireStage;
 using Official.Domain.Model.Person;
 using Official.Domain.Model.Person.IHireStageRepository;
 using Official.Persistence.EFCore.Context;

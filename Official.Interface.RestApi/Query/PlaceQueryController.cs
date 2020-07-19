@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Interface.Facade.Contracts.IFacadeQuery.Enum;
 using Official.Interface.Facade.Contracts.Utility;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Query
 {
@@ -24,7 +25,7 @@ namespace Official.Interface.RestApi.Query
         /// <param name="typeId">نوع لیست 1- کشور 2- استان 3- شهر</param>
         /// <param name="placeId">شناسه پدر</param>
         /// <returns></returns>
-        [HttpGet("{typeId}/{placeId?}")]
+        [HttpGet("{typeId}/{placeId?}"), Authorize(Policy = View)]
         public async Task<IActionResult> GetByType(int typeId, long? placeId = null)
         {
             try

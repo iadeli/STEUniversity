@@ -223,11 +223,29 @@ namespace Official.Persistence.EFCore.Resourse {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to اسامی شهرها.
+        /// </summary>
+        internal static string Place {
+            get {
+                return ResourceManager.GetString("Place", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ترم آموزشی.
         /// </summary>
         internal static string Term {
             get {
                 return ResourceManager.GetString("Term", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اطلاعات کاربران.
+        /// </summary>
+        internal static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
             }
         }
     }

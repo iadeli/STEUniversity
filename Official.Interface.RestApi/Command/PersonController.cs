@@ -2,11 +2,13 @@
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Command
 {
@@ -24,7 +26,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">فیلدهای اطلاعات فردی</param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost, Authorize(Policy = Add)]
         public async Task<IActionResult> Post(CreatePersonCommand command)
         {
             try
@@ -44,7 +46,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">فیلدهای اطلاعات فردی</param>
         /// <returns></returns>
-        [HttpPut]
+        [HttpPut, Authorize(Policy = Edit)]
         public async Task<IActionResult> Put(UpdatePersonCommand command)
         {
             try
@@ -63,8 +65,8 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="Id">شناسه فرد</param>
         /// <returns></returns>
-        [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete(long Id)
+        [HttpDelete("{Id}"), Authorize(Policy = Delete)]
+        public async Task<IActionResult> Remove(long Id)
         {
             try
             {

@@ -1,28 +1,28 @@
-﻿using Official.Domain.Model.Common;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Official.Domain.Model.Common;
 
-namespace Official.Domain.Model.CommonEntity.HireStage
+namespace Official.Domain.Model.Person
 {
-    [DisplayAttribute(Name ="حالت استخدامی")]
+    [Display(Name ="حالت استخدامی")]
     public class HireStage : Entity
     {
-        [DisplayAttribute(Name ="عنوان وضعیت استخدامی مدرس")]
+        [Display(Name ="عنوان وضعیت استخدامی مدرس")]
         public string Name { get; set; }
 
-        [DisplayAttribute(Name = "ترم آموزشی")]
+        [Display(Name = "ترم آموزشی")]
         public long TermId { get; set; }
 
-        [DisplayAttribute(Name = "توضیحات")]
+        [Display(Name = "توضیحات")]
         public string Description { get; set; }
 
-        [DisplayAttribute(Name = "نوع استخدام")]
+        [Display(Name = "نوع استخدام")]
         public int HireTypeId { get; set; }
 
-        [DisplayAttribute(Name = "نام فرد")]
+        [Display(Name = "نام فرد")]
         public long PersonId { get; set; }
 
 
-        public Person.Person Person { get; set; }
-        public Term.Term Term { get; set; }
+        public Model.Person.Person Person { get; set; }
+        public CommonEntity.Term.Term Term { get; set; }
     }
 }

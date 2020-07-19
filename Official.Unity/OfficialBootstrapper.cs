@@ -5,16 +5,16 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Official.Application.Attribute;
 using Official.Application.Command.ApiLog;
-using Official.Application.Command.HireStage;
 using Official.Application.Command.Person;
 using Official.Application.Command.Term;
 using Official.Application.Command.User;
-using Official.Application.Contracts.Command.HireStageCommand;
-using Official.Application.Contracts.Command.Log.ApiLog;
+using Official.Application.Contracts.Command.Log.ApiLogItem;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
+using Official.Application.Contracts.Command.Person.HireStageCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Application.Contracts.Command.Person.PersonCommand;
+using Official.Application.Contracts.Command.Security;
 using Official.Application.Contracts.Command.Term;
 using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.CommonEntity.Term.ITermRepository;
@@ -50,13 +50,16 @@ namespace Official.Config.DI
 
             //services.AddScoped<IUserRepository, UserRepository>();
             var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<AppRole>>();
             var signInManager = serviceProvider.GetRequiredService<SignInManager<AppUser>>();
             
-            services.Add(new ServiceDescriptor(typeof(IUserRepository), new UserRepository(userManager, signInManager, context)));
+            services.Add(new ServiceDescriptor(typeof(ISecurityRepository), new SecurityRepository(userManager, roleManager, signInManager, context)));
 
-            services.AddScoped<ICommandHandler<CreateUserCommand, bool>, UserCommandHandlers>();
-            services.AddScoped<ICommandHandler<LoginCommand, JwtTokenDto>, UserCommandHandlers>();
-            services.AddScoped<ICommandHandler<string, JwtTokenDto>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<LoginCommand, JwtTokenDto>, SecurityCommandHandlers>();
+            services.AddScoped<ICommandHandler<string, JwtTokenDto>, SecurityCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateUserCommand, bool>, SecurityCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateRoleCommand, bool>, SecurityCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateRoleClaimCommand, int>, SecurityCommandHandlers>();
 
             services.AddScoped<IApiLogRepository, ApiLogRepository>();
             services.AddScoped<ICommandHandler<CreateApiLogCommand, long>, ApiLogCommandHandlers>();

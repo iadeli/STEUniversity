@@ -7,7 +7,7 @@ using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
-using Official.Interface.RestApi.Enum;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.RestApi.Command
 {
@@ -27,7 +27,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">فیلد های اطلاعات آموزشی</param>
         /// <returns></returns>
-        [HttpPost, Authorize(Policy = Policy.Add)]
+        [HttpPost, Authorize(Policy = Add)]
         public async Task<IActionResult> Post(CreateEducationalInfoCommand command)
         {
             try
@@ -46,7 +46,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">فیلدهای اطلاعات آموزشی</param>
         /// <returns></returns>
-        [HttpPut, Authorize(Policy = Policy.Edit)]
+        [HttpPut, Authorize(Policy = Edit)]
         public async Task<IActionResult> Put(UpdateEducationalInfoCommand command)
         {
             try
@@ -65,8 +65,8 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="Id">شناسه اطلاعات آموزشی</param>
         /// <returns></returns>
-        [HttpDelete("{Id}"), Authorize(Policy = Policy.Delete)]
-        public async Task<IActionResult> Delete(long Id)
+        [HttpDelete("{Id}"), Authorize(Policy = Delete)]
+        public async Task<IActionResult> Remove(long Id)
         {
             try
             {

@@ -1,0 +1,8 @@
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\b\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.deps.json
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\b\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.csprojAssemblyReference.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.csproj.CoreCompileInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.AssemblyInfoInputs.cache
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.AssemblyInfo.cs
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.csproj.CopyComplete
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.QueryModel\Debug\netcoreapp2.2\Official.QueryModel.dll

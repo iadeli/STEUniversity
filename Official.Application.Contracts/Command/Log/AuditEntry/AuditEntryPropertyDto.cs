@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Official.Application.Contracts.Command.AuditEntry
+﻿namespace Official.Application.Contracts.Command.Log.AuditEntry
 {
     public class AuditEntryPropertyDto
     {
