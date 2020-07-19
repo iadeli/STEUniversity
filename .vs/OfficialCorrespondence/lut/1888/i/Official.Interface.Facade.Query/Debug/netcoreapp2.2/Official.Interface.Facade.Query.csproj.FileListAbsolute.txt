@@ -1,8 +1,0 @@
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\b\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.deps.json
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\b\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csprojAssemblyReference.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfoInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.AssemblyInfo.cs
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.csproj.CopyComplete
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\1888\i\Official.Interface.Facade.Query\Debug\netcoreapp2.2\Official.Interface.Facade.Query.dll

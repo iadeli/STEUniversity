@@ -1,7 +1,0 @@
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.deps.json
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\b\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.csproj.CoreCompileInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.AssemblyInfoInputs.cache
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.AssemblyInfo.cs
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.csproj.CopyComplete
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.RestApi\Debug\netcoreapp2.2\Official.Interface.RestApi.dll
