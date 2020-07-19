@@ -8,3 +8,4 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorre
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.AssemblyInfo.cs
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Persistence.EFCore\Debug\netcoreapp2.2\Official.Persistence.EFCore.csprojAssemblyReference.cache
