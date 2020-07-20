@@ -22,7 +22,7 @@ namespace Official.Persistence.EFCore.Resourse {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResourceEntity {
+    public class ResourceEntity {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Official.Persistence.EFCore.Resourse {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Official.Persistence.EFCore.Resourse.ResourceEntity", typeof(ResourceEntity).Assembly);
@@ -51,7 +51,7 @@ namespace Official.Persistence.EFCore.Resourse {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to نقش ها.
         /// </summary>
-        internal static string AppRole {
+        public static string AppRole {
             get {
                 return ResourceManager.GetString("AppRole", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to خصوصیات نقش ها.
         /// </summary>
-        internal static string AppRoleClaim {
+        public static string AppRoleClaim {
             get {
                 return ResourceManager.GetString("AppRoleClaim", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to کاربران.
         /// </summary>
-        internal static string AppUser {
+        public static string AppUser {
             get {
                 return ResourceManager.GetString("AppUser", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to خصوصیات کاربران.
         /// </summary>
-        internal static string AppUserClaim {
+        public static string AppUserClaim {
             get {
                 return ResourceManager.GetString("AppUserClaim", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to ورود کاربران.
         /// </summary>
-        internal static string AppUserLogin {
+        public static string AppUserLogin {
             get {
                 return ResourceManager.GetString("AppUserLogin", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to نقش کاربران.
         /// </summary>
-        internal static string AppUserRole {
+        public static string AppUserRole {
             get {
                 return ResourceManager.GetString("AppUserRole", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to مجوز کاربران.
         /// </summary>
-        internal static string AppUserToken {
+        public static string AppUserToken {
             get {
                 return ResourceManager.GetString("AppUserToken", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to وقایع سیستم.
         /// </summary>
-        internal static string AuditEntry {
+        public static string AuditEntry {
             get {
                 return ResourceManager.GetString("AuditEntry", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to جرئیات وقایع سیستم.
         /// </summary>
-        internal static string AuditEntryProperty {
+        public static string AuditEntryProperty {
             get {
                 return ResourceManager.GetString("AuditEntryProperty", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to اطلاعات شناسنامه ای افراد.
         /// </summary>
-        internal static string BirthCertificate {
+        public static string BirthCertificate {
             get {
                 return ResourceManager.GetString("BirthCertificate", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to دفترچه تماس افراد.
         /// </summary>
-        internal static string Contact {
+        public static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to پیوست مدارک سوابق آموزشی.
         /// </summary>
-        internal static string DegreeAttach {
+        public static string DegreeAttach {
             get {
                 return ResourceManager.GetString("DegreeAttach", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to اطلاعات آموزشی.
         /// </summary>
-        internal static string EducationalInfo {
+        public static string EducationalInfo {
             get {
                 return ResourceManager.GetString("EducationalInfo", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to لیست کمبوهای ثابت.
         /// </summary>
-        internal static string Enumuration {
+        public static string Enumuration {
             get {
                 return ResourceManager.GetString("Enumuration", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to حالت های استخدامی.
         /// </summary>
-        internal static string HireStage {
+        public static string HireStage {
             get {
                 return ResourceManager.GetString("HireStage", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to سوابق آموزشی.
         /// </summary>
-        internal static string HistoryEducational {
+        public static string HistoryEducational {
             get {
                 return ResourceManager.GetString("HistoryEducational", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to فهرست انتخاب.
         /// </summary>
-        internal static string Menu {
+        public static string Menu {
             get {
                 return ResourceManager.GetString("Menu", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to اطلاعات فردی.
         /// </summary>
-        internal static string Person {
+        public static string Person {
             get {
                 return ResourceManager.GetString("Person", resourceCulture);
             }
@@ -225,16 +225,25 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to اسامی شهرها.
         /// </summary>
-        internal static string Place {
+        public static string Place {
             get {
                 return ResourceManager.GetString("Place", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to امنیت.
+        /// </summary>
+        public static string Security {
+            get {
+                return ResourceManager.GetString("Security", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ترم آموزشی.
         /// </summary>
-        internal static string Term {
+        public static string Term {
             get {
                 return ResourceManager.GetString("Term", resourceCulture);
             }
@@ -243,7 +252,7 @@ namespace Official.Persistence.EFCore.Resourse {
         /// <summary>
         ///   Looks up a localized string similar to اطلاعات کاربران.
         /// </summary>
-        internal static string User {
+        public static string User {
             get {
                 return ResourceManager.GetString("User", resourceCulture);
             }

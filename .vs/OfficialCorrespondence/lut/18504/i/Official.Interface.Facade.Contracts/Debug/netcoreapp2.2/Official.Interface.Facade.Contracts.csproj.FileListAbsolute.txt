@@ -5,4 +5,3 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorre
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Contracts\Debug\netcoreapp2.2\Official.Interface.Facade.Contracts.AssemblyInfo.cs
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Contracts\Debug\netcoreapp2.2\Official.Interface.Facade.Contracts.csproj.CopyComplete
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Contracts\Debug\netcoreapp2.2\Official.Interface.Facade.Contracts.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\.vs\OfficialCorrespondence\lut\0\i\Official.Interface.Facade.Contracts\Debug\netcoreapp2.2\Official.Interface.Facade.Contracts.csprojAssemblyReference.cache

@@ -38,7 +38,10 @@ using ServiceHost.Utility;
 using Swashbuckle.AspNetCore.Swagger;
 using Official.Interface.RestApi.PolicyHandler;
 using static Official.Persistence.EFCore.Utility.Constant;
-
+using Official.Interface.Facade.Query.FacadeQuery.Security;
+using Official.Interface.Facade.Contracts.IFacadeQuery.Security;
+using Official.Interface.Facade.Query.FacadeQuery.Security.User;
+using Official.Interface.Facade.Contracts.IFacadeQuery.Security.User;
 
 namespace ServiceHost
 {
@@ -160,6 +163,8 @@ namespace ServiceHost
             services.AddScoped<IHistoryEducationalFacadeQuery, HistoryEducationalFacadeQuery>();
             services.AddScoped<IHireStageFacadeQuery, HireStageFacadeQuery>();
             services.AddScoped<IAuditEntryFacadeQuery, AuditEntryFacadeQuery>();
+            services.AddScoped<ISecurityFacadeQuery, SecurityFacadeQuery>();
+            services.AddScoped<IUserFacadeQuery, UserFacadeQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

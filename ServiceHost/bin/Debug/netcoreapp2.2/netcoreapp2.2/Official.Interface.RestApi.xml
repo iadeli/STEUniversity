@@ -118,7 +118,7 @@
         </member>
         <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRoleClaim(Official.Application.Contracts.Command.Person.PersonCommand.CreateRoleClaimCommand)">
             <summary>
-            دسترسی گروه به فرم ها
+            ایجاد دسترسی گروه به فرم ها
             </summary>
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
@@ -272,6 +272,20 @@
             </summary>
             <param name="typeId">نوع لیست 1- کشور 2- استان 3- شهر</param>
             <param name="placeId">شناسه پدر</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.SecurityQueryController.GetUserAccessClaim(System.Int64,System.String)">
+            <summary>
+            دریافت دسترسی کاربر به استان و سمت
+            </summary>
+            <param name="type">ProvinceId - PositionId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.SecurityQueryController.GetRoleAccessClaim(System.Int64,System.String)">
+            <summary>
+            دریافت دسترسی گروه به فرم ها
+            </summary>
+            <param name="type">ControllerInfoId</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.TermQueryController.Get">

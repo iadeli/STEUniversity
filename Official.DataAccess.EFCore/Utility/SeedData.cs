@@ -25,7 +25,7 @@ namespace Official.Persistence.EFCore.Utility
                 var allController = Assembly.Load(RestApi).GetTypes()
                     .Where(type => type.BaseType.Name == ControllerType)
                     .SelectMany(type => type.GetMethods(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
-                    .Where(m => !m.GetCustomAttributes(typeof(System.Runtime.CompilerServices.CompilerGeneratedAttribute), true).Any()).ToList()
+                    .Where(m => !m.GetCustomAttributes(typeof(System.Runtime.CompilerServices.CompilerGeneratedAttribute), true).Any())
                     .Select(x => new
                     {
                         Controller = x.DeclaringType?.Name,

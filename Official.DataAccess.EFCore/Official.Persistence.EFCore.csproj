@@ -61,7 +61,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resourse\ResourceEntity.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceEntity.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resourse\ResourceQuery.resx">

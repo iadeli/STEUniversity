@@ -19,7 +19,8 @@ namespace Official.Interface.Facade.Contracts.Utility
             Func<TSource, TSource> nextItem)
             where TSource : class
         {
-            return FromHierarchy(source, nextItem, s => s != null);
+            var fromHierarchy = FromHierarchy(source, nextItem, s => s != null);
+            return fromHierarchy;
         }
 
         public static IEnumerable<TSource> FromHierarchy<TSource>(

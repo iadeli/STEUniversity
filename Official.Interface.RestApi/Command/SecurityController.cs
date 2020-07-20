@@ -61,24 +61,10 @@ namespace Official.Interface.RestApi.Command
             }
         }
 
-        /// <summary>
-        /// ایجاد کاربر
-        /// </summary>
-        /// <param name="command">پارامترهای ورودی</param>
-        /// <returns></returns>
-        [HttpPost("User")]
-        public async Task<IActionResult> CreateUser(CreateUserCommand command)
-        {
-            try
-            {
-                var result = await _bus.Dispatch<CreateUserCommand, bool>(command);
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
-            }
-        }
+        // ایجاد دسترسی به استان ها
+        // ایجاد دسترسی به سمت ها
+
+        //((انتصاب استان و سمت به کاربر در کدام فرم انجام گیرد))
 
         /// <summary>
         /// ایجاد گروه
@@ -99,8 +85,11 @@ namespace Official.Interface.RestApi.Command
             }
         }
 
+        // ویرایش گروه
+        // حذف گروه به همراه دسترسی ایجاد شده
+
         /// <summary>
-        /// دسترسی گروه به فرم ها
+        /// ایجاد دسترسی گروه به فرم ها
         /// </summary>
         /// <param name="command">پارامترهای ورودی</param>
         /// <returns></returns>
