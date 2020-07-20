@@ -4,6 +4,6 @@ namespace Official.Framework.Application
 {
     public interface ICommandHandler<T,Z>
     {
-        Task<Z> Handle(T command);
+        Task<Z> HandleAsync(T command);
     }
 }

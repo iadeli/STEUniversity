@@ -88,6 +88,27 @@
             <param name="Id">شناسه فرد</param>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Command.RoleController.Create(Official.Application.Contracts.Command.Security.CreateRoleCommand)">
+            <summary>
+            ایجاد گروه
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Command.RoleController.Update(Official.Application.Contracts.Command.Security.Role.UpdateRoleCommand)">
+            <summary>
+            ویرایش گروه
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Command.RoleController.RemoveUser(System.Int64)">
+            <summary>
+            حذف گروه
+            </summary>
+            <param name="id">شناسه گروه</param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Command.SecurityController.Login(Official.Application.Contracts.Command.User.LoginCommand)">
             <summary>
             احراز هویت
@@ -98,13 +119,6 @@
         <member name="M:Official.Interface.RestApi.Command.SecurityController.RefreshToken(System.String)">
             <summary>
             تمدید توکن
-            </summary>
-            <param name="command">پارامترهای ورودی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateUser(Official.Application.Contracts.Command.User.CreateUserCommand)">
-            <summary>
-            ایجاد کاربر
             </summary>
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
@@ -142,6 +156,27 @@
             حذف ترم آموزشی
             </summary>
             <param name="Id">شناسه ترم آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Command.UserController.CreateUser(Official.Application.Contracts.Command.User.CreateUserCommand)">
+            <summary>
+            ایجاد کاربر
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Command.UserController.UpdateUser(Official.Application.Contracts.Command.Security.User.UpdateUserCommand)">
+            <summary>
+            ویرایش کاربر
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Command.UserController.RemoveUser(System.Int64)">
+            <summary>
+            حذف کاربر
+            </summary>
+            <param name="id">شناسه کاربر</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetAuditLog">
@@ -274,6 +309,26 @@
             <param name="placeId">شناسه پدر</param>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Query.RoleQueryController.GetRoles">
+            <summary>
+            دریافت گروه
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.RoleQueryController.GetRoleById(System.Int64)">
+            <summary>
+            دریافت گروه براساس شناسه گروه
+            </summary>
+            <param name="roleId">شناسه گروه</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.RoleQueryController.GetRoleByPersonId(System.Int64)">
+            <summary>
+            دریافت گروه براساس شناسه فرد
+            </summary>
+            <param name="PersonId"></param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Query.SecurityQueryController.GetUserAccessClaim(System.Int64,System.String)">
             <summary>
             دریافت دسترسی کاربر به استان و سمت
@@ -299,6 +354,26 @@
             دریافت ترم آموزشی براساس شناسه
             </summary>
             <param name="id">شناسه ترم آموزشی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.UserQueryController.GetUsers">
+            <summary>
+            دریافت کاربران
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.UserQueryController.GetUserById(System.Int64)">
+            <summary>
+            دریافت کاربر براساس شناسه کاربر
+            </summary>
+            <param name="UserId">شناسه کاربر</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Query.UserQueryController.GetUserByPersonId(System.Int64)">
+            <summary>
+            دریافت کاربر براساس شناسه فرد
+            </summary>
+            <param name="UserId">شناسه کاربر</param>
             <returns></returns>
         </member>
     </members>

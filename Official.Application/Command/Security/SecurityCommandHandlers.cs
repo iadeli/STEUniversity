@@ -13,7 +13,7 @@ using Official.Domain.Model.Authorization;
 
 namespace Official.Application.Command.User
 {
-    public class SecurityCommandHandlers : ICommandHandler<LoginCommand, JwtTokenDto>, ICommandHandler<string, JwtTokenDto>, ICommandHandler<CreateUserCommand, bool>
+    public class SecurityCommandHandlers : ICommandHandler<LoginCommand, JwtTokenDto>, ICommandHandler<string, JwtTokenDto>
         , ICommandHandler<CreateRoleCommand, bool>, ICommandHandler<CreateRoleClaimCommand, int>
     {
         private readonly ISecurityRepository _securityRepository;
@@ -24,7 +24,7 @@ namespace Official.Application.Command.User
             _jwtRepository = jwtRepository;
         }
 
-        public async Task<JwtTokenDto> Handle(LoginCommand command)
+        public async Task<JwtTokenDto> HandleAsync(LoginCommand command)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace Official.Application.Command.User
             }
         }
 
-        public async Task<JwtTokenDto> Handle(string token)
+        public async Task<JwtTokenDto> HandleAsync(string token)
         {
             try
             {
@@ -70,37 +70,8 @@ namespace Official.Application.Command.User
                 throw e;
             }
         }
-
-        public async Task<bool> Handle(CreateUserCommand command)
-        {
-            try
-            {
-                _securityRepository.BeginTransaction();
-
-                var isExistsUser = await _securityRepository.IsExistsUserName(command.UserName.Trim());
-                if (isExistsUser)
-                    throw new Exception("این نام کاربری قبلا ثبت شده است");
-
-                var succeeded = await _securityRepository.CreateUser(command.UserName.Trim(), command.Password.Trim(), command.PersonId);
-
-                if (succeeded)
-                {
-                    var userId = await _securityRepository.GetUserIdByUserNameAsync(command.UserName.Trim());
-                    await _securityRepository.CreateUserRoleAsync(userId, command.RoleIds);
-                }
-
-                _securityRepository.Commit();
-
-                return succeeded;
-            }
-            catch (Exception e)
-            {
-                _securityRepository.Rollback();
-                throw e;
-            }
-        }
-
-        public async Task<bool> Handle(CreateRoleCommand command)
+        
+        public async Task<bool> HandleAsync(CreateRoleCommand command)
         {
             try
             {
@@ -128,7 +99,7 @@ namespace Official.Application.Command.User
             }
         }
 
-        public async Task<int> Handle(CreateRoleClaimCommand command)
+        public async Task<int> HandleAsync(CreateRoleClaimCommand command)
         {
             try
             {

@@ -18,7 +18,7 @@ namespace Official.Application.Command.Person
         {
             _personRepository = personRepository;
         }
-        public async Task<long> Handle(CreatePersonCommand command)
+        public async Task<long> HandleAsync(CreatePersonCommand command)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<long> Handle(UpdatePersonCommand command)
+        public async Task<long> HandleAsync(UpdatePersonCommand command)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<int> Handle(DeletePersonCommand command)
+        public async Task<int> HandleAsync(DeletePersonCommand command)
         {
             try
             {

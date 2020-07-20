@@ -18,7 +18,7 @@ namespace Official.Application.Command.Person
             _educationalInfoRepository = educationalInfoRepository;
         }
 
-        public async Task<long> Handle(CreateEducationalInfoCommand command)
+        public async Task<long> HandleAsync(CreateEducationalInfoCommand command)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<long> Handle(UpdateEducationalInfoCommand command)
+        public async Task<long> HandleAsync(UpdateEducationalInfoCommand command)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<int> Handle(DeleteEducationalInfoCommand command)
+        public async Task<int> HandleAsync(DeleteEducationalInfoCommand command)
         {
             try
             {

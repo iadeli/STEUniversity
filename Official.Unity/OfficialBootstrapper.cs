@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Official.Application.Attribute;
 using Official.Application.Command.ApiLog;
 using Official.Application.Command.Person;
+using Official.Application.Command.Security;
 using Official.Application.Command.Term;
 using Official.Application.Command.User;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
@@ -15,6 +16,7 @@ using Official.Application.Contracts.Command.Person.HireStageCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Security;
+using Official.Application.Contracts.Command.Security.User;
 using Official.Application.Contracts.Command.Term;
 using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.CommonEntity.Term.ITermRepository;
@@ -57,9 +59,12 @@ namespace Official.Config.DI
 
             services.AddScoped<ICommandHandler<LoginCommand, JwtTokenDto>, SecurityCommandHandlers>();
             services.AddScoped<ICommandHandler<string, JwtTokenDto>, SecurityCommandHandlers>();
-            services.AddScoped<ICommandHandler<CreateUserCommand, bool>, SecurityCommandHandlers>();
             services.AddScoped<ICommandHandler<CreateRoleCommand, bool>, SecurityCommandHandlers>();
             services.AddScoped<ICommandHandler<CreateRoleClaimCommand, int>, SecurityCommandHandlers>();
+
+            services.AddScoped<ICommandHandler<CreateUserCommand, long>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateUserCommand, long>, UserCommandHandlers>();
+            services.AddScoped<ICommandHandler<RemoveUserCommand, int>, UserCommandHandlers>();
 
             services.AddScoped<IApiLogRepository, ApiLogRepository>();
             services.AddScoped<ICommandHandler<CreateApiLogCommand, long>, ApiLogCommandHandlers>();

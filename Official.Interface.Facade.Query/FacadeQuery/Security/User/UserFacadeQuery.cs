@@ -36,5 +36,46 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.User
                 throw e;
             }
         }
+
+        public async Task<List<UserQuery>> GetUserById(long userId)
+        {
+            try
+            {
+                var sql = @"
+                    select anu.Id AS UserId, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
+                    from AspNetUsers anu 
+                    INNER JOIN Persons p ON anu.PersonId = p.Id 
+                    INNER JOIN Contacts c ON p.Id = c.PersonId
+                    WHERE anu.Id = @UserId
+                    ";
+                var users = await _connection.QueryAsync<UserQuery>(sql, new { UserId = userId });
+                return users.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<List<UserQuery>> GetUserByPersonId(long personId)
+        {
+            try
+            {
+                var sql = @"
+                    select anu.Id AS UserId, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
+                    from AspNetUsers anu 
+                    INNER JOIN Persons p ON anu.PersonId = p.Id 
+                    INNER JOIN Contacts c ON p.Id = c.PersonId
+                    WHERE p.Id = @PersonId
+                    ";
+                var users = await _connection.QueryAsync<UserQuery>(sql, new { PersonId = personId });
+                return users.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }

@@ -18,7 +18,7 @@ namespace Official.Application.Command.Term
             _termRepository = termRepository;
         }
 
-        public async Task<long> Handle(CreateTermCommand command)
+        public async Task<long> HandleAsync(CreateTermCommand command)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace Official.Application.Command.Term
             }
         }
 
-        public async Task<long> Handle(UpdateTermCommand command)
+        public async Task<long> HandleAsync(UpdateTermCommand command)
         {
             try
             {
@@ -110,7 +110,7 @@ namespace Official.Application.Command.Term
             }
         }
 
-        public async Task<int> Handle(DeleteTermCommand command)
+        public async Task<int> HandleAsync(DeleteTermCommand command)
         {
             try
             {

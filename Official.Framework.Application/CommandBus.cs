@@ -16,7 +16,7 @@ namespace Official.Framework.Application
         public async Task<Z> Dispatch<T,Z>(T command)
         {
             var handler = _serviceLocator.GetInstance<ICommandHandler<T,Z>>();
-            return await handler.Handle(command);
+            return await handler.HandleAsync(command);
         }
     }
 }

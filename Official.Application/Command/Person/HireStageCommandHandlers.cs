@@ -16,7 +16,7 @@ namespace Official.Application.Command.Person
             _hireStageRepository = hireStageRepository;
         }
 
-        public async Task<long> Handle(CreateHireStageCommand command)
+        public async Task<long> HandleAsync(CreateHireStageCommand command)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<long> Handle(UpdateHireStageCommand command)
+        public async Task<long> HandleAsync(UpdateHireStageCommand command)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<int> Handle(DeleteHireStageCommand command)
+        public async Task<int> HandleAsync(DeleteHireStageCommand command)
         {
             try
             {

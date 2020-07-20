@@ -24,7 +24,7 @@ namespace Official.Persistence.EFCore.Repositories
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
-            _context = context;
+            _context = context; 
         }
 
         private bool _disposed = false;
@@ -83,37 +83,6 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task<bool> CreateUser(string userName, string password, long personId)
-        {
-            try
-            {
-                AppUser user = new AppUser()
-                {
-                    UserName = userName,
-                    PersonId = personId
-                };
-                IdentityResult result = await _userManager.CreateAsync(user, password);
-                return result.Succeeded;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<bool> IsExistsUserName(string userName)
-        {
-            try
-            {
-                AppUser user = await _userManager.FindByNameAsync(userName);
-                return user != null;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
         public async Task<bool> IsExistsRoleNameAsync(string roleName)
         {
             try
@@ -137,38 +106,6 @@ namespace Official.Persistence.EFCore.Repositories
                 };
                 IdentityResult result = await _roleManager.CreateAsync(role);
                 return result.Succeeded;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<long> GetUserIdByUserNameAsync(string userName)
-        {
-            try
-            {
-                AppUser user = await _userManager.FindByNameAsync(userName);
-                return user.Id;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<int> CreateUserRoleAsync(long userId, List<long> roleIds)
-        {
-            try
-            {
-                var userRoleList = new List<AppUserRole>();
-                foreach (var roleId in roleIds)
-                {
-                    var userRole = new AppUserRole() { RoleId = roleId, UserId = userId };
-                    userRoleList.Add(userRole);
-                }
-                await _context.AddRangeAsync(userRoleList);
-                return await Save();
             }
             catch (Exception e)
             {

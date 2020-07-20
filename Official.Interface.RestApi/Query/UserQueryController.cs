@@ -20,6 +20,10 @@ namespace Official.Interface.RestApi.Query
             _query = query;
         }
 
+        /// <summary>
+        /// دریافت کاربران
+        /// </summary>
+        /// <returns></returns>
         [HttpGet, Authorize(Policy = View)]
         public async Task<IActionResult> GetUsers()
         {
@@ -33,5 +37,44 @@ namespace Official.Interface.RestApi.Query
                 return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
+
+        /// <summary>
+        /// دریافت کاربر براساس شناسه کاربر
+        /// </summary>
+        /// <param name="UserId">شناسه کاربر</param>
+        /// <returns></returns>
+        [HttpGet("{UserId}"), Authorize(Policy = View)]
+        public async Task<IActionResult> GetUserById(long UserId)
+        {
+            try
+            {
+                var users = await _query.GetUserById(UserId);
+                return Ok(users);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
+        /// <summary>
+        /// دریافت کاربر براساس شناسه فرد
+        /// </summary>
+        /// <param name="UserId">شناسه کاربر</param>
+        /// <returns></returns>
+        [HttpGet("Person/{PersonId}"), Authorize(Policy = View)]
+        public async Task<IActionResult> GetUserByPersonId(long PersonId)
+        {
+            try
+            {
+                var user = await _query.GetUserByPersonId(PersonId);
+                return Ok(user);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
     }
 }

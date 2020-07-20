@@ -17,7 +17,7 @@ namespace Official.Application.Command.ApiLog
             _apiLogRepository = apiLogRepository;
         }
 
-        public async Task<long> Handle(CreateApiLogCommand command)
+        public async Task<long> HandleAsync(CreateApiLogCommand command)
         {
             try
             {

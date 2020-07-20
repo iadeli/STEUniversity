@@ -19,7 +19,7 @@ namespace Official.Application.Command.Person
             _historyEducationalRepository = historyEducationalRepository;
         }
 
-        public async Task<long> Handle(CreateHistoryEducationalCommand command)
+        public async Task<long> HandleAsync(CreateHistoryEducationalCommand command)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<long> Handle(UpdateHistoryEducationalCommand command)
+        public async Task<long> HandleAsync(UpdateHistoryEducationalCommand command)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace Official.Application.Command.Person
             }
         }
 
-        public async Task<int> Handle(DeleteHistoryEducationalCommand command)
+        public async Task<int> HandleAsync(DeleteHistoryEducationalCommand command)
         {
             try
             {
