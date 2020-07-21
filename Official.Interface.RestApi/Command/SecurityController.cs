@@ -76,11 +76,11 @@ namespace Official.Interface.RestApi.Command
         /// <param name="command">پارامترهای ورودی</param>
         /// <returns></returns>
         [HttpPost("Role/Claim")]
-        public async Task<IActionResult> CreateRoleClaim(List<CreateRoleClaimCommand> command)
+        public async Task<IActionResult> CreateRoleClaim(CreateRoleClaimCommand command)
         {
             try
             {
-                var result = await _bus.Dispatch<List<CreateRoleClaimCommand>, bool>(command);
+                var result = await _bus.Dispatch<CreateRoleClaimCommand, bool>(command);
                 return Ok(result);
             }
             catch (Exception e)

@@ -90,14 +90,12 @@ namespace Official.Application.Command.Security
                 await _securityRepository.CreateRoleClaims(addRoleClaimList);
 
                 _securityRepository.Commit();
-                _securityRepository.Dispose();
 
                 return true;
             }
             catch (Exception e)
             {
                 _securityRepository.Rollback();
-                _securityRepository.Dispose();
                 throw e;
             }
         }

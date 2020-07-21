@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using Official.Domain.Model;
 using Official.Domain.Model.Security.IRoleRepository;
@@ -21,6 +22,7 @@ namespace Official.Persistence.EFCore.Repositories
         public RoleRepository(STEDbContext context, RoleManager<AppRole> roleManager)
         {
             _context = context;
+            _roleManager = roleManager;
         }
 
         private bool _disposed = false;
@@ -143,9 +145,12 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                AppRole role = await _roleManager.FindByNameAsync(name);
-                await _context.AddAsync(role);
-                return await Save();
+                AppRole role = await _roleManager.FindByIdAsync(id.ToString());
+                role.Name = name;
+                //_context.Entry<AppRole>(role).State = EntityState.Modified;
+                //_context.Update<AppRole>(role);
+                await Save();
+                return role.Id;
             }
             catch (Exception e)
             {
@@ -158,7 +163,7 @@ namespace Official.Persistence.EFCore.Repositories
             try
             {
                 var role = _context.Roles.Where(a => a.Id == id).ToList();
-                _context.Remove(role);
+                _context.RemoveRange(role);
                 return await Save();
             }
             catch (Exception e)

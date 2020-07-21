@@ -36,11 +36,11 @@ namespace Official.Application.Command.Security
 
                 await _roleRepository.CreateUserRole(roleId, command.UserIds);
                 _roleRepository.Commit();
-                _roleRepository.Dispose();
                 return roleId;
             }
             catch (Exception e)
             {
+                _roleRepository.Rollback();
                 throw e;
             }
         }
@@ -67,13 +67,11 @@ namespace Official.Application.Command.Security
 
                 await _roleRepository.CreateUserRole(roleId, command.UserIds);
                 _roleRepository.Commit();
-                _roleRepository.Dispose();
                 return roleId;
             }
             catch (Exception e)
             {
                 _roleRepository.Rollback();
-                _roleRepository.Dispose();
                 throw e;
             }
         }
@@ -87,13 +85,11 @@ namespace Official.Application.Command.Security
                 if (rowsAffected > 0)
                     await _roleRepository.RemoveUserRole(command.Id);
                 _roleRepository.Commit();
-                _roleRepository.Dispose();
                 return rowsAffected;
             }
             catch (Exception e)
             {
                 _roleRepository.Rollback();
-                _roleRepository.Dispose();
                 throw e;
             }
         }

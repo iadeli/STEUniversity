@@ -23,7 +23,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.User
             try
             {
                 var sql = @"
-                    select anu.Id AS UserId, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
+                    select anu.Id, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
                     from AspNetUsers anu 
                     INNER JOIN Persons p ON anu.PersonId = p.Id 
                     INNER JOIN Contacts c ON p.Id = c.PersonId
@@ -42,7 +42,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.User
             try
             {
                 var sql = @"
-                    select anu.Id AS UserId, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
+                    select anu.Id, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
                     from AspNetUsers anu 
                     INNER JOIN Persons p ON anu.PersonId = p.Id 
                     INNER JOIN Contacts c ON p.Id = c.PersonId
@@ -62,7 +62,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.User
             try
             {
                 var sql = @"
-                    select anu.Id AS UserId, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
+                    select anu.Id, p.Id AS PersonId, (p.FirstName + ' ' + p.LastName) AS FullName, anu.UserName, p.NationalCode, c.Mobile, c.Email
                     from AspNetUsers anu 
                     INNER JOIN Persons p ON anu.PersonId = p.Id 
                     INNER JOIN Contacts c ON p.Id = c.PersonId

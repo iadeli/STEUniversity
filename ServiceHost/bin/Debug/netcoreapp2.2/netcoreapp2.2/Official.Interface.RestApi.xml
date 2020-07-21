@@ -123,7 +123,7 @@
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRoleClaim(System.Collections.Generic.List{Official.Application.Contracts.Command.Security.CreateRoleClaimCommand})">
+        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRoleClaim(Official.Application.Contracts.Command.Security.CreateRoleClaimCommand)">
             <summary>
             ایجاد دسترسی گروه به فرم ها
             </summary>

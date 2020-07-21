@@ -51,14 +51,12 @@ namespace Official.Application.Command.Security
                 var rowsAffected = await _userRepository.CreateUserRole(userId, command.RoleIds);
 
                 _userRepository.Commit();
-                _userRepository.Dispose();
 
                 return userId;
             }
             catch (Exception e)
             {
                 _userRepository.Rollback();
-                _userRepository.Dispose();
                 throw e;
             }
         }
@@ -71,8 +69,6 @@ namespace Official.Application.Command.Security
 
                 if (string.IsNullOrWhiteSpace(command.UserName))
                     throw new Exception("لطفا نام کاربری را پر کنید");
-                if (string.IsNullOrWhiteSpace(command.Password))
-                    throw new Exception("لطفا کلمه عبور را پر کنید");
 
                 var appUserTransfer = _userRepository.GetUserById(command.Id);
                 appUserTransfer = command.Adapt(appUserTransfer);
@@ -90,14 +86,12 @@ namespace Official.Application.Command.Security
                 await _userRepository.UpdateUserRoleAsync(userId, appUserTransfer.RoleIds);
 
                 _userRepository.Commit();
-                _userRepository.Dispose();
 
                 return userId;
             }
             catch (Exception e)
             {
                 _userRepository.Rollback();
-                _userRepository.Dispose();
                 throw e;
             }
         }
@@ -111,13 +105,11 @@ namespace Official.Application.Command.Security
                 if (rowsAffected > 0)
                     await _userRepository.RemoveUserRole(command.Id);
                 _userRepository.Commit();
-                _userRepository.Dispose();
                 return rowsAffected;
             }
             catch (Exception e)
             {
                 _userRepository.Rollback();
-                _userRepository.Dispose();
                 throw e;
             }
         }

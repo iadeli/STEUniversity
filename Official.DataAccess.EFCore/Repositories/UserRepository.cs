@@ -178,7 +178,6 @@ namespace Official.Persistence.EFCore.Repositories
             {
                 var user = _context.AspNetUsers.Where(a => a.Id == appUserTransfer.Id).FirstOrDefault();
                 user.UserName = appUserTransfer.UserName;
-                await _context.SingleUpdateAsync(user);
                 await Save();
                 return user.Id;
             }
