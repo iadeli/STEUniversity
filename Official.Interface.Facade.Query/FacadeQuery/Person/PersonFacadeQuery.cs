@@ -22,9 +22,10 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = @"select p.[Id] ,[NationalCode] ,[PersonnelCode] ,[TeacherCode] ,[FirstName] ,[LastName] ,[EFirstName] ,[ELastName] ,[FatherName] ,[No] ,[IssueCityId] ,[BirthCountryId]
+                var sql = @"select p.[Id] ,[NationalCode] ,[PersonnelCode] ,[TeacherCode] ,[FirstName] ,[LastName], [EnlistId], [EnlistCode], [ReligionId], [SubReligionId]
+                                ,[NationalityId], [EthnicityId], [IndigenousSituationId], [EFirstName] ,[ELastName] ,[FatherName] ,[No] ,[IssueCityId] ,[BirthCountryId]
 		                        ,[BirthProvinceId] ,[BirthCityId] ,[BirthDate] ,[GenderId] ,[PrefixId] ,[MarriedId] ,[Address] ,[PostalCode] ,[PostBox] ,[Mobile] ,[WorkplacePhoneNumber]
-		                        ,[Email] ,[WorkAddress] ,[NecessaryContactNumber] ,[Description] 
+		                        ,[Email] ,[WorkAddress] ,[NecessaryContactNumber] ,[Description]  
                             from Persons p inner join BirthCertificates bc on p.Id = bc.PersonId inner join PersonDetails pd on p.Id = pd.PersonId inner join Contacts c on p.Id = c.PersonId";
                 var data = await _connection.QueryAsync<PersonQuery>(sql);
                 return data.ToList();
@@ -39,7 +40,8 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = @"select p.[Id] ,[NationalCode] ,[PersonnelCode] ,[TeacherCode] ,[FirstName] ,[LastName] ,[EFirstName] ,[ELastName] ,[FatherName] ,[No] ,[IssueCityId] ,[BirthCountryId]
+                var sql = @"select p.[Id] ,[NationalCode] ,[PersonnelCode] ,[TeacherCode] ,[FirstName] ,[LastName], [EnlistId], [EnlistCode], [ReligionId], [SubReligionId]
+                                ,[NationalityId], [EthnicityId], [IndigenousSituationId], [EFirstName] ,[ELastName] ,[FatherName] ,[No] ,[IssueCityId] ,[BirthCountryId]
 		                        ,[BirthProvinceId] ,[BirthCityId] ,[BirthDate] ,[GenderId] ,[PrefixId] ,[MarriedId] ,[Address] ,[PostalCode] ,[PostBox] ,[Mobile] ,[WorkplacePhoneNumber]
 		                        ,[Email] ,[WorkAddress] ,[NecessaryContactNumber] ,[Description] 
                             from Persons p inner join BirthCertificates bc on p.Id = bc.PersonId inner join PersonDetails pd on p.Id = pd.PersonId inner join Contacts c on p.Id = c.PersonId WHERE p.ID = @Id";

@@ -76,32 +76,6 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("Places");
                 });
 
-            modelBuilder.Entity("Official.Domain.Model.CommonEntity.HireStage.HireStage", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description");
-
-                    b.Property<int>("HireTypeId");
-
-                    b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.Property<long>("PersonId");
-
-                    b.Property<long>("TermId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PersonId");
-
-                    b.HasIndex("TermId");
-
-                    b.ToTable("HireStages");
-                });
-
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
                     b.Property<long>("Id")
@@ -297,6 +271,32 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("EducationalInfos");
                 });
 
+            modelBuilder.Entity("Official.Domain.Model.Person.HireStage", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsFacultymember");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<long>("PersonId");
+
+                    b.Property<long>("TermId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.HasIndex("TermId");
+
+                    b.ToTable("HireStages");
+                });
+
             modelBuilder.Entity("Official.Domain.Model.Person.HistoryEducational", b =>
                 {
                     b.Property<long>("Id")
@@ -350,6 +350,8 @@ namespace Official.Persistence.EFCore.Migrations
                     b.Property<string>("PersonnelCode")
                         .IsRequired();
 
+                    b.Property<int>("PositionId");
+
                     b.Property<string>("TeacherCode")
                         .IsRequired();
 
@@ -367,8 +369,6 @@ namespace Official.Persistence.EFCore.Migrations
                     b.Property<int?>("EnlistId");
 
                     b.Property<int?>("EthnicityId");
-
-                    b.Property<long>("Id");
 
                     b.Property<int?>("IndigenousSituationId");
 
@@ -599,19 +599,6 @@ namespace Official.Persistence.EFCore.Migrations
                     b.ToTable("AuditEntryProperties");
                 });
 
-            modelBuilder.Entity("Official.Domain.Model.CommonEntity.HireStage.HireStage", b =>
-                {
-                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
-                        .WithMany("HireStages")
-                        .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Official.Domain.Model.CommonEntity.Term.Term", "Term")
-                        .WithMany("HireStages")
-                        .HasForeignKey("TermId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("Official.Domain.Model.CommonEntity.Menu.Menu", b =>
                 {
                     b.HasOne("Official.Domain.Model.CommonEntity.Menu.Menu")
@@ -653,6 +640,19 @@ namespace Official.Persistence.EFCore.Migrations
 
                     b.HasOne("Official.Domain.Model.CommonEntity.Term.Term", "Term")
                         .WithMany("EducationalInfos")
+                        .HasForeignKey("TermId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Official.Domain.Model.Person.HireStage", b =>
+                {
+                    b.HasOne("Official.Domain.Model.Person.Person", "Person")
+                        .WithMany("HireStages")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Official.Domain.Model.CommonEntity.Term.Term", "Term")
+                        .WithMany("HireStages")
                         .HasForeignKey("TermId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

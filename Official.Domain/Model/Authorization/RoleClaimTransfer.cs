@@ -9,6 +9,6 @@ namespace Official.Domain.Model.Authorization
         public long Id { get; set; }
         public long RoleId { get; set; }
         public string ClaimType { get; set; }
-        public new List<string> ClaimValue { get; private set; }
+        public string ClaimValue { get; set; }
     }
 }

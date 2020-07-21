@@ -1,9 +1,6 @@
-﻿using Official.Application.Contracts.Command.Security.User;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Official.Application.Contracts.Command.User
+namespace Official.Application.Contracts.Command.Security.User
 {
     public class CreateUserCommand : UserDto
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -6,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Security;
-using Official.Application.Contracts.Command.User;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
 using static Official.Persistence.EFCore.Utility.Constant;
@@ -66,24 +66,6 @@ namespace Official.Interface.RestApi.Command
 
         //((انتصاب استان و سمت به کاربر در کدام فرم انجام گیرد))
 
-        /// <summary>
-        /// ایجاد گروه
-        /// </summary>
-        /// <param name="command">پارامترهای ورودی</param>
-        /// <returns></returns>
-        [HttpPost("Role")]
-        public async Task<IActionResult> CreateRole(CreateRoleCommand command)
-        {
-            try
-            {
-                var result = await _bus.Dispatch<CreateRoleCommand, bool>(command);
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
-            }
-        }
 
         // ویرایش گروه
         // حذف گروه به همراه دسترسی ایجاد شده
@@ -94,11 +76,11 @@ namespace Official.Interface.RestApi.Command
         /// <param name="command">پارامترهای ورودی</param>
         /// <returns></returns>
         [HttpPost("Role/Claim")]
-        public async Task<IActionResult> CreateRoleClaim(CreateRoleClaimCommand command)
+        public async Task<IActionResult> CreateRoleClaim(List<CreateRoleClaimCommand> command)
         {
             try
             {
-                var result = await _bus.Dispatch<CreateRoleClaimCommand, int>(command);
+                var result = await _bus.Dispatch<List<CreateRoleClaimCommand>, bool>(command);
                 return Ok(result);
             }
             catch (Exception e)

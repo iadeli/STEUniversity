@@ -223,6 +223,15 @@ namespace Official.Persistence.EFCore.Resourse {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;PositionId&apos; AND EnumValue =.
+        /// </summary>
+        internal static string PositionId {
+            get {
+                return ResourceManager.GetString("PositionId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT EnumTitle FROM Enumurations WHERE EnumName = &apos;PrefixId&apos; AND EnumValue =.
         /// </summary>
         internal static string PrefixId {

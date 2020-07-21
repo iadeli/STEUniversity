@@ -21,7 +21,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = "select *, (CASE WHEN HireTypeId IN (5,6) THEN cast(1 as bit) else cast(0 as bit) END) AS IsFacultymember from HireStages";
+                var sql = "select * from HireStages";
                 var data = await _connection.QueryAsync<HireStageQuery>(sql);
                 return data.ToList();
             }
@@ -35,7 +35,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = "select *, (CASE WHEN HireTypeId IN (5,6) THEN cast(1 as bit) else cast(0 as bit) END) AS IsFacultymember from HireStages where Id = @Id";
+                var sql = "select * from HireStages where Id = @Id";
                 var data = await _connection.QueryFirstOrDefaultAsync<HireStageQuery>(sql, new { Id = id });
                 return data;
             }
@@ -49,7 +49,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Person
         {
             try
             {
-                var sql = "select *, (CASE WHEN HireTypeId IN (5,6) THEN cast(1 as bit) else cast(0 as bit) END) AS IsFacultymember from HireStages where PersonId = @PersonId";
+                var sql = "select * from HireStages where PersonId = @PersonId";
                 var data = await _connection.QueryAsync<HireStageQuery>(sql, new { PersonId = personId });
                 return data.ToList();
             }

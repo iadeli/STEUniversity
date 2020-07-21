@@ -145,6 +145,8 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interfac
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Authorization.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Abstractions.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Application.Contracts.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Application.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Official.Domain.dll
@@ -180,5 +182,3 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interfac
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Debug\netcoreapp2.2\Official.Interface.RestApi.csproj.CopyComplete
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Debug\netcoreapp2.2\Official.Interface.RestApi.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\obj\Debug\netcoreapp2.2\Official.Interface.RestApi.pdb
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Interface.RestApi\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll

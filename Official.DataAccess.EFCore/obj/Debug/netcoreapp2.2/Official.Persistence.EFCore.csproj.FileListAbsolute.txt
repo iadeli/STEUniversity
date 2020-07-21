@@ -64,12 +64,14 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAcce
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Official.Domain.pdb
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Authentication.JwtBearer.xml
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.pdb
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
@@ -86,5 +88,3 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAcce
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.csproj.CopyComplete
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\obj\Debug\netcoreapp2.2\Official.Persistence.EFCore.pdb
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.DataAccess.EFCore\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml

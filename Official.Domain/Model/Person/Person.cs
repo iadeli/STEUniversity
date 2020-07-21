@@ -25,6 +25,9 @@ namespace Official.Domain.Model.Person
         [DisplayAttribute(Name ="نام خانوادگی")]
         public string LastName { get; private set; }
 
+        [DisplayAttribute(Name = "سمت شغلی")]
+        public int PositionId { get; set; }
+
         public BirthCertificate BirthCertificate { get; set; }
         public PersonDetail PersonDetail { get; set; }
         public Contact Contact { get; set; }

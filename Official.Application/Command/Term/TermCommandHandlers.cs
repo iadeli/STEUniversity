@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Mapster;
 using Official.Application.Contracts.Command.Term;
-using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.CommonEntity.Term.ITermRepository;
 using Official.Framework.Application;
 

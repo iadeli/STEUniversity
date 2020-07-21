@@ -35,9 +35,9 @@ C:\BamPardazesh\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netc
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\bin\Debug\netcoreapp2.2\Official.Framework.Core.deps.json
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\bin\Debug\netcoreapp2.2\Official.Framework.Core.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\bin\Debug\netcoreapp2.2\Official.Framework.Core.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.csprojAssemblyReference.cache
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.csproj.CoreCompileInputs.cache
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.AssemblyInfoInputs.cache
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.AssemblyInfo.cs
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.pdb
-C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Framework.Core\obj\Debug\netcoreapp2.2\Official.Framework.Core.csprojAssemblyReference.cache

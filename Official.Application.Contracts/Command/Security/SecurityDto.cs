@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Official.QueryModel.Model
+namespace Official.Application.Contracts.Command.Security
 {
-    public class SecurityQuery
+    public class SecurityDto
     {
         public string ClaimType { get; set; }
         public long ClaimValue { get; set; }

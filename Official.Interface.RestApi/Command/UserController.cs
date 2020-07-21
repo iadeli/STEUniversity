@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Contracts.Command.Security.User;
-using Official.Application.Contracts.Command.User;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
 using System;

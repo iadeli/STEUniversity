@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Official.Application.Contracts.Command.Person.PersonCommand
+namespace Official.Application.Contracts.Command.Security
 {
-    public class CreateRoleClaimCommand : RoleClaimDto
+    public class CreateRoleClaimCommand : SecurityDto
     {
-        public new List<string> ClaimValue { get; set; }
+        public long RoleId { get; set; }
+        public bool? ViewPolicy { get; set; }
+        public bool? AddPolicy { get; set; }
+        public bool? EditPolicy { get; set; }
+        public bool? DeletePolicy { get; set; }
+        public string Policy { get; set; }
     }
 }

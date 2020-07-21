@@ -1,6 +1,5 @@
 ﻿using Mapster;
 using Official.Application.Contracts.Command.Security.User;
-using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.Security;
 using Official.Domain.Model.Security.IUserRepository;
 using Official.Framework.Application;

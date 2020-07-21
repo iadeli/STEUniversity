@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Official.Application.Contracts.Command.Security
+﻿namespace Official.Application.Contracts.Command.Security.Role
 {
     public class AppRoleDto
     {

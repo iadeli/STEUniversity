@@ -42,14 +42,14 @@ namespace Official.Interface.RestApi.Query
         /// <summary>
         /// دریافت گروه براساس شناسه گروه
         /// </summary>
-        /// <param name="roleId">شناسه گروه</param>
+        /// <param name="RoleId">شناسه گروه</param>
         /// <returns></returns>
-        [HttpGet, Authorize(Policy = View)]
-        public async Task<IActionResult> GetRoleById(long roleId)
+        [HttpGet("{RoleId}"), Authorize(Policy = View)]
+        public async Task<IActionResult> GetRoleById(long RoleId)
         {
             try
             {
-                var role = await _query.GetRoleByIdAsync(roleId);
+                var role = await _query.GetRoleByIdAsync(RoleId);
                 return Ok(role);
             }
             catch (Exception e)
@@ -61,9 +61,9 @@ namespace Official.Interface.RestApi.Query
         /// <summary>
         /// دریافت گروه براساس شناسه فرد
         /// </summary>
-        /// <param name="PersonId"></param>
+        /// <param name="PersonId">شناسه فرد</param>
         /// <returns></returns>
-        [HttpGet, Authorize(Policy = View)]
+        [HttpGet("Person/{PersonId}"), Authorize(Policy = View)]
         public async Task<IActionResult> GetRoleByPersonId(long PersonId)
         {
             try

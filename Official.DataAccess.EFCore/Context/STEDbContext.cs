@@ -74,8 +74,9 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.EthnicityId, x => Resourse.ResourceQuery.ResourceManager.GetString("EthnicityId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.IndigenousSituationId, x => Resourse.ResourceQuery.ResourceManager.GetString("IndigenousSituationId") + x);
             AuditManager.DefaultConfiguration.Format<PersonDetail>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
+            AuditManager.DefaultConfiguration.Format<Person>(x => x.PositionId, x => Resourse.ResourceQuery.ResourceManager.GetString("PositionId") + x);
             AuditManager.DefaultConfiguration.Format<HireStage>(x => x.TermId, x => Resourse.ResourceQuery.ResourceManager.GetString("TermId") + x);
-            AuditManager.DefaultConfiguration.Format<HireStage>(x => x.HireTypeId, x => Resourse.ResourceQuery.ResourceManager.GetString("HireTypeId") + x);
+            //AuditManager.DefaultConfiguration.Format<HireStage>(x => x.HireTypeId, x => Resourse.ResourceQuery.ResourceManager.GetString("HireTypeId") + x);
             AuditManager.DefaultConfiguration.Format<HireStage>(x => x.PersonId, x => Resourse.ResourceQuery.ResourceManager.GetString("PersonId") + x);
         }
 

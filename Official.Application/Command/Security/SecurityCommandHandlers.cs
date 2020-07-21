@@ -1,20 +1,16 @@
-﻿using Official.Application.Contracts.Command.User;
-using Official.Framework.Application;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
-using Official.Domain.Model.Security;
-using Official.Domain.Model.Security.ISecurityRepository;
-using Mapster;
 using Official.Application.Contracts.Command.Security;
-using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Domain.Model.Authorization;
+using Official.Domain.Model.Security.ISecurityRepository;
+using Official.Framework.Application;
 
-namespace Official.Application.Command.User
+namespace Official.Application.Command.Security
 {
     public class SecurityCommandHandlers : ICommandHandler<LoginCommand, JwtTokenDto>, ICommandHandler<string, JwtTokenDto>
-        , ICommandHandler<CreateRoleCommand, bool>, ICommandHandler<CreateRoleClaimCommand, int>
+        , ICommandHandler<List<CreateRoleClaimCommand>, bool>
     {
         private readonly ISecurityRepository _securityRepository;
         private readonly IJwtRepository _jwtRepository;
@@ -70,48 +66,125 @@ namespace Official.Application.Command.User
                 throw e;
             }
         }
-        
-        public async Task<bool> HandleAsync(CreateRoleCommand command)
+
+        public async Task<bool> HandleAsync(List<CreateRoleClaimCommand> command)
         {
             try
             {
                 _securityRepository.BeginTransaction();
 
-                var isExistsRole = await _securityRepository.IsExistsRoleNameAsync(command.Name.Trim());
-                if (isExistsRole)
-                    throw new Exception("این گروه کاربری قبلا ثبت شده است");
+                var addRoleClaimList = new List<RoleClaimTransfer>();
+                var removeRoleClaimList = new List<RoleClaimTransfer>();
 
-                var succeeded = await _securityRepository.CreateRoleAsync(command.Name);
-                if (succeeded)
+                var roleClaimType = command.Select(a => a.ClaimType).FirstOrDefault();
+                if (roleClaimType == "ControlerInfoId")
                 {
-                    var roleId = await _securityRepository.GetRoleIdByRoleNameAsync(command.Name.Trim());
-                    await _securityRepository.CreateRoleUserAsync(roleId, command.UserIds);
+                    await PrepareRoleClaimList(command, addRoleClaimList, removeRoleClaimList);
+                }
+                if (roleClaimType == "ProvinceId" || roleClaimType == "PositionId")
+                {
+                    PrepareRoleClaimList2(command, addRoleClaimList, removeRoleClaimList);
                 }
 
-                _securityRepository.Commit();
+                await _securityRepository.RemoveRoleClaims(removeRoleClaimList);
+                await _securityRepository.CreateRoleClaims(addRoleClaimList);
 
-                return succeeded;
+                _securityRepository.Commit();
+                _securityRepository.Dispose();
+
+                return true;
             }
             catch (Exception e)
             {
                 _securityRepository.Rollback();
+                _securityRepository.Dispose();
                 throw e;
             }
         }
 
-        public async Task<int> HandleAsync(CreateRoleClaimCommand command)
+        private static void PrepareRoleClaimList2(List<CreateRoleClaimCommand> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
         {
-            try
+            foreach (var roleClaim in command)
             {
-                var roleClaimTransfer = new RoleClaimTransfer();
-                roleClaimTransfer = command.Adapt(roleClaimTransfer);
-                var rowsAffected = await _securityRepository.CreateRoleClaims(roleClaimTransfer);
-                return rowsAffected;
-            }
-            catch (Exception e)
-            {
-                throw e;
+                var roleClaimDto = new RoleClaimTransfer()
+                {
+                    RoleId = roleClaim.RoleId,
+                    ClaimType = roleClaim.ClaimType,
+                    ClaimValue = roleClaim.ClaimValue.ToString()
+                };
+                if (roleClaim.Checked)
+                    addRoleClaimList.Add(roleClaimDto);
+                else
+                    removeRoleClaimList.Add(roleClaimDto);
             }
         }
+
+        private async Task PrepareRoleClaimList(List<CreateRoleClaimCommand> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
+        {
+            foreach (var roleClaim in command)
+            {
+                var addControllerIds = _securityRepository.GetControllerIdByType(roleClaim.Entity, "AddPolicy");
+                var deleteControllerIds = _securityRepository.GetControllerIdByType(roleClaim.Entity, "DeletePolicy");
+                var editControllerIds = _securityRepository.GetControllerIdByType(roleClaim.Entity, "EditPolicy");
+                var viewControllerIds = _securityRepository.GetControllerIdByType(roleClaim.Entity, "ViewPolicy");
+
+                foreach (var controllerId in addControllerIds)
+                {
+                    var roleClaimDto = new RoleClaimTransfer()
+                    {
+                        RoleId = roleClaim.RoleId,
+                        ClaimType = roleClaim.ClaimType,
+                        ClaimValue = controllerId.ToString()
+                    };
+                    if ((roleClaim.AddPolicy ?? false) == true)
+                        addRoleClaimList.Add(roleClaimDto);
+                    else
+                        removeRoleClaimList.Add(roleClaimDto);
+                }
+
+                foreach (var controllerId in deleteControllerIds)
+                {
+                    var roleClaimDto = new RoleClaimTransfer()
+                    {
+                        RoleId = roleClaim.RoleId,
+                        ClaimType = roleClaim.ClaimType,
+                        ClaimValue = controllerId.ToString()
+                    };
+                    if ((roleClaim.DeletePolicy ?? false) == true)
+                        addRoleClaimList.Add(roleClaimDto);
+                    else
+                        removeRoleClaimList.Add(roleClaimDto);
+                }
+
+                foreach (var controllerId in editControllerIds)
+                {
+                    var roleClaimDto = new RoleClaimTransfer()
+                    {
+                        RoleId = roleClaim.RoleId,
+                        ClaimType = roleClaim.ClaimType,
+                        ClaimValue = controllerId.ToString()
+                    };
+                    if ((roleClaim.EditPolicy ?? false) == true)
+                        addRoleClaimList.Add(roleClaimDto);
+                    else
+                        removeRoleClaimList.Add(roleClaimDto);
+                }
+
+                foreach (var controllerId in viewControllerIds)
+                {
+                    var roleClaimDto = new RoleClaimTransfer()
+                    {
+                        RoleId = roleClaim.RoleId,
+                        ClaimType = roleClaim.ClaimType,
+                        ClaimValue = controllerId.ToString()
+                    };
+                    if ((roleClaim.ViewPolicy ?? false) == true)
+                        addRoleClaimList.Add(roleClaimDto);
+                    else
+                        removeRoleClaimList.Add(roleClaimDto);
+                }
+            }
+        }
+
     }
 }

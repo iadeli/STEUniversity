@@ -9,7 +9,7 @@ namespace Official.Application.Contracts.Command.Person.HireStageCommand
         public string Name { get; set; }
         public long TermId { get; set; }
         public string Description { get; set; }
-        public int HireTypeId { get; set; }
+        public bool IsFacultymember { get; set; }
         [AdaptIgnore]
         public long PersonId { get; private set; }
     }

@@ -8,6 +8,9 @@ using Official.Domain.Model.Security.ISecurityRepository;
 using Official.Persistence.EFCore.Context;
 using Microsoft.EntityFrameworkCore.Storage;
 using Official.Domain.Model.Authorization;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using NotImplementedException = System.NotImplementedException;
 
 namespace Official.Persistence.EFCore.Repositories
 {
@@ -24,7 +27,7 @@ namespace Official.Persistence.EFCore.Repositories
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
-            _context = context; 
+            _context = context;
         }
 
         private bool _disposed = false;
@@ -58,6 +61,23 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
+        public void BeginTransaction()
+        {
+            _tran = _context.Database.BeginTransaction();
+        }
+
+        public void Commit()
+        {
+            _tran.Commit();
+            _tran.Dispose();
+        }
+
+        public void Rollback()
+        {
+            _tran.Rollback();
+            _tran.Dispose();
+        }
+
         public async Task<bool> Login(string userName, string password)
         {
             try
@@ -83,12 +103,12 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task<bool> IsExistsRoleNameAsync(string roleName)
+        public List<long> GetControllerIdByType(string entityName, string policy)
         {
             try
             {
-                AppRole role = await _roleManager.FindByNameAsync(roleName);
-                return role != null;
+                var controllerIds = _context.ControllerInfos.Where(a => a.Controller == entityName && a.Policy == policy).Select(a => a.Id).ToList();
+                return controllerIds;
             }
             catch (Exception e)
             {
@@ -96,16 +116,14 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task<bool> CreateRoleAsync(string roleName)
+        public async Task RemoveRoleClaims(List<RoleClaimTransfer> roleClaimTransfers)
         {
             try
             {
-                AppRole role = new AppRole()
-                {
-                    Name = roleName
-                };
-                IdentityResult result = await _roleManager.CreateAsync(role);
-                return result.Succeeded;
+                var roleClaims = await _context.RoleClaims.Where(a =>
+                    roleClaimTransfers.Any(b => b.RoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
+                _context.RemoveRange(roleClaims);
+                await Save();
             }
             catch (Exception e)
             {
@@ -113,78 +131,34 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task<long> GetRoleIdByRoleNameAsync(string roleName)
+        public async Task CreateRoleClaims(List<RoleClaimTransfer> roleClaimTransfers)
         {
             try
             {
-                AppRole role = await _roleManager.FindByNameAsync(roleName);
-                return role.Id;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
+                var transfers = roleClaimTransfers;
+                var existsRoleClaim = await _context.RoleClaims.Where(a => transfers.Any(b =>
+                    b.RoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
+                roleClaimTransfers = roleClaimTransfers.Where(a => !existsRoleClaim.Any(b =>
+                    b.RoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToList();
 
-        public async Task<int> CreateRoleUserAsync(long roleId, List<long> userIds)
-        {
-            try
-            {
-                var userRoleList = new List<AppUserRole>();
-                foreach (var userId in userIds)
-                {
-                    var userRole = new AppUserRole() { RoleId = roleId, UserId = userId };
-                    userRoleList.Add(userRole);
-                }
-                await _context.AddRangeAsync(userRoleList);
-                return await Save();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<int> CreateRoleClaims(RoleClaimTransfer roleClaimTransfer)
-        {
-            try
-            {
-                var appRoleClaimList = new List<AppRoleClaim>();
-                foreach (var claimValue in roleClaimTransfer.ClaimValue)
+                var roleClaimList = new List<AppRoleClaim>();
+                foreach (var roleClaim in roleClaimTransfers)
                 {
                     var appRoleClaim = new AppRoleClaim()
                     {
-                        RoleId = roleClaimTransfer.RoleId,
-                        ClaimType = roleClaimTransfer.ClaimType,
-                        ClaimValue = claimValue
+                        RoleId = roleClaim.RoleId,
+                        ClaimType = roleClaim.ClaimType,
+                        ClaimValue = roleClaim.ClaimValue
                     };
-                    appRoleClaimList.Add(appRoleClaim);
+                    roleClaimList.Add(appRoleClaim);
                 }
-                await _context.AddRangeAsync(appRoleClaimList);
-                return await Save();
+                await _context.AddRangeAsync(roleClaimList);
+                await Save();
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-
-        public void BeginTransaction()
-        {
-            _tran = _context.Database.BeginTransaction();
-        }
-
-        public void Commit()
-        {
-            _tran.Commit();
-            _tran.Dispose();
-        }
-
-        public void Rollback()
-        {
-            _tran.Rollback();
-            _tran.Dispose();
-        }
-
     }
 }

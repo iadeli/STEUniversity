@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Official.Application.Contracts.Command.Security;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Official.QueryModel.Model
 {
-    public class RoleAccessQuery : SecurityQuery
+    public class RoleAccessQuery : SecurityDto
     {
         public long RoleId { get; set; }
         public bool? ViewPolicy { get; set; }

@@ -171,6 +171,9 @@
   <data name="PlaceId" xml:space="preserve">
     <value>SELECT [Name] FROM Places WHERE Id =</value>
   </data>
+  <data name="PositionId" xml:space="preserve">
+    <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'PositionId' AND EnumValue =</value>
+  </data>
   <data name="PrefixId" xml:space="preserve">
     <value>SELECT EnumTitle FROM Enumurations WHERE EnumName = 'PrefixId' AND EnumValue =</value>
   </data>

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -8,7 +9,6 @@ using Official.Application.Command.ApiLog;
 using Official.Application.Command.Person;
 using Official.Application.Command.Security;
 using Official.Application.Command.Term;
-using Official.Application.Command.User;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
@@ -16,9 +16,9 @@ using Official.Application.Contracts.Command.Person.HireStageCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Security;
+using Official.Application.Contracts.Command.Security.Role;
 using Official.Application.Contracts.Command.Security.User;
 using Official.Application.Contracts.Command.Term;
-using Official.Application.Contracts.Command.User;
 using Official.Domain.Model.CommonEntity.Term.ITermRepository;
 using Official.Domain.Model.Log.IApiLogRepository;
 using Official.Domain.Model.Person.IEducationalInfoRepository;
@@ -26,7 +26,9 @@ using Official.Domain.Model.Person.IHireStageRepository;
 using Official.Domain.Model.Person.IHistoryEducationalRepository;
 using Official.Domain.Model.Person.IPersonRepository;
 using Official.Domain.Model.Security;
+using Official.Domain.Model.Security.IRoleRepository;
 using Official.Domain.Model.Security.ISecurityRepository;
+using Official.Domain.Model.Security.IUserRepository;
 using Official.Framework.Application;
 using Official.Persistence.EFCore;
 using Official.Persistence.EFCore.Context;
@@ -47,24 +49,24 @@ namespace Official.Config.DI
             var context = serviceProvider.GetRequiredService<STEDbContext>();
             services.AddScoped<UserResolverService>();
 
-            //services.AddScoped<IJwtRepository, JwtRepository>();
             services.Add(new ServiceDescriptor(typeof(IJwtRepository), new JwtRepository(context)));
-
-            //services.AddScoped<IUserRepository, UserRepository>();
             var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
             var roleManager = serviceProvider.GetRequiredService<RoleManager<AppRole>>();
-            var signInManager = serviceProvider.GetRequiredService<SignInManager<AppUser>>();
-            
+            var signInManager = serviceProvider.GetRequiredService<SignInManager<AppUser>>();            
             services.Add(new ServiceDescriptor(typeof(ISecurityRepository), new SecurityRepository(userManager, roleManager, signInManager, context)));
-
             services.AddScoped<ICommandHandler<LoginCommand, JwtTokenDto>, SecurityCommandHandlers>();
             services.AddScoped<ICommandHandler<string, JwtTokenDto>, SecurityCommandHandlers>();
-            services.AddScoped<ICommandHandler<CreateRoleCommand, bool>, SecurityCommandHandlers>();
-            services.AddScoped<ICommandHandler<CreateRoleClaimCommand, int>, SecurityCommandHandlers>();
+            services.AddScoped<ICommandHandler<List<CreateRoleClaimCommand>, bool>, SecurityCommandHandlers>();
 
+            services.Add(new ServiceDescriptor(typeof(IUserRepository), new UserRepository(userManager, context)));
             services.AddScoped<ICommandHandler<CreateUserCommand, long>, UserCommandHandlers>();
             services.AddScoped<ICommandHandler<UpdateUserCommand, long>, UserCommandHandlers>();
             services.AddScoped<ICommandHandler<RemoveUserCommand, int>, UserCommandHandlers>();
+            
+            services.Add(new ServiceDescriptor(typeof(IRoleRepository), new RoleRepository(context, roleManager)));
+            services.AddScoped<ICommandHandler<CreateRoleCommand, long>, RoleCommandHandlers>();
+            services.AddScoped<ICommandHandler<UpdateRoleCommand, long>, RoleCommandHandlers>();
+            services.AddScoped<ICommandHandler<RemoveRoleCommand, int>, RoleCommandHandlers>();
 
             services.AddScoped<IApiLogRepository, ApiLogRepository>();
             services.AddScoped<ICommandHandler<CreateApiLogCommand, long>, ApiLogCommandHandlers>();

@@ -9,10 +9,8 @@ namespace Official.Domain.Model.Security.ISecurityRepository
     {
         bool Register(string userName, string password);
         Task<bool> Login(string userName, string password);
-        Task<bool> IsExistsRoleNameAsync(string roleName);
-        Task<bool> CreateRoleAsync(string roleName);
-        Task<long> GetRoleIdByRoleNameAsync(string roleName);
-        Task<int> CreateRoleUserAsync(long roleId, List<long> userIds);
-        Task<int> CreateRoleClaims(RoleClaimTransfer roleClaimTransfer);
+        List<long> GetControllerIdByType(string entityName, string policy);
+        Task RemoveRoleClaims(List<RoleClaimTransfer> roleClaimTransfers);
+        Task CreateRoleClaims(List<RoleClaimTransfer> roleClaimTransfers);
     }
 }

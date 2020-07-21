@@ -9,8 +9,6 @@ namespace Official.Domain.Model.Person
     [DisplayAttribute(Name ="اطلاعات سایر فرد")]
     public class PersonDetail : ValueObject<PersonDetail>
     {
-        public long Id { get; private set; }
-
         [DisplayAttribute(Name ="شماره نظام وظیفه")]
         public int? EnlistId { get; private set; }
 

@@ -88,7 +88,7 @@
             <param name="Id">شناسه فرد</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.Command.RoleController.Create(Official.Application.Contracts.Command.Security.CreateRoleCommand)">
+        <member name="M:Official.Interface.RestApi.Command.RoleController.Create(Official.Application.Contracts.Command.Security.Role.CreateRoleCommand)">
             <summary>
             ایجاد گروه
             </summary>
@@ -109,7 +109,7 @@
             <param name="id">شناسه گروه</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.Command.SecurityController.Login(Official.Application.Contracts.Command.User.LoginCommand)">
+        <member name="M:Official.Interface.RestApi.Command.SecurityController.Login(Official.Application.Contracts.Command.Security.LoginCommand)">
             <summary>
             احراز هویت
             </summary>
@@ -123,14 +123,7 @@
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRole(Official.Application.Contracts.Command.Security.CreateRoleCommand)">
-            <summary>
-            ایجاد گروه
-            </summary>
-            <param name="command">پارامترهای ورودی</param>
-            <returns></returns>
-        </member>
-        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRoleClaim(Official.Application.Contracts.Command.Person.PersonCommand.CreateRoleClaimCommand)">
+        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRoleClaim(System.Collections.Generic.List{Official.Application.Contracts.Command.Security.CreateRoleClaimCommand})">
             <summary>
             ایجاد دسترسی گروه به فرم ها
             </summary>
@@ -158,7 +151,7 @@
             <param name="Id">شناسه ترم آموزشی</param>
             <returns></returns>
         </member>
-        <member name="M:Official.Interface.RestApi.Command.UserController.CreateUser(Official.Application.Contracts.Command.User.CreateUserCommand)">
+        <member name="M:Official.Interface.RestApi.Command.UserController.CreateUser(Official.Application.Contracts.Command.Security.User.CreateUserCommand)">
             <summary>
             ایجاد کاربر
             </summary>
@@ -319,14 +312,14 @@
             <summary>
             دریافت گروه براساس شناسه گروه
             </summary>
-            <param name="roleId">شناسه گروه</param>
+            <param name="RoleId">شناسه گروه</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.RoleQueryController.GetRoleByPersonId(System.Int64)">
             <summary>
             دریافت گروه براساس شناسه فرد
             </summary>
-            <param name="PersonId"></param>
+            <param name="PersonId">شناسه فرد</param>
             <returns></returns>
         </member>
         <member name="M:Official.Interface.RestApi.Query.SecurityQueryController.GetUserAccessClaim(System.Int64,System.String)">

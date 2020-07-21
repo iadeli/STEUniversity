@@ -15,8 +15,8 @@ namespace Official.Domain.Model.Person
         [Display(Name = "توضیحات")]
         public string Description { get; set; }
 
-        [Display(Name = "نوع استخدام")]
-        public int HireTypeId { get; set; }
+        [Display(Name = "عضو هیئت علمی")]
+        public bool IsFacultymember { get; set; }
 
         [Display(Name = "نام فرد")]
         public long PersonId { get; set; }
