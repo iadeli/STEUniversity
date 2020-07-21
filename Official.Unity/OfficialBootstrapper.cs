@@ -56,7 +56,7 @@ namespace Official.Config.DI
             services.Add(new ServiceDescriptor(typeof(ISecurityRepository), new SecurityRepository(userManager, roleManager, signInManager, context)));
             services.AddScoped<ICommandHandler<LoginCommand, JwtTokenDto>, SecurityCommandHandlers>();
             services.AddScoped<ICommandHandler<string, JwtTokenDto>, SecurityCommandHandlers>();
-            services.AddScoped<ICommandHandler<List<CreateRoleClaimCommand>, bool>, SecurityCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreateRoleClaimCommand, bool>, SecurityCommandHandlers>();
 
             services.Add(new ServiceDescriptor(typeof(IUserRepository), new UserRepository(userManager, context)));
             services.AddScoped<ICommandHandler<CreateUserCommand, long>, UserCommandHandlers>();

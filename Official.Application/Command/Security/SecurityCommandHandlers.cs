@@ -10,7 +10,7 @@ using Official.Framework.Application;
 namespace Official.Application.Command.Security
 {
     public class SecurityCommandHandlers : ICommandHandler<LoginCommand, JwtTokenDto>, ICommandHandler<string, JwtTokenDto>
-        , ICommandHandler<List<CreateRoleClaimCommand>, bool>
+        , ICommandHandler<CreateRoleClaimCommand, bool>
     {
         private readonly ISecurityRepository _securityRepository;
         private readonly IJwtRepository _jwtRepository;
@@ -67,23 +67,25 @@ namespace Official.Application.Command.Security
             }
         }
 
-        public async Task<bool> HandleAsync(List<CreateRoleClaimCommand> command)
+        public async Task<bool> HandleAsync(CreateRoleClaimCommand command)
         {
             try
             {
                 _securityRepository.BeginTransaction();
 
+                var dto = command.CreateRoleClaimDtos;
+
                 var addRoleClaimList = new List<RoleClaimTransfer>();
                 var removeRoleClaimList = new List<RoleClaimTransfer>();
 
-                var roleClaimType = command.Select(a => a.ClaimType).FirstOrDefault();
-                if (roleClaimType == "ControlerInfoId")
+                var roleClaimType = dto.Select(a => a.ClaimType).FirstOrDefault();
+                if (roleClaimType == "ControllerInfoId")
                 {
-                    await PrepareRoleClaimList(command, addRoleClaimList, removeRoleClaimList);
+                    await PrepareRoleClaimList(dto, addRoleClaimList, removeRoleClaimList);
                 }
                 if (roleClaimType == "ProvinceId" || roleClaimType == "PositionId")
                 {
-                    PrepareRoleClaimList2(command, addRoleClaimList, removeRoleClaimList);
+                    PrepareRoleClaimList2(dto, addRoleClaimList, removeRoleClaimList);
                 }
 
                 await _securityRepository.RemoveRoleClaims(removeRoleClaimList);
@@ -100,7 +102,7 @@ namespace Official.Application.Command.Security
             }
         }
 
-        private static void PrepareRoleClaimList2(List<CreateRoleClaimCommand> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
+        private static void PrepareRoleClaimList2(List<CreateRoleClaimDto> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
         {
             foreach (var roleClaim in command)
             {
@@ -117,7 +119,7 @@ namespace Official.Application.Command.Security
             }
         }
 
-        private async Task PrepareRoleClaimList(List<CreateRoleClaimCommand> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
+        private async Task PrepareRoleClaimList(List<CreateRoleClaimDto> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
         {
             foreach (var roleClaim in command)
             {
