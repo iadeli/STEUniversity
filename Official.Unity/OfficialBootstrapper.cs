@@ -12,6 +12,7 @@ using Official.Application.Command.Term;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
 using Official.Application.Contracts.Command.Person;
 using Official.Application.Contracts.Command.Person.EducationalInfoCommand;
+using Official.Application.Contracts.Command.Person.Excell;
 using Official.Application.Contracts.Command.Person.HireStageCommand;
 using Official.Application.Contracts.Command.Person.HistoryEducationalCommand;
 using Official.Application.Contracts.Command.Person.PersonCommand;
@@ -75,6 +76,7 @@ namespace Official.Config.DI
             services.AddScoped<ICommandHandler<CreatePersonCommand, long>, PersonCommandHandlers>();
             services.AddScoped<ICommandHandler<UpdatePersonCommand, long>, PersonCommandHandlers>();
             services.AddScoped<ICommandHandler<DeletePersonCommand, int>, PersonCommandHandlers>();
+            services.AddScoped<ICommandHandler<CreatePersonExcelCommand, bool>, PersonCommandHandlers>();
 
             services.AddScoped<IEducationalInfoRepository, EducationalInfoRepository>();
             services.AddScoped<ICommandHandler<CreateEducationalInfoCommand, long>, EducationalInfoCommandHandlers>();

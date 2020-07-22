@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Mapster;
 using Official.Application.Contracts.Command.Person;
+using Official.Application.Contracts.Command.Person.Excell;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Domain.Model.Person.IPersonRepository;
 using Official.Framework.Application;
 
 namespace Official.Application.Command.Person
 {
-    public class PersonCommandHandlers : ICommandHandler<CreatePersonCommand, long>, ICommandHandler<UpdatePersonCommand, long>, ICommandHandler<DeletePersonCommand, int>
+    public class PersonCommandHandlers : ICommandHandler<CreatePersonCommand, long>, ICommandHandler<UpdatePersonCommand, 
+        long>, ICommandHandler<DeletePersonCommand, int>, ICommandHandler<CreatePersonExcelCommand, bool>
     {
         private readonly IPersonRepository _personRepository;
         public PersonCommandHandlers(IPersonRepository personRepository)
@@ -95,6 +98,69 @@ namespace Official.Application.Command.Person
             try
             {
                 return await _personRepository.Remove(command.Id);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task<bool> HandleAsync(CreatePersonExcelCommand command)
+        {
+            try
+            {
+                //TODO: ذخیره جزئیات فایل ارسالی
+
+                var personDto = ConvertExcelToList(command.fileData);
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        private List<Domain.Model.Person.Person> ConvertExcelToList(byte[] fileData)
+        {
+            try
+            {
+                var personDtoList = new List<PersonDto>();
+                using (var memory = new MemoryStream(fileData))
+                {
+                    using (var excel = new OfficeOpenXml.ExcelPackage(memory))
+                    {
+                        var workbook = excel.Workbook;
+                        var firstSheet = excel.Workbook.Worksheets[1];
+                        if (firstSheet == null) throw new Exception("فایل اکسل ارسالی خالی می باشد");
+                        for (int i = firstSheet.Dimension.Start.Row + 1; i <= firstSheet.Dimension.End.Row; i++)
+                        {
+                            var person = new CreatePersonCommand()
+                            {
+                                NationalCode = firstSheet.GetValue(i, 1).ToString(),
+                                PersonnelCode = firstSheet.GetValue(i, 2).ToString(),
+                                TeacherCode = firstSheet.GetValue(i, 3).ToString(),
+                                FirstName = firstSheet.GetValue(i, 4).ToString(),
+                                LastName = firstSheet.GetValue(i, 5).ToString(),
+                                PositionId = Convert.ToInt32(firstSheet.GetValue(i, 6)),
+                                IsConvert = true
+                            };
+                            var birthCertificateDto = new BirthCertificateDto()
+                            {
+                                EFirstName = firstSheet.GetValue(i, 7).ToString(),
+                                ELastName = firstSheet.GetValue(i, 8).ToString(),
+                                FatherName = firstSheet.GetValue(i, 9).ToString(),
+                                No = firstSheet.GetValue(i, 10).ToString(),
+                                IssueCityId = Convert.ToInt32(firstSheet.GetValue(i, 11).ToString()),
+                                BirthCountryId = Convert.ToInt32(firstSheet.GetValue(i, 12)),
+                                BirthProvinceId = Convert.ToInt32(firstSheet.GetValue(i, 13)),
+                                BirthCityId = Convert.ToInt32(firstSheet.GetValue(i, 14)),
+
+                            }
+                            personDtoList.Add(person);
+                        }
+                        return personDtoList;
+                    }
+                }
             }
             catch (Exception e)
             {

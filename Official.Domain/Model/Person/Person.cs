@@ -28,6 +28,9 @@ namespace Official.Domain.Model.Person
         [DisplayAttribute(Name = "سمت شغلی")]
         public int PositionId { get; set; }
 
+        [DisplayAttribute(Name = "ارسالی از اکسل")]
+        public bool? IsConvert { get; set; }
+
         public BirthCertificate BirthCertificate { get; set; }
         public PersonDetail PersonDetail { get; set; }
         public Contact Contact { get; set; }

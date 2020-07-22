@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Persistence.EFCore.Utility
 {
@@ -18,6 +19,11 @@ namespace Official.Persistence.EFCore.Utility
         {
             return _context.HttpContext?.User?.Claims.FirstOrDefault(x => x.Properties.Where(p => p.Value == "sub").Any())?.Value; //userName
             //return _context.HttpContext?.User?.Identity?.Name; //personId
+        }
+
+        public List<string> GetRoles()
+        {
+            return _context.HttpContext?.User?.Claims.Where(x => x.Type == RoleType)?.Select(x => x.Value).ToList();
         }
     }
 }

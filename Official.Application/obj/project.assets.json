@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "EPPlus/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EPPlus.dll": {}
+        }
+      },
       "Mapster/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -399,6 +408,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "OfficeOpenXml.Extends/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "EPPlus": "4.1.0"
+        },
+        "compile": {
+          "lib/net40/OfficeOpenXml.Extends.dll": {}
+        },
+        "runtime": {
+          "lib/net40/OfficeOpenXml.Extends.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -1229,6 +1250,22 @@
     }
   },
   "libraries": {
+    "EPPlus/4.1.0": {
+      "sha512": "Eiy0belVoScBXVX6ctXX5845ppf50MxLngX2sHZLFUT0x9yVxN9flQAJjQO9hYrqY1+tFTGRoAkZh7iaZ/HMjA==",
+      "type": "package",
+      "path": "epplus/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "epplus.4.1.0.nupkg.sha512",
+        "epplus.nuspec",
+        "lib/net35/EPPlus.XML",
+        "lib/net35/EPPlus.dll",
+        "lib/net40/EPPlus.XML",
+        "lib/net40/EPPlus.dll",
+        "lib/readme.txt"
+      ]
+    },
     "Mapster/4.1.0": {
       "sha512": "a8MLjFJKclB5IAM4rBP4+f/bR9wWHZ6mOZJMxIB/bEhEK9Dc31d/9CX3OFMQ73VLVrdj5acfoiz8UFdT146d7w==",
       "type": "package",
@@ -1991,6 +2028,18 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "OfficeOpenXml.Extends/1.0.6": {
+      "sha512": "MRdNiAbSMzCx/WQzch4tkSJUhRD4BfVRD5WF120310PimMzUY6ge06XKS85daDbkZN20PQbhO0eUNKEYAkpFOA==",
+      "type": "package",
+      "path": "officeopenxml.extends/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/OfficeOpenXml.Extends.dll",
+        "officeopenxml.extends.1.0.6.nupkg.sha512",
+        "officeopenxml.extends.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -4717,6 +4766,7 @@
     ".NETCoreApp,Version=v2.2": [
       "Mapster >= 4.1.0",
       "Microsoft.NETCore.App >= 2.2.0",
+      "OfficeOpenXml.Extends >= 1.0.6",
       "Official.Application.Contracts >= 1.0.0",
       "Official.Domain >= 1.0.0",
       "Official.Framework.Application >= 1.0.0"
@@ -4782,6 +4832,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "OfficeOpenXml.Extends": {
+            "target": "Package",
+            "version": "[1.0.6, )"
           }
         },
         "imports": [
@@ -4791,5 +4845,27 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EPPlus 4.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "EPPlus",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'OfficeOpenXml.Extends 1.0.6' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "OfficeOpenXml.Extends",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

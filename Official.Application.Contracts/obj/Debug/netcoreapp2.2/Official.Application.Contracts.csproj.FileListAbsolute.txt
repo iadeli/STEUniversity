@@ -42,3 +42,4 @@ C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Applicat
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.AssemblyInfo.cs
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.dll
 C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.pdb
+C:\BamPardazesh\Source\STEUniversity\BE-OfficialCorrespondence\Official.Application.Contracts\obj\Debug\netcoreapp2.2\Official.Application.Contracts.csprojAssemblyReference.cache

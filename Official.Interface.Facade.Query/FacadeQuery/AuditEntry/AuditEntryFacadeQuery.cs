@@ -9,6 +9,10 @@ using Dapper;
 using System.Linq;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
 using Official.Application.Contracts.Command.Log.AuditEntry;
+using System.Security.Claims;
+using Official.Persistence.EFCore.Utility;
+using Microsoft.AspNetCore.Http;
+using static Official.Persistence.EFCore.Utility.Constant;
 
 namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
 {
@@ -32,6 +36,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
                         INNER JOIN (
                             SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
                         ) pu ON ae.CreatedBy = pu.UserName
+                        ORDER BY CreatedDate DESC
                     ";
                 var data = await _connection.QueryAsync<AuditEntryDto>(sql);
                 return data.ToList();
@@ -57,6 +62,7 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
                         WHERE CreatedBy = ISNULL(@CreatedBy, CreatedBy) AND 
                             (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa')) BETWEEN ISNULL(@FromDate, (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa'))) AND ISNULL(@ToDate, (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa'))) AND 
                             EntityTypeName = ISNULL(@EntityTypeName, EntityTypeName) AND [State] = ISNULL(@State, State) AND NationalCode = ISNULL(@NationalCode, NationalCode)
+                        ORDER BY CreatedDate DESC
                      ";
                 var data = await _connection.QueryAsync<AuditEntryDto>(sql, new { CreatedBy = auditEntryQuery.CreatedBy, FromDate = auditEntryQuery.FromDate, ToDate = auditEntryQuery.ToDate, EntityTypeName = auditEntryQuery.EntityTypeName, State = auditEntryQuery.State, NationalCode = auditEntryQuery.NationalCode });
                 return data.ToList();
@@ -113,16 +119,50 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
             return _value;
         }
 
+        public async Task<List<AuditEntryDto>> GetAuditLogByEntity(string entityName, long entityId)
+        {
+            try
+            {
+                var sql = @"
+                    SELECT AuditEntryID, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName, (SELECT FORMAT(CreatedDate, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS CreatedDate, EntitySetName, 
+                        (CASE WHEN [State] = 0 THEN N'ایجاد' WHEN [State] = 2 THEN N'ویرایش' ELSE N'حذف' END) AS StateName, EntityTypeName, [State] 
+                    FROM AuditEntries ae 
+                    INNER JOIN (
+                        SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
+                    ) pu ON ae.CreatedBy = pu.UserName
+                    WHERE EntityTypeName = @EntityName and exists (
+						select * from AuditEntryProperties where AuditEntryID = ae.AuditEntryID and PropertyName = 'Id' and (NewValue = @entityId or OldValue = @entityId)
+					)
+                    ORDER BY CreatedDate DESC";
+                var data = await _connection.QueryAsync<AuditEntryDto>(sql, new { EntityName = entityName, EntityId = entityId });
+                return data.ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public async Task<List<ApiLogQuery>> GetApiLogAsync()
         {
             try
             {
-                var sql = @" 
-                    select al.Id, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS RequestTime, ResponseMillis, StatusCode, Method, Path, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName 
+                var sql = string.Empty;
+                var orderBy = " ORDER BY RequestTime DESC ";
+                var where = " WHERE [Path] = '/api/Security/Token' ";
+                var roles = new UserResolverService(new HttpContextAccessor())?.GetRoles();
+                sql = @" SELECT Id FROM AspNetRoles WHERE [Name] = @Name ";
+                var defaultRoleId = await _connection.QueryFirstOrDefaultAsync<string>(sql, new { Name = DefaultRole });
+                if (roles.Contains(defaultRoleId))
+                    where = string.Empty;
+                sql = @" 
+                    select al.Id, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS RequestTime, ResponseMillis, 
+                        StatusCode, Method, Path, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName 
+                        ,case when (StatusCode BETWEEN 200 AND 299) THEN 'موفق' Else 'ناموفق' END AS StatusName
                     from ApiLogs al
-                    INNER JOIN(
+                    LEFT JOIN(
                         SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
-                    ) pu ON al.CreatedBy = pu.UserName ";
+                    ) pu ON al.CreatedBy = pu.UserName " + where + orderBy;
                 var data = await _connection.QueryAsync<ApiLogQuery>(sql);
                 return data.ToList();
             }
@@ -136,15 +176,25 @@ namespace Official.Interface.Facade.Query.FacadeQuery.AuditEntry
         {
             try
             {
-                var sql = @" 
-                    select al.Id, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS RequestTime, ResponseMillis, StatusCode, Method, Path, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName 
+                var sql = string.Empty;
+                var orderBy = " ORDER BY RequestTime DESC ";
+                var where = " AND [Path] = '/api/Security/Token' ";
+                var roles = new UserResolverService(new HttpContextAccessor())?.GetRoles();
+                sql = @" SELECT Id FROM AspNetRoles WHERE [Name] = @Name ";
+                var defaultRoleId = await _connection.QueryFirstOrDefaultAsync<string>(sql, new { Name = DefaultRole });
+                if (roles.Contains(defaultRoleId))
+                    where = string.Empty;
+                sql = @" 
+                    select al.Id, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) AS RequestTime, ResponseMillis, 
+                        StatusCode, Method, Path, CreatedBy, pu.NationalCode, (pu.FirstName + ' ' + pu.LastName) AS FullName 
+                        ,case when (StatusCode BETWEEN 200 AND 299) THEN 'موفق' Else 'ناموفق' END AS StatusName
                     from ApiLogs al
-                    INNER JOIN(
+                    LEFT JOIN(
                         SELECT p.*, u.UserName FROM Persons p INNER JOIN AspNetUsers u ON p.Id = u.PersonId
                     ) pu ON al.CreatedBy = pu.UserName 
                     WHERE (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')) BETWEEN ISNULL(@FromDate, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa'))) AND ISNULL(@ToDate, (SELECT FORMAT(RequestTime, 'yyyy/MM/dd-HH:mm:ss', 'fa')))
                     AND StatusCode = ISNULL(@StatusCode, StatusCode) AND Method = ISNULL(@Method, Method) AND [Path] = ISNULL(@Path, Path) 
-                    AND CreatedBy = ISNULL(@CreatedBy, CreatedBy) AND NationalCode = ISNULL(@NationalCode, NationalCode)";
+                    AND ISNULL(CreatedBy, '') = ISNULL(null, ISNULL(CreatedBy, '')) AND ISNULL(NationalCode, '') = ISNULL(null, ISNULL(NationalCode, '')) " + where + orderBy;
                 var data = await _connection.QueryAsync<ApiLogQuery>(sql, new { FromDate = apiLogFilter.FromDate, ToDate = apiLogFilter.ToDate, StatusCode = apiLogFilter.StatusCode, Method = apiLogFilter.Method, Path = apiLogFilter.Path, CreatedBy = apiLogFilter.CreatedBy, NationalCode = apiLogFilter.NationalCode });
                 return data.ToList();
             }

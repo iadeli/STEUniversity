@@ -11,6 +11,7 @@ namespace Official.Application.Contracts.Command.Person.PersonCommand
         public string PersonnelCode { get; set; }
         public string NationalCode { get; set; }
         public int PositionId { get; set; }
+        public bool? IsConvert { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }

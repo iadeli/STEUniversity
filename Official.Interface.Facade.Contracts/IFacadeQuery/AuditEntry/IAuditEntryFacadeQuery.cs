@@ -16,5 +16,6 @@ namespace Official.Interface.Facade.Contracts.IFacadeQuery.AuditEntry
 
         Task<List<ApiLogQuery>> GetApiLogAsync();
         Task<List<ApiLogQuery>> GetApiLogByFilterAsync(ApiLogFilter apiLogFilter);
+        Task<List<AuditEntryDto>> GetAuditLogByEntity(string entityName, long entityId);
     }
 }

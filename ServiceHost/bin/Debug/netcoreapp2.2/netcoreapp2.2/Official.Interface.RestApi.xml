@@ -202,6 +202,14 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Query.AuditEntryQueryController.GetAuditLogByEntity(System.String,System.Int64)">
+            <summary>
+            دریافت رخداد فرم ها براساس موجودیت
+            </summary>
+            <param name="entityName">نام جدول</param>
+            <param name="entityId">شناسه جدول</param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Query.EducationalInfoQueryController.Get">
             <summary>
             دریافت اطلاعات آموزشی

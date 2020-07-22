@@ -41,6 +41,7 @@ namespace Official.Persistence.EFCore.Context
             AuditManager.DefaultConfiguration.AuditEntryFactory = arg => new AuditEntry()
             {
                 EntitySetName = Resourse.ResourceEntity.ResourceManager.GetString(arg.EntityEntry.Entity.GetType().Name)
+                //,StateName = arg.EntityEntry.Entity.GetType().GetProperty("Id").GetValue(arg.EntityEntry.Entity, null).ToString()
             };
             AuditManager.DefaultConfiguration.AuditEntryPropertyFactory = arg => new AuditEntryProperty()
             {

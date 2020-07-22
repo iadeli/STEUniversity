@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Official.Application.Contracts.Command.Log.ApiLogItem;
 using Official.Framework.Application;
 using Official.Persistence.EFCore.Utility;
@@ -95,11 +97,6 @@ namespace Official.Interface.RestApi.Middleware
                             string requestBody,
                             string responseBody)
         {
-            if (path.ToLower().StartsWith("/api/user"))
-            {
-                requestBody = "(Request logging disabled for /api/user)";
-                responseBody = "(Response logging disabled for /api/user)";
-            }
 
             //if (requestBody.Length > 100)
             //{
@@ -118,15 +115,15 @@ namespace Official.Interface.RestApi.Middleware
 
             var apiLogDto = new CreateApiLogCommand()
             {
-                CreatedBy = new UserResolverService(new HttpContextAccessor())?.GetUser(),
+                CreatedBy = GetUserName(requestBody), 
                 RequestTime = requestTime,
                 ResponseMillis = responseMillis,
                 StatusCode = statusCode,
                 Method = method,
                 Path = path,
                 QueryString = queryString,
-                RequestBody = requestBody,
-                ResponseBody = responseBody
+                RequestBody = path.ToLower().StartsWith("/api/security/token") ? "(Request logging disabled for /api/security/token)" : requestBody,
+                ResponseBody = path.ToLower().StartsWith("/api/security/token") ? "(Response logging disabled for /api/security/token)" : responseBody
             };
 
             await _bus.Dispatch<CreateApiLogCommand, long>(apiLogDto);
@@ -135,6 +132,17 @@ namespace Official.Interface.RestApi.Middleware
             //sb.Append(path);
             //File.AppendAllText(@"C:\temp\" + "log.txt", sb.ToString());
             //sb.Clear();
+        }
+
+        private string GetUserName(string requestBody)
+        {
+            var userName = new UserResolverService(new HttpContextAccessor())?.GetUser();
+            if (string.IsNullOrWhiteSpace(userName))
+            {
+                var data = (JObject)JsonConvert.DeserializeObject(requestBody);
+                userName = data == null ? string.Empty : data["userName"].Value<string>();
+            }
+            return userName;
         }
     }
 }

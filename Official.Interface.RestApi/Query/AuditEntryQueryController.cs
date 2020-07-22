@@ -113,5 +113,26 @@ namespace Official.Interface.RestApi.Query
             }
         }
 
+        /// <summary>
+        /// دریافت رخداد فرم ها براساس موجودیت
+        /// </summary>
+        /// <param name="entityName">نام جدول</param>
+        /// <param name="entityId">شناسه جدول</param>
+        /// <returns></returns>
+        [HttpGet("Entity")]
+        public async Task<IActionResult> GetAuditLogByEntity(string entityName, long entityId)
+        {
+
+            try
+            {
+                var auditLog = await _query.GetAuditLogByEntity(entityName, entityId);
+                return Ok(auditLog);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
     }
 }

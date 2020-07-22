@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
+using Official.Application.Contracts.Command.Person.Excell;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
@@ -79,5 +80,19 @@ namespace Official.Interface.RestApi.Command
                 return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
             }
         }
+
+        public async Task<IActionResult> CreatePersonByExcel(CreatePersonExcelCommand command)
+        {
+            try
+            {
+                var result = _bus.Dispatch<CreatePersonExcelCommand, bool>(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
     }
 }
