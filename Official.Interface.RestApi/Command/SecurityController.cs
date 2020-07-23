@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Official.Application.Attribute;
 using Official.Application.Contracts.Command.Person.PersonCommand;
 using Official.Application.Contracts.Command.Security;
+using Official.Application.Contracts.Command.Security.User;
 using Official.Framework.Application;
 using Official.Interface.Facade.Contracts.Utility;
 using static Official.Persistence.EFCore.Utility.Constant;
@@ -47,7 +48,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="command">پارامترهای ورودی</param>
         /// <returns></returns>
-        [HttpPost("Token/Refresh"), AllowAnonymous]
+        [HttpPost("Token/Refresh/{token}"), AllowAnonymous]
         public async Task<IActionResult> RefreshToken(string token)
         {
             try
@@ -72,6 +73,25 @@ namespace Official.Interface.RestApi.Command
             try
             {
                 var result = await _bus.Dispatch<CreateRoleClaimCommand, bool>(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.ExpectationFailed, e.GetAllMessages());
+            }
+        }
+
+        /// <summary>
+        /// ایجاد دسترسی کاربر به استان و سمت
+        /// </summary>
+        /// <param name="command">پارامترهای ورودی</param>
+        /// <returns></returns>
+        [HttpPost("User/Claim")]
+        public async Task<IActionResult> CreateUserClaim(CreateUserClaimCommand command)
+        {
+            try
+            {
+                var result = await _bus.Dispatch<CreateUserClaimCommand, bool>(command);
                 return Ok(result);
             }
             catch (Exception e)

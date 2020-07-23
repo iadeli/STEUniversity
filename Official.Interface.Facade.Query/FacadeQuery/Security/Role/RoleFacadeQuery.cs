@@ -24,6 +24,12 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.Role
             {
                 var sql = @" SELECT * FROM AspNetRoles ";
                 var roles = await _connection.QueryAsync<RoleQuery>(sql);
+                roles = roles.Select(a => new RoleQuery()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    UserIds = _connection.Query<long>($"SELECT UserId FROM AspNetUserRoles WHERE RoleId = {a.Id}").ToList()
+                });
                 return roles.ToList();
             }
             catch (Exception e)
@@ -38,6 +44,12 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.Role
             {
                 var sql = " SELECT * FROM AspNetRoles WHERE Id = @RoleId ";
                 var roles = await _connection.QueryAsync<RoleQuery>(sql, new { RoleId = roleId });
+                roles = roles.Select(a => new RoleQuery() {
+
+                    Id = a.Id,
+                    Name = a.Name,
+                    UserIds = _connection.Query<long>($"SELECT UserId FROM AspNetUserRoles WHERE RoleId = {a.Id}").ToList()
+                });
                 return roles.ToList();
             }
             catch (Exception e)

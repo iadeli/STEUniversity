@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using Official.Domain.Model;
 using Official.Domain.Model.Person;
 using Official.Domain.Model.Person.IPersonRepository;
 using Official.Persistence.EFCore.Context;
@@ -13,6 +15,7 @@ namespace Official.Persistence.EFCore.Repositories
     public class PersonRepository : IPersonRepository, IDisposable
     {
         private readonly STEDbContext _context;
+        private IDbContextTransaction _tran;
         public PersonRepository(STEDbContext context)
         {
             _context = context;
@@ -86,9 +89,9 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                if (action == 1)                
+                if (action == 1)
                     return await _context.Persons.Where(a => a.TeacherCode == person.TeacherCode).AnyAsync();
-                
+
                 return await _context.Persons.Where(a => a.Id != person.Id && a.TeacherCode == person.TeacherCode).AnyAsync();
             }
             catch (Exception e)
@@ -101,9 +104,9 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                if (action == 1)                
+                if (action == 1)
                     return await _context.Persons.Where(a => a.NationalCode == person.NationalCode).AnyAsync();
-                
+
                 return await _context.Persons.Where(a => a.Id != person.Id && a.NationalCode == person.NationalCode).AnyAsync();
             }
             catch (Exception e)
@@ -116,9 +119,9 @@ namespace Official.Persistence.EFCore.Repositories
         {
             try
             {
-                if (action == 1)                
+                if (action == 1)
                     return await _context.Persons.Where(a => a.PersonnelCode == person.PersonnelCode).AnyAsync();
-                
+
                 return await _context.Persons.Where(a => a.Id != person.Id && a.PersonnelCode == person.PersonnelCode).AnyAsync();
             }
             catch (Exception e)
@@ -153,5 +156,66 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
+        public async Task CreateRangeAsync(List<Person> entities)
+        {
+            try
+            {   
+                await _context.AddRangeAsync(entities);
+                await Save();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public List<Person> GetExistsPerson(List<Person> entities)
+        {
+            try
+            {
+                var existsPerson = _context.Persons.Include(a => a.BirthCertificate).Include(a => a.Contact).Include(a => a.PersonDetail).AsEnumerable()
+                    .Where(a => entities.Any(b => b.NationalCode == a.NationalCode)).ToList();
+                return existsPerson;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task UpdateRangeAsync(List<Person> existsPerson)
+        {
+            try
+            {
+                foreach (var entity in existsPerson)
+                {
+                    _context.Persons.Attach(entity);
+                    _context.Entry(entity).State = EntityState.Modified;
+                    //_context.ObjectStateManager.ChangeObjectState(entity, EntityState.Modified);
+                }
+                await Save();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void BeginTransaction()
+        {
+            _tran = _context.Database.BeginTransaction();
+        }
+
+        public void Commit()
+        {
+            _tran.Commit();
+            _tran.Dispose();
+        }
+
+        public void Rollback()
+        {
+            _tran.Rollback();
+            _tran.Dispose();
+        }
     }
 }

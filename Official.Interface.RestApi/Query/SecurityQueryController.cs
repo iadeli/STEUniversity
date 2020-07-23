@@ -25,7 +25,7 @@ namespace Official.Interface.RestApi.Query
         /// </summary>
         /// <param name="type">ProvinceId - PositionId</param>
         /// <returns></returns>
-        [HttpGet("UserClaim"), Authorize(Policy = View)]
+        [HttpGet("UserClaim/{userId}/{type}"), Authorize(Policy = View)]
         public async Task<IActionResult> GetUserAccessClaim(long userId, string type)
         {
             try
@@ -44,7 +44,7 @@ namespace Official.Interface.RestApi.Query
         /// </summary>
         /// <param name="type">ControllerInfoId</param>
         /// <returns></returns>
-        [HttpGet("RoleClaim"), Authorize(Policy = View)]
+        [HttpGet("RoleClaim/{roleId}/{type}"), Authorize(Policy = View)]
         public async Task<IActionResult> GetRoleAccessClaim(long roleId, string type)
         {
             try

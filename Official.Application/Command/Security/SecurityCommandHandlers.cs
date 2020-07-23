@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Official.Application.Contracts.Command.Security;
+using Official.Application.Contracts.Command.Security.User;
 using Official.Domain.Model.Authorization;
 using Official.Domain.Model.Security.ISecurityRepository;
 using Official.Framework.Application;
@@ -10,7 +11,7 @@ using Official.Framework.Application;
 namespace Official.Application.Command.Security
 {
     public class SecurityCommandHandlers : ICommandHandler<LoginCommand, JwtTokenDto>, ICommandHandler<string, JwtTokenDto>
-        , ICommandHandler<CreateRoleClaimCommand, bool>
+        , ICommandHandler<CreateRoleClaimCommand, bool>, ICommandHandler<CreateUserClaimCommand, bool>
     {
         private readonly ISecurityRepository _securityRepository;
         private readonly IJwtRepository _jwtRepository;
@@ -75,17 +76,13 @@ namespace Official.Application.Command.Security
 
                 var dto = command.CreateRoleClaimDtos;
 
-                var addRoleClaimList = new List<RoleClaimTransfer>();
-                var removeRoleClaimList = new List<RoleClaimTransfer>();
+                var addRoleClaimList = new List<ClaimTransfer>();
+                var removeRoleClaimList = new List<ClaimTransfer>();
 
                 var roleClaimType = dto.Select(a => a.ClaimType).FirstOrDefault();
                 if (roleClaimType == "ControllerInfoId")
                 {
                     await PrepareRoleClaimList(dto, addRoleClaimList, removeRoleClaimList);
-                }
-                if (roleClaimType == "ProvinceId" || roleClaimType == "PositionId")
-                {
-                    PrepareRoleClaimList2(dto, addRoleClaimList, removeRoleClaimList);
                 }
 
                 await _securityRepository.RemoveRoleClaims(removeRoleClaimList);
@@ -102,24 +99,24 @@ namespace Official.Application.Command.Security
             }
         }
 
-        private static void PrepareRoleClaimList2(List<CreateRoleClaimDto> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
+        private static void PrepareUserClaimList(List<CreateUserClaimDto> command, List<ClaimTransfer> addRoleClaimList, List<ClaimTransfer> removeRoleClaimList)
         {
-            foreach (var roleClaim in command)
+            foreach (var userClaim in command)
             {
-                var roleClaimDto = new RoleClaimTransfer()
+                var userClaimDto = new ClaimTransfer()
                 {
-                    RoleId = roleClaim.RoleId,
-                    ClaimType = roleClaim.ClaimType,
-                    ClaimValue = roleClaim.ClaimValue.ToString()
+                    UserOrRoleId = userClaim.UserId,
+                    ClaimType = userClaim.ClaimType,
+                    ClaimValue = userClaim.ClaimValue.ToString()
                 };
-                if (roleClaim.Checked)
-                    addRoleClaimList.Add(roleClaimDto);
+                if (userClaim.Checked)
+                    addRoleClaimList.Add(userClaimDto);
                 else
-                    removeRoleClaimList.Add(roleClaimDto);
+                    removeRoleClaimList.Add(userClaimDto);
             }
         }
 
-        private async Task PrepareRoleClaimList(List<CreateRoleClaimDto> command, List<RoleClaimTransfer> addRoleClaimList, List<RoleClaimTransfer> removeRoleClaimList)
+        private async Task PrepareRoleClaimList(List<CreateRoleClaimDto> command, List<ClaimTransfer> addRoleClaimList, List<ClaimTransfer> removeRoleClaimList)
         {
             foreach (var roleClaim in command)
             {
@@ -130,9 +127,9 @@ namespace Official.Application.Command.Security
 
                 foreach (var controllerId in addControllerIds)
                 {
-                    var roleClaimDto = new RoleClaimTransfer()
+                    var roleClaimDto = new ClaimTransfer()
                     {
-                        RoleId = roleClaim.RoleId,
+                        UserOrRoleId = roleClaim.RoleId,
                         ClaimType = roleClaim.ClaimType,
                         ClaimValue = controllerId.ToString()
                     };
@@ -144,9 +141,9 @@ namespace Official.Application.Command.Security
 
                 foreach (var controllerId in deleteControllerIds)
                 {
-                    var roleClaimDto = new RoleClaimTransfer()
+                    var roleClaimDto = new ClaimTransfer()
                     {
-                        RoleId = roleClaim.RoleId,
+                        UserOrRoleId = roleClaim.RoleId,
                         ClaimType = roleClaim.ClaimType,
                         ClaimValue = controllerId.ToString()
                     };
@@ -158,9 +155,9 @@ namespace Official.Application.Command.Security
 
                 foreach (var controllerId in editControllerIds)
                 {
-                    var roleClaimDto = new RoleClaimTransfer()
+                    var roleClaimDto = new ClaimTransfer()
                     {
-                        RoleId = roleClaim.RoleId,
+                        UserOrRoleId = roleClaim.RoleId,
                         ClaimType = roleClaim.ClaimType,
                         ClaimValue = controllerId.ToString()
                     };
@@ -172,9 +169,9 @@ namespace Official.Application.Command.Security
 
                 foreach (var controllerId in viewControllerIds)
                 {
-                    var roleClaimDto = new RoleClaimTransfer()
+                    var roleClaimDto = new ClaimTransfer()
                     {
-                        RoleId = roleClaim.RoleId,
+                        UserOrRoleId = roleClaim.RoleId,
                         ClaimType = roleClaim.ClaimType,
                         ClaimValue = controllerId.ToString()
                     };
@@ -186,5 +183,34 @@ namespace Official.Application.Command.Security
             }
         }
 
+        public async Task<bool> HandleAsync(CreateUserClaimCommand command)
+        {
+            try
+            {
+                _securityRepository.BeginTransaction();
+
+                var dto = command.CreateUserClaimDtos;
+
+                var addUserClaimList = new List<ClaimTransfer>();
+                var removeUserClaimList = new List<ClaimTransfer>();
+
+                var userClaimType = dto.Select(a => a.ClaimType).FirstOrDefault();
+                if (userClaimType == "ProvinceId" || userClaimType == "PositionId")
+                {
+                    PrepareUserClaimList(dto, addUserClaimList, removeUserClaimList);
+                }
+
+                await _securityRepository.RemoveUserClaims(removeUserClaimList);
+                await _securityRepository.CreateUserClaims(addUserClaimList);
+
+                _securityRepository.Commit();
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

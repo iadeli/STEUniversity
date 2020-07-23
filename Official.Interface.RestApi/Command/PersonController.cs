@@ -81,6 +81,12 @@ namespace Official.Interface.RestApi.Command
             }
         }
 
+        /// <summary>
+        /// ارسال اطلاعات فردی از طریق اکسل
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPost("Excel")]
         public async Task<IActionResult> CreatePersonByExcel(CreatePersonExcelCommand command)
         {
             try

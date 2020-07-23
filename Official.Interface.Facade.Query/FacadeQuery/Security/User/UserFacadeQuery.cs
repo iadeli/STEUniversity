@@ -29,6 +29,17 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.User
                     INNER JOIN Contacts c ON p.Id = c.PersonId
                     ";
                 var users = await _connection.QueryAsync<UserQuery>(sql);
+                users = users.Select(a => new UserQuery()
+                {
+                    Id = a.Id,
+                    PersonId = a.PersonId,
+                    FullName = a.FullName,
+                    UserName = a.UserName,
+                    NationalCode = a.NationalCode,
+                    Mobile = a.Mobile,
+                    Email = a.Email,
+                    RoleIds = _connection.Query<long>($"SELECT RoleId FROM AspNetUserRoles WHERE UserId = {a.Id}").ToList()
+                });
                 return users.ToList();
             }
             catch (Exception e)
@@ -49,6 +60,17 @@ namespace Official.Interface.Facade.Query.FacadeQuery.Security.User
                     WHERE anu.Id = @UserId
                     ";
                 var users = await _connection.QueryAsync<UserQuery>(sql, new { UserId = userId });
+                users = users.Select(a => new UserQuery()
+                {
+                    Id = a.Id,
+                    PersonId = a.PersonId,
+                    FullName = a.FullName,
+                    UserName = a.UserName,
+                    NationalCode = a.NationalCode,
+                    Mobile = a.Mobile,
+                    Email = a.Email,
+                    RoleIds = _connection.Query<long>($"SELECT RoleId FROM AspNetUserRoles WHERE UserId = {a.Id}").ToList()
+                });
                 return users.ToList();
             }
             catch (Exception e)

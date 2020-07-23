@@ -65,7 +65,7 @@ namespace Official.Interface.RestApi.Command
         /// </summary>
         /// <param name="id">شناسه گروه</param>
         /// <returns></returns>
-        [HttpDelete("id"), Authorize(Policy = Delete)]
+        [HttpDelete("{id}"), Authorize(Policy = Delete)]
         public async Task<IActionResult> RemoveUser(long id)
         {
             try

@@ -88,6 +88,13 @@
             <param name="Id">شناسه فرد</param>
             <returns></returns>
         </member>
+        <member name="M:Official.Interface.RestApi.Command.PersonController.CreatePersonByExcel(Official.Application.Contracts.Command.Person.Excell.CreatePersonExcelCommand)">
+            <summary>
+            ارسال اطلاعات فردی از طریق اکسل
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
         <member name="M:Official.Interface.RestApi.Command.RoleController.Create(Official.Application.Contracts.Command.Security.Role.CreateRoleCommand)">
             <summary>
             ایجاد گروه
@@ -126,6 +133,13 @@
         <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateRoleClaim(Official.Application.Contracts.Command.Security.CreateRoleClaimCommand)">
             <summary>
             ایجاد دسترسی گروه به فرم ها
+            </summary>
+            <param name="command">پارامترهای ورودی</param>
+            <returns></returns>
+        </member>
+        <member name="M:Official.Interface.RestApi.Command.SecurityController.CreateUserClaim(Official.Application.Contracts.Command.Security.User.CreateUserClaimCommand)">
+            <summary>
+            ایجاد دسترسی کاربر به استان و سمت
             </summary>
             <param name="command">پارامترهای ورودی</param>
             <returns></returns>

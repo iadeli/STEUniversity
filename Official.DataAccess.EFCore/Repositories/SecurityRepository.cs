@@ -116,12 +116,12 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task RemoveRoleClaims(List<RoleClaimTransfer> roleClaimTransfers)
+        public async Task RemoveRoleClaims(List<ClaimTransfer> roleClaimTransfers)
         {
             try
             {
                 var roleClaims = await _context.RoleClaims.Where(a =>
-                    roleClaimTransfers.Any(b => b.RoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
+                    roleClaimTransfers.Any(b => b.UserOrRoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
                 _context.RemoveRange(roleClaims);
                 await Save();
             }
@@ -131,28 +131,73 @@ namespace Official.Persistence.EFCore.Repositories
             }
         }
 
-        public async Task CreateRoleClaims(List<RoleClaimTransfer> roleClaimTransfers)
+        public async Task CreateRoleClaims(List<ClaimTransfer> roleClaimTransfers)
         {
             try
             {
                 var transfers = roleClaimTransfers;
                 var existsRoleClaim = await _context.RoleClaims.Where(a => transfers.Any(b =>
-                    b.RoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
+                    b.UserOrRoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
                 roleClaimTransfers = roleClaimTransfers.Where(a => !existsRoleClaim.Any(b =>
-                    b.RoleId == a.RoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToList();
+                    b.RoleId == a.UserOrRoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToList();
 
                 var roleClaimList = new List<AppRoleClaim>();
                 foreach (var roleClaim in roleClaimTransfers)
                 {
                     var appRoleClaim = new AppRoleClaim()
                     {
-                        RoleId = roleClaim.RoleId,
+                        RoleId = roleClaim.UserOrRoleId,
                         ClaimType = roleClaim.ClaimType,
                         ClaimValue = roleClaim.ClaimValue
                     };
                     roleClaimList.Add(appRoleClaim);
                 }
                 await _context.AddRangeAsync(roleClaimList);
+                await Save();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task RemoveUserClaims(List<ClaimTransfer> removeUserClaimList)
+        {
+            try
+            {
+                var userClaims = await _context.UserClaims.Where(a =>
+                    removeUserClaimList.Any(b => b.UserOrRoleId == a.UserId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
+                _context.RemoveRange(userClaims);
+                await Save();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public async Task CreateUserClaims(List<ClaimTransfer> addUserClaimTransfer)
+        {
+            try
+            {
+                var transfers = addUserClaimTransfer;
+                var existsUserClaim = await _context.UserClaims.Where(a => transfers.Any(b =>
+                    b.UserOrRoleId == a.UserId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToListAsync();
+                addUserClaimTransfer = addUserClaimTransfer.Where(a => !existsUserClaim.Any(b =>
+                    b.UserId == a.UserOrRoleId && b.ClaimType == a.ClaimType && b.ClaimValue == a.ClaimValue)).ToList();
+
+                var userClaimList = new List<AppUserClaim>();
+                foreach (var userClaim in addUserClaimTransfer)
+                {
+                    var appUserClaim = new AppUserClaim()
+                    {
+                        UserId = userClaim.UserOrRoleId,
+                        ClaimType = userClaim.ClaimType,
+                        ClaimValue = userClaim.ClaimValue
+                    };
+                    userClaimList.Add(appUserClaim);
+                }
+                await _context.AddRangeAsync(userClaimList);
                 await Save();
             }
             catch (Exception e)

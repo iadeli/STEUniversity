@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "079218e213ad31da82c56352b8da38ba400c62eb"
+    "signature": "acaa89e203a88642c0141ebe2de7fed5698e7ba6"
   },
   "compilationOptions": {},
   "targets": {
@@ -28,6 +28,14 @@
           "lib/netstandard2.0/Dapper.dll": {
             "assemblyVersion": "1.60.0.0",
             "fileVersion": "1.60.6.27094"
+          }
+        }
+      },
+      "EPPlus/4.1.0": {
+        "runtime": {
+          "lib/net40/EPPlus.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
           }
         }
       },
@@ -588,6 +596,17 @@
           }
         }
       },
+      "OfficeOpenXml.Extends/1.0.6": {
+        "dependencies": {
+          "EPPlus": "4.1.0"
+        },
+        "runtime": {
+          "lib/net40/OfficeOpenXml.Extends.dll": {
+            "assemblyVersion": "1.0.6.0",
+            "fileVersion": "1.0.6.0"
+          }
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1140,6 +1159,7 @@
       "Official.Application/1.0.0": {
         "dependencies": {
           "Mapster": "4.1.0",
+          "OfficeOpenXml.Extends": "1.0.6",
           "Official.Application.Contracts": "1.0.0",
           "Official.Domain": "1.0.0",
           "Official.Framework.Application": "1.0.0",
@@ -1263,6 +1283,13 @@
       "sha512": "sha512-mmnJNhKMeF2KhvVXDoVQlFxre8aJAo71YBJrKqFlvuqzYC2QiXUq94/GCDBJzU7paq4GqpkV2glw3308TcGibw==",
       "path": "dapper/1.60.6",
       "hashPath": "dapper.1.60.6.nupkg.sha512"
+    },
+    "EPPlus/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Eiy0belVoScBXVX6ctXX5845ppf50MxLngX2sHZLFUT0x9yVxN9flQAJjQO9hYrqY1+tFTGRoAkZh7iaZ/HMjA==",
+      "path": "epplus/4.1.0",
+      "hashPath": "epplus.4.1.0.nupkg.sha512"
     },
     "Mapster/4.1.0": {
       "type": "package",
@@ -1599,6 +1626,13 @@
       "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "OfficeOpenXml.Extends/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MRdNiAbSMzCx/WQzch4tkSJUhRD4BfVRD5WF120310PimMzUY6ge06XKS85daDbkZN20PQbhO0eUNKEYAkpFOA==",
+      "path": "officeopenxml.extends/1.0.6",
+      "hashPath": "officeopenxml.extends.1.0.6.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

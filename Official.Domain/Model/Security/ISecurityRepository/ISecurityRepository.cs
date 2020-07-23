@@ -10,7 +10,9 @@ namespace Official.Domain.Model.Security.ISecurityRepository
         bool Register(string userName, string password);
         Task<bool> Login(string userName, string password);
         List<long> GetControllerIdByType(string entityName, string policy);
-        Task RemoveRoleClaims(List<RoleClaimTransfer> roleClaimTransfers);
-        Task CreateRoleClaims(List<RoleClaimTransfer> roleClaimTransfers);
+        Task RemoveRoleClaims(List<ClaimTransfer> roleClaimTransfers);
+        Task CreateRoleClaims(List<ClaimTransfer> roleClaimTransfers);
+        Task RemoveUserClaims(List<ClaimTransfer> removeUserClaimList);
+        Task CreateUserClaims(List<ClaimTransfer> addUserClaimList);
     }
 }
